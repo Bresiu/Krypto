@@ -13,7 +13,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static final String TAG = "LoginActivity";
     private static String password = "";
     private static String pass = "1234";
+
     private int count = 0;
+
     private Button Button1;
     private Button Button2;
     private Button Button3;
