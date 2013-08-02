@@ -16,8 +16,7 @@
             android:theme="@style/AppTheme">
         <activity
                 android:name="com.bresiu.krypto.LoginActivity"
-                android:theme="@style/Theme.Sherlock.Light.NoActionBar"
-                android:label="@string/title_activity_login">
+                android:theme="@style/Theme.Sherlock.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
