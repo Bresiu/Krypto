@@ -994,7 +994,7 @@ public final class R {
         public static final int abs__textButton = 0x7f060013;
         public static final int abs__title = 0x7f06001b;
         public static final int abs__up = 0x7f06000f;
-        public static final int action_settings = 0x7f06003e;
+        public static final int action_settings = 0x7f06003f;
         public static final int b0 = 0x7f06003b;
         public static final int b1 = 0x7f060032;
         public static final int b2 = 0x7f060033;
@@ -1008,6 +1008,7 @@ public final class R {
         public static final int disableHome = 0x7f060008;
         public static final int edit_query = 0x7f060026;
         public static final int homeAsUp = 0x7f060005;
+        public static final int info = 0x7f06003e;
         public static final int listMode = 0x7f060001;
         public static final int logo = 0x7f06003d;
         public static final int normal = 0x7f060000;
@@ -1053,8 +1054,9 @@ public final class R {
         public static final int abs__simple_dropdown_hint = 0x7f030014;
         public static final int activity_login = 0x7f030015;
         public static final int activity_main = 0x7f030016;
-        public static final int sherlock_spinner_dropdown_item = 0x7f030017;
-        public static final int sherlock_spinner_item = 0x7f030018;
+        public static final int activity_register = 0x7f030017;
+        public static final int sherlock_spinner_dropdown_item = 0x7f030018;
+        public static final int sherlock_spinner_item = 0x7f030019;
     }
 
     public static final class menu {

@@ -8,37 +8,51 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class LoginActivity extends Activity implements View.OnClickListener {
+public class RegisterActivity extends Activity implements View.OnClickListener {
 
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "RegisterActivity";
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
-    private static final String PASS = "0000";
+    private static final String KEY = "Key";
+
+    private static boolean isFirstAttempt = true;
+    private static String passFirstAttempt;
     private static String password;
     private int count = 0;
+
     private TextView Pass;
     private SharedPreferences preferences;
+    private SharedPreferences.Editor preferencesEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
+
         super.onCreate(savedInstanceState);
+
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
-        if (restoreData()) {
-            setContentView(R.layout.activity_login);
-            setupWidgets();
-            password = "";
-        } else {
-            toRegister();
+        preferencesEditor = preferences.edit();
+
+        setContentView(R.layout.activity_register);
+        setupWidgets();
+    }
+
+    /*
+        @Override
+        protected void onStart() {
+            Log.d(TAG, "onStart");
+            super.onStart();
+            clean();
         }
-    }
 
-    @Override
-    protected void onPause() {
-        Log.d(TAG, "onPause");
-        super.onDestroy();
-    }
-
+        private void clean() {
+            count = 0;
+            password = "";
+            passFirstAttempt = "";
+            isFirstAttempt = true;
+            Pass.setText("");
+        }
+    */
     private void setupWidgets() {
         Pass = (TextView) findViewById(R.id.pass);
     }
@@ -79,34 +93,38 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 password += 9;
                 break;
         }
-        Log.d(TAG, password);
         count++;
 
         if (count == 4) {
-            if (password.equals(PASS)) {
-                loginComplete();
-            } else {
-                Pass.setText("Incorect Password");
+            if (isFirstAttempt) {
+                passFirstAttempt = password;
                 password = "";
+                isFirstAttempt = false;
                 count = 0;
+                Pass.setText("Enter pass again");
+            } else {
+                if (password.equals(passFirstAttempt)) {
+                    saveData();
+                } else {
+                    Pass.setText("passes dont match");
+                    password = "";
+                    count = 0;
+                }
+                isFirstAttempt = true;
             }
         }
     }
 
-    private boolean restoreData() {
-        return preferences.getBoolean(KEY_STORED, false);
+    private void saveData() {
+        preferencesEditor.putBoolean(KEY_STORED, true);
+        preferencesEditor.putString(KEY, password);
+        preferencesEditor.commit();
+        passwordSet();
     }
 
-    private void loginComplete() {
-        Intent login = new Intent(this,
-                MainActivity.class);
-        startActivity(login);
-        finish();
-    }
-
-    private void toRegister() {
+    private void passwordSet() {
         Intent register = new Intent(this,
-                RegisterActivity.class);
+                MainActivity.class);
         startActivity(register);
         finish();
     }

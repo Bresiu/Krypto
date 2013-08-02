@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
         <activity
+                android:name="com.bresiu.krypto.RegisterActivity"
+                android:theme="@style/Theme.Sherlock.Light.NoActionBar"
+                android:label="@string/app_name">
+        </activity>
+        <activity
                 android:name="com.bresiu.krypto.MainActivity"
                 android:theme="@style/Theme.Sherlock.Light.DarkActionBar"
                 android:label="@string/app_name">
