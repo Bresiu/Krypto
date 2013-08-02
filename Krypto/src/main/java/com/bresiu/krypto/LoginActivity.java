@@ -11,11 +11,10 @@ import android.widget.TextView;
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = "LoginActivity";
-    private static String password = "";
-    private static String pass = "1234";
-
+    private static final String PASS = "0000";
+    private static String password;
     private int count = 0;
-
+    private Button Button0;
     private Button Button1;
     private Button Button2;
     private Button Button3;
@@ -29,14 +28,23 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupWidgets();
+        password = "";
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(TAG, "onPause");
+        super.onDestroy();
     }
 
     private void setupWidgets() {
         Pass = (TextView) findViewById(R.id.pass);
 
+        Button0 = (Button) findViewById(R.id.b0);
         Button1 = (Button) findViewById(R.id.b1);
         Button2 = (Button) findViewById(R.id.b2);
         Button3 = (Button) findViewById(R.id.b3);
@@ -50,8 +58,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (count == 0) Pass.setText("");
         Pass.append("*");
         switch (v.getId()) {
+            case R.id.b0:
+                password += 0;
+                break;
             case R.id.b1:
                 password += 1;
                 break;
@@ -84,10 +96,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         count++;
 
         if (count == 4) {
-            if (password.equals(pass)) {
+            if (password.equals(PASS)) {
                 loginComplete();
             } else {
-                Pass.setText("");
+                Pass.setText("Incorect Password");
                 password = "";
                 count = 0;
             }

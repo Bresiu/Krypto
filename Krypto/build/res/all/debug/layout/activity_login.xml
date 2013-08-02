@@ -90,13 +90,14 @@
             android:layout_below="@+id/b5"
             android:layout_toRightOf="@+id/b5"/>
 
-    <ImageView
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/logo"
-            android:src="@drawable/web_hi_res_512"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"/>
+            android:onClick="onClick"
+            android:text="0"
+            android:id="@+id/b0"
+            android:layout_below="@+id/b8"
+            android:layout_toRightOf="@+id/b7"/>
 
     <TextView
             android:layout_width="wrap_content"
@@ -104,8 +105,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/pass"
             android:gravity="center"
-            android:layout_below="@+id/b7"
+            android:layout_below="@+id/b0"
             android:layout_alignLeft="@+id/b7"
             android:layout_alignRight="@+id/b9"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:src="@drawable/web_hi_res_512"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
 </RelativeLayout>
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/layout/activity_login.xml -->
+        <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/layout/activity_login.xml -->
