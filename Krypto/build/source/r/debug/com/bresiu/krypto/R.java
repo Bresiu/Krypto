@@ -952,6 +952,7 @@ public final class R {
     }
 
     public static final class id {
+        public static final int PhoneNumberInfo = 0x7f060040;
         public static final int abs__action_bar = 0x7f060020;
         public static final int abs__action_bar_container = 0x7f06001f;
         public static final int abs__action_bar_subtitle = 0x7f060011;
@@ -994,7 +995,7 @@ public final class R {
         public static final int abs__textButton = 0x7f060013;
         public static final int abs__title = 0x7f06001b;
         public static final int abs__up = 0x7f06000f;
-        public static final int action_settings = 0x7f06003f;
+        public static final int action_settings = 0x7f060044;
         public static final int b0 = 0x7f06003b;
         public static final int b1 = 0x7f060032;
         public static final int b2 = 0x7f060033;
@@ -1008,11 +1009,15 @@ public final class R {
         public static final int disableHome = 0x7f060008;
         public static final int edit_query = 0x7f060026;
         public static final int homeAsUp = 0x7f060005;
-        public static final int info = 0x7f06003e;
+        public static final int info = 0x7f060043;
         public static final int listMode = 0x7f060001;
         public static final int logo = 0x7f06003d;
+        public static final int message = 0x7f06003f;
+        public static final int messageInfo = 0x7f060042;
         public static final int normal = 0x7f060000;
         public static final int pass = 0x7f06003c;
+        public static final int phoneNumber = 0x7f060041;
+        public static final int send = 0x7f06003e;
         public static final int showCustom = 0x7f060007;
         public static final int showHome = 0x7f060004;
         public static final int showTitle = 0x7f060006;

@@ -13,9 +13,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static final String TAG = "LoginActivity";
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
-    private static final String PASS = "0000";
+    private static final String KEY = "Key";
+
     private static String password;
     private int count = 0;
+
     private TextView Pass;
     private SharedPreferences preferences;
 
@@ -31,12 +33,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         } else {
             toRegister();
         }
-    }
-
-    @Override
-    protected void onPause() {
-        Log.d(TAG, "onPause");
-        super.onDestroy();
     }
 
     private void setupWidgets() {
@@ -79,11 +75,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 password += 9;
                 break;
         }
-        Log.d(TAG, password);
         count++;
 
         if (count == 4) {
-            if (password.equals(PASS)) {
+            if (password.equals(preferences.getString(KEY, ""))) {
                 loginComplete();
             } else {
                 Pass.setText("Incorect Password");

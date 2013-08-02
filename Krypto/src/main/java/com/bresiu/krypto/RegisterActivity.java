@@ -18,7 +18,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     private static boolean isFirstAttempt = true;
     private static String passFirstAttempt;
     private static String password;
-    private int count = 0;
+    private int count;
 
     private TextView Pass;
     private SharedPreferences preferences;
@@ -35,24 +35,16 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
 
         setContentView(R.layout.activity_register);
         setupWidgets();
+        clean();
     }
 
-    /*
-        @Override
-        protected void onStart() {
-            Log.d(TAG, "onStart");
-            super.onStart();
-            clean();
-        }
+    private void clean() {
+        password = "";
+        count = 0;
+        Pass.setText("");
+        isFirstAttempt = true;
+    }
 
-        private void clean() {
-            count = 0;
-            password = "";
-            passFirstAttempt = "";
-            isFirstAttempt = true;
-            Pass.setText("");
-        }
-    */
     private void setupWidgets() {
         Pass = (TextView) findViewById(R.id.pass);
     }
@@ -104,6 +96,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                 Pass.setText("Enter pass again");
             } else {
                 if (password.equals(passFirstAttempt)) {
+
                     saveData();
                 } else {
                     Pass.setText("passes dont match");
