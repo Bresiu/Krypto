@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
-import com.bresiu.krypto.sms.SendSMS;
+import com.bresiu.krypto.sms.SmsSender;
 import com.bresiu.krypto.utils.TypefaceSpan;
 
 public class MainActivity extends SherlockActivity implements View.OnClickListener {
@@ -42,18 +42,19 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        Log.d(TAG, "onCick");
+        Log.d(TAG, "onClick");
         switch (v.getId()) {
             case R.id.send:
                 String phno = phoneNumber.getText().toString();
                 String msg = message.getText().toString();
                 if (phno.length() >= PHONE_NUMBER_MIN_LENGTH && msg.length() > 0) {
-                    SendSMS sendSms = new SendSMS();
-                    sendSms.SendSMS(phno, msg);
-                } else
+                    SmsSender smsSender = new SmsSender();
+                    smsSender.SendSMS(phno, msg);
+                } else {
                     Toast.makeText(getBaseContext(),
                             "Please enter both phone number and message.",
                             Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }
