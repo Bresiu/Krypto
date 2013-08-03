@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
+import android.os.Vibrator;
 import android.telephony.SmsMessage;
 import android.util.Log;
 
@@ -30,7 +32,11 @@ public class SmsReceiver extends BroadcastReceiver {
                 str += msgs[i].getMessageBody().toString();
                 str += "\n";
             }
-            Log.d(TAG, "onReceive");
+            for (int i = 0; i < 3; i++) {
+                Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(30);
+                SystemClock.sleep(DELAY);
+            }
         }
     }
 }

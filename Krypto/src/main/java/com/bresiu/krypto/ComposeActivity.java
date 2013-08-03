@@ -1,5 +1,6 @@
 package com.bresiu.krypto;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -10,15 +11,17 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
-import com.bresiu.krypto.sms.SmsSender;
+import com.bresiu.krypto.sms.SendSMS;
 import com.bresiu.krypto.utils.TypefaceSpan;
 
-public class MainActivity extends SherlockActivity implements View.OnClickListener {
+public class ComposeActivity extends SherlockActivity implements View.OnClickListener {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "ComposeActivity";
     private static final int PHONE_NUMBER_MIN_LENGTH = 9;
-    private EditText phoneNumber;
-    private EditText message;
+    private EditText mPhoneNumber;
+    private EditText mMessage;
+
+    Context context = getApplicationContext();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +34,13 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         ab.setTitle(s);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_compose);
         setupWidgets();
     }
 
     private void setupWidgets() {
-        phoneNumber = (EditText) findViewById(R.id.phoneNumber);
-        message = (EditText) findViewById(R.id.message);
+        mPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
+        mMessage = (EditText) findViewById(R.id.message);
     }
 
     @Override
@@ -45,13 +48,13 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
         Log.d(TAG, "onClick");
         switch (v.getId()) {
             case R.id.send:
-                String phno = phoneNumber.getText().toString();
-                String msg = message.getText().toString();
+                String phno = mPhoneNumber.getText().toString();
+                String msg = mMessage.getText().toString();
                 if (phno.length() >= PHONE_NUMBER_MIN_LENGTH && msg.length() > 0) {
-                    SmsSender smsSender = new SmsSender();
-                    smsSender.SendSMS(phno, msg);
+                    SendSMS sendSMS = new SendSMS();
+                    sendSMS.sendSMS(phno, msg, context);
                 } else {
-                    Toast.makeText(getBaseContext(),
+                    Toast.makeText(context,
                             "Please enter both phone number and message.",
                             Toast.LENGTH_SHORT).show();
                 }

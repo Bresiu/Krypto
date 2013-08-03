@@ -117,7 +117,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
 
     private void passwordSet() {
         Intent register = new Intent(this,
-                MainActivity.class);
+                ComposeActivity.class);
         startActivity(register);
         finish();
     }
