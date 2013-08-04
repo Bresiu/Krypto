@@ -1,6 +1,11 @@
 package com.bresiu.krypto;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -18,10 +23,19 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
 
     private static final String TAG = "ComposeActivity";
     private static final int PHONE_NUMBER_MIN_LENGTH = 9;
+    public BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals("SOMEACTION")) {
+                Log.d(TAG, "TO JEST ZYCIE, TO JEST TANIEC!");
+            }
+            context.unregisterReceiver(receiver);
+        }
+    };
+    Context context;
     private EditText mPhoneNumber;
     private EditText mMessage;
-
-    Context context = getApplicationContext();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +48,12 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         ab.setTitle(s);
+        ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f3f4f3")));
         setContentView(R.layout.activity_compose);
         setupWidgets();
+        context = getApplicationContext();
+
+        registerReceiver(receiver, new IntentFilter("SOMEACTION"));
     }
 
     private void setupWidgets() {

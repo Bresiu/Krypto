@@ -17,5 +17,10 @@ public class SmsDeliveredReceiver extends BroadcastReceiver {
                 Log.d(getClass().getSimpleName(), "SMS not delivered");
                 break;
         }
+
+        Intent intent = new Intent();
+        intent.setAction("SOMEACTION");
+        context.sendBroadcast(intent);
     }
+
 }

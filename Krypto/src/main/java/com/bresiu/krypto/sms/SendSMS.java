@@ -9,7 +9,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class SendSMS {
-
+    private static final String TAG = "SendSMS";
     private static final String KRYPTO_TAG = "|";
 
     public void sendSMS(String phoneNumber, String message, Context context) {
@@ -17,7 +17,6 @@ public class SendSMS {
         ArrayList<PendingIntent> deliveredPendingIntents = new ArrayList<PendingIntent>();
         PendingIntent sentPI = PendingIntent.getBroadcast(context, 0,
                 new Intent(context, SmsSentReceiver.class), 0);
-
         PendingIntent deliveredPI = PendingIntent.getBroadcast(context, 0,
                 new Intent(context, SmsDeliveredReceiver.class), 0);
         try {
