@@ -786,10 +786,10 @@ public final class R {
         public static final int abs__bright_foreground_disabled_holo_light = 0x7f050003;
         public static final int abs__bright_foreground_holo_dark = 0x7f050004;
         public static final int abs__bright_foreground_holo_light = 0x7f050005;
-        public static final int abs__primary_text_disable_only_holo_dark = 0x7f05000d;
-        public static final int abs__primary_text_disable_only_holo_light = 0x7f05000e;
-        public static final int abs__primary_text_holo_dark = 0x7f05000f;
-        public static final int abs__primary_text_holo_light = 0x7f050010;
+        public static final int abs__primary_text_disable_only_holo_dark = 0x7f05000f;
+        public static final int abs__primary_text_disable_only_holo_light = 0x7f050010;
+        public static final int abs__primary_text_holo_dark = 0x7f050011;
+        public static final int abs__primary_text_holo_light = 0x7f050012;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml
          */
@@ -799,7 +799,9 @@ public final class R {
         public static final int dark_gray = 0x7f050009;
         public static final int gray = 0x7f05000a;
         public static final int light_blue = 0x7f05000b;
-        public static final int red = 0x7f05000c;
+        public static final int new_blue = 0x7f05000c;
+        public static final int new_white = 0x7f05000d;
+        public static final int red = 0x7f05000e;
     }
 
     public static final class dimen {
@@ -947,8 +949,39 @@ public final class R {
         public static final int abs__textfield_searchview_right_holo_dark = 0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light = 0x7f02006e;
         public static final int abs__toast_frame = 0x7f02006f;
-        public static final int ic_launcher = 0x7f020070;
-        public static final int web_hi_res_512 = 0x7f020071;
+        public static final int d0 = 0x7f020070;
+        public static final int d0_filled = 0x7f020071;
+        public static final int d0s = 0x7f020072;
+        public static final int d1 = 0x7f020073;
+        public static final int d1_filled = 0x7f020074;
+        public static final int d1s = 0x7f020075;
+        public static final int d2 = 0x7f020076;
+        public static final int d2_filled = 0x7f020077;
+        public static final int d2s = 0x7f020078;
+        public static final int d3 = 0x7f020079;
+        public static final int d3_filled = 0x7f02007a;
+        public static final int d3s = 0x7f02007b;
+        public static final int d4 = 0x7f02007c;
+        public static final int d4_filled = 0x7f02007d;
+        public static final int d4s = 0x7f02007e;
+        public static final int d5 = 0x7f02007f;
+        public static final int d5_filled = 0x7f020080;
+        public static final int d5s = 0x7f020081;
+        public static final int d6 = 0x7f020082;
+        public static final int d6_filled = 0x7f020083;
+        public static final int d6s = 0x7f020084;
+        public static final int d7 = 0x7f020085;
+        public static final int d7_filled = 0x7f020086;
+        public static final int d7s = 0x7f020087;
+        public static final int d8 = 0x7f020088;
+        public static final int d8_filled = 0x7f020089;
+        public static final int d8s = 0x7f02008a;
+        public static final int d9 = 0x7f02008b;
+        public static final int d9_filled = 0x7f02008c;
+        public static final int d9s = 0x7f02008d;
+        public static final int gradient_background = 0x7f02008e;
+        public static final int ic_launcher = 0x7f02008f;
+        public static final int web_hi_res_512 = 0x7f020090;
     }
 
     public static final class id {
@@ -995,7 +1028,7 @@ public final class R {
         public static final int abs__textButton = 0x7f060013;
         public static final int abs__title = 0x7f06001b;
         public static final int abs__up = 0x7f06000f;
-        public static final int action_settings = 0x7f060044;
+        public static final int action_settings = 0x7f060045;
         public static final int b0 = 0x7f060040;
         public static final int b1 = 0x7f060037;
         public static final int b2 = 0x7f060038;
@@ -1022,6 +1055,7 @@ public final class R {
         public static final int showHome = 0x7f060004;
         public static final int showTitle = 0x7f060006;
         public static final int tabMode = 0x7f060002;
+        public static final int textView = 0x7f060044;
         public static final int useLogo = 0x7f060003;
         public static final int wrap_content = 0x7f060009;
     }
@@ -1062,6 +1096,7 @@ public final class R {
         public static final int activity_register = 0x7f030017;
         public static final int sherlock_spinner_dropdown_item = 0x7f030018;
         public static final int sherlock_spinner_item = 0x7f030019;
+        public static final int test = 0x7f03001a;
     }
 
     public static final class menu {

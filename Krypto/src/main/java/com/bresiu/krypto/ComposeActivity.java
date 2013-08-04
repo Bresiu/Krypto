@@ -23,17 +23,8 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
 
     private static final String TAG = "ComposeActivity";
     private static final int PHONE_NUMBER_MIN_LENGTH = 9;
-    public BroadcastReceiver receiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (action.equals("SOMEACTION")) {
-                Log.d(TAG, "TO JEST ZYCIE, TO JEST TANIEC!");
-            }
-            context.unregisterReceiver(receiver);
-        }
-    };
-    Context context;
+    private Context context;
+    private BReceiver receiver;
     private EditText mPhoneNumber;
     private EditText mMessage;
 
@@ -51,9 +42,17 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
         ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f3f4f3")));
         setContentView(R.layout.activity_compose);
         setupWidgets();
-        context = getApplicationContext();
 
-        registerReceiver(receiver, new IntentFilter("SOMEACTION"));
+        receiver = new BReceiver();
+        IntentFilter filter = new IntentFilter("SmsDeliveredReceiver");
+        registerReceiver(receiver, filter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy");
+        unregisterReceiver(receiver);
+        super.onDestroy();
     }
 
     private void setupWidgets() {
@@ -68,6 +67,7 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
             case R.id.send:
                 String phno = mPhoneNumber.getText().toString();
                 String msg = mMessage.getText().toString();
+                context = getApplicationContext();
                 if (phno.length() >= PHONE_NUMBER_MIN_LENGTH && msg.length() > 0) {
                     SendSMS sendSMS = new SendSMS();
                     sendSMS.sendSMS(phno, msg, context);
@@ -79,4 +79,16 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
                 break;
         }
     }
+
+    private void showDataFromIntent(Intent intent) {
+        Log.d(TAG, "trololo");
+    }
+
+    private class BReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            showDataFromIntent(intent);
+        }
+    }
+
 }

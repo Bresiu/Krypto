@@ -7,19 +7,24 @@ import android.content.Intent;
 import android.util.Log;
 
 public class SmsDeliveredReceiver extends BroadcastReceiver {
+    private static final String TAG = "ComposeReceiver";
+    private String action = "";
+
     @Override
     public void onReceive(Context context, Intent arg1) {
+        Log.d(TAG, "SmsDeliveredReceiver");
         switch (getResultCode()) {
             case Activity.RESULT_OK:
-                Log.d(getClass().getSimpleName(), "SMS delivered");
+                action = "SMS delivered";
+                Log.d(TAG, "SMS delivered");
                 break;
             case Activity.RESULT_CANCELED:
-                Log.d(getClass().getSimpleName(), "SMS not delivered");
+                action = "SMS not delivered";
+                Log.d(TAG, "SMS not delivered");
                 break;
         }
-
         Intent intent = new Intent();
-        intent.setAction("SOMEACTION");
+        intent.setAction("SmsDeliveredReceiver");
         context.sendBroadcast(intent);
     }
 
