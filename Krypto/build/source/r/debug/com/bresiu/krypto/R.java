@@ -818,10 +818,10 @@ public final class R {
         public static final int abs__bright_foreground_disabled_holo_light = 0x7f060003;
         public static final int abs__bright_foreground_holo_dark = 0x7f060004;
         public static final int abs__bright_foreground_holo_light = 0x7f060005;
-        public static final int abs__primary_text_disable_only_holo_dark = 0x7f060011;
-        public static final int abs__primary_text_disable_only_holo_light = 0x7f060012;
-        public static final int abs__primary_text_holo_dark = 0x7f060013;
-        public static final int abs__primary_text_holo_light = 0x7f060014;
+        public static final int abs__primary_text_disable_only_holo_dark = 0x7f060012;
+        public static final int abs__primary_text_disable_only_holo_light = 0x7f060013;
+        public static final int abs__primary_text_holo_dark = 0x7f060014;
+        public static final int abs__primary_text_holo_light = 0x7f060015;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/colors.xml
          */
@@ -835,7 +835,8 @@ public final class R {
         public static final int new_dark_gray = 0x7f06000d;
         public static final int new_light_gray = 0x7f06000e;
         public static final int new_orange = 0x7f06000f;
-        public static final int red = 0x7f060010;
+        public static final int new_white = 0x7f060010;
+        public static final int red = 0x7f060011;
     }
 
     public static final class dimen {
@@ -983,9 +984,8 @@ public final class R {
         public static final int abs__textfield_searchview_right_holo_dark = 0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light = 0x7f02006e;
         public static final int abs__toast_frame = 0x7f02006f;
-        public static final int gradient_background = 0x7f020070;
-        public static final int ic_launcher = 0x7f020071;
-        public static final int web_hi_res_512 = 0x7f020072;
+        public static final int ic_launcher = 0x7f020070;
+        public static final int web_hi_res_512 = 0x7f020071;
     }
 
     public static final class id {
@@ -1032,30 +1032,35 @@ public final class R {
         public static final int abs__textButton = 0x7f040027;
         public static final int abs__title = 0x7f04002f;
         public static final int abs__up = 0x7f040023;
-        public static final int action_settings = 0x7f04005b;
+        public static final int action_settings = 0x7f040061;
         public static final int app_name = 0x7f04004c;
-        public static final int b0 = 0x7f040057;
-        public static final int b1 = 0x7f04004d;
-        public static final int b2 = 0x7f04004e;
-        public static final int b3 = 0x7f04004f;
-        public static final int b4 = 0x7f040050;
-        public static final int b5 = 0x7f040051;
-        public static final int b6 = 0x7f040052;
-        public static final int b7 = 0x7f040053;
-        public static final int b8 = 0x7f040054;
-        public static final int b9 = 0x7f040055;
-        public static final int back = 0x7f040058;
-        public static final int box = 0x7f040056;
+        public static final int b0 = 0x7f04005f;
+        public static final int b1 = 0x7f040055;
+        public static final int b2 = 0x7f040056;
+        public static final int b3 = 0x7f040057;
+        public static final int b4 = 0x7f040058;
+        public static final int b5 = 0x7f040059;
+        public static final int b6 = 0x7f04005a;
+        public static final int b7 = 0x7f04005b;
+        public static final int b8 = 0x7f04005c;
+        public static final int b9 = 0x7f04005d;
+        public static final int back = 0x7f040060;
+        public static final int box = 0x7f04005e;
         public static final int disableHome = 0x7f04001c;
         public static final int edit_query = 0x7f04003a;
         public static final int homeAsUp = 0x7f040019;
-        public static final int info = 0x7f04005a;
+        public static final int info = 0x7f04004e;
         public static final int listMode = 0x7f040015;
         public static final int logo = 0x7f04004b;
         public static final int message = 0x7f04004a;
         public static final int normal = 0x7f040014;
-        public static final int pass = 0x7f040059;
+        public static final int pass = 0x7f04004f;
         public static final int phoneNumber = 0x7f040047;
+        public static final int prog = 0x7f04004d;
+        public static final int prog1 = 0x7f040051;
+        public static final int prog2 = 0x7f040052;
+        public static final int prog3 = 0x7f040053;
+        public static final int prog4 = 0x7f040054;
         public static final int roboto_black = 0x7f04000a;
         public static final int roboto_black_italic = 0x7f04000b;
         public static final int roboto_bold = 0x7f040008;
@@ -1082,6 +1087,7 @@ public final class R {
         public static final int showHome = 0x7f040018;
         public static final int showTitle = 0x7f04001a;
         public static final int tabMode = 0x7f040016;
+        public static final int tableLayout = 0x7f040050;
         public static final int useLogo = 0x7f040017;
         public static final int wrap_content = 0x7f04001d;
     }

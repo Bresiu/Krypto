@@ -14,5 +14,6 @@
     <color name="new_background">#2e2e2e</color>
     <color name="new_orange">#fb3c08</color>
     <color name="new_light_gray">#6c6c6c</color>
+    <color name="new_white">#fcfcfc</color>
 
 </resources>
