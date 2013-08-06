@@ -52,6 +52,10 @@
     <color name="dark_gray">#434443</color>
     <color name="gray">#989998</color>
     <color name="light_blue">#43bad8</color>
+    <color name="new_background">#2e2e2e</color>
+    <color name="new_dark_gray">#212121</color>
+    <color name="new_light_gray">#6c6c6c</color>
+    <color name="new_orange">#fb3c08</color>
     <color name="red">#bf2f1b</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml -->
     <declare-styleable name="RobotoAutoCompleteTextView">
@@ -589,6 +593,7 @@
     <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="app_name">Krypto</string>
+    <string name="lower_than">&lt;</string>
     <string name="title_activity_login">Login</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">

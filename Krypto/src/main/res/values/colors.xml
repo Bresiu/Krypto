@@ -10,4 +10,9 @@
     <color name="light_blue">#43bad8</color>
     <color name="red">#bf2f1b</color>
 
+    <color name="new_dark_gray">#212121</color>
+    <color name="new_background">#2e2e2e</color>
+    <color name="new_orange">#fb3c08</color>
+    <color name="new_light_gray">#6c6c6c</color>
+
 </resources>
