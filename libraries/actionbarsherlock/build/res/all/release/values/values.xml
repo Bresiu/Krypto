@@ -1,105 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__attrs.xml -->
     <attr name="background" format="reference|color"/>
     <attr name="backgroundSplit" format="reference|color"/>
     <attr name="divider" format="reference"/>
     <attr name="height" format="dimension"/>
     <attr name="subtitleTextStyle" format="reference"/>
     <attr name="titleTextStyle" format="reference"/>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml -->
-    <attr name="typeface" format="enum">
-        <enum name="roboto_thin" value="0"/>
-        <enum name="roboto_thin_italic" value="1"/>
-        <enum name="roboto_light" value="2"/>
-        <enum name="roboto_light_italic" value="3"/>
-        <enum name="roboto_regular" value="4"/>
-        <enum name="roboto_italic" value="5"/>
-        <enum name="roboto_medium" value="6"/>
-        <enum name="roboto_medium_italic" value="7"/>
-        <enum name="roboto_bold" value="8"/>
-        <enum name="roboto_bold_italic" value="9"/>
-        <enum name="roboto_black" value="10"/>
-        <enum name="roboto_black_italic" value="11"/>
-        <enum name="roboto_condensed" value="12"/>
-        <enum name="roboto_condensed_italic" value="13"/>
-        <enum name="roboto_condensed_bold" value="14"/>
-        <enum name="roboto_condensed_bold_italic" value="15"/>
-        <enum name="robotoslab_thin" value="16"/>
-        <enum name="robotoslab_light" value="17"/>
-        <enum name="robotoslab_regular" value="18"/>
-        <enum name="robotoslab_bold" value="19"/>
-    </attr>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__bools.xml -->
     <bool name="abs__action_bar_embed_tabs">false</bool>
     <bool name="abs__action_bar_expanded_action_views_exclusive">true</bool>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__config.xml -->
     <bool name="abs__config_actionMenuItemAllCaps">true</bool>
     <bool name="abs__config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__bools.xml -->
     <bool name="abs__split_action_bar_is_narrow">true</bool>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__colors.xml -->
     <color name="abs__background_holo_dark">#ff000000</color>
     <color name="abs__background_holo_light">#fff3f3f3</color>
     <color name="abs__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
     <color name="abs__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="abs__bright_foreground_holo_dark">@color/abs__background_holo_light</color>
     <color name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</color>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/colors.xml -->
-    <color name="background">#f3f4f3</color>
-    <color name="black">#333332</color>
-    <color name="blue">#2a86ac</color>
-    <color name="dark_gray">#434443</color>
-    <color name="gray">#989998</color>
-    <color name="light_blue">#43bad8</color>
-    <color name="red">#bf2f1b</color>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml -->
-    <declare-styleable name="RobotoAutoCompleteTextView">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoButton">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoCheckBox">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoCheckedTextView">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoChronometer">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoCompoundButton">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoDigitalClock">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoEditText">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoExtractEditText">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoMultiAutoCompleteTextView">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoRadioButton">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoSwitch">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoTextClock">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoTextView">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <declare-styleable name="RobotoToggleButton">
-        <attr name="typeface"/>
-    </declare-styleable>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__attrs.xml -->
     <declare-styleable name="SherlockActionBar">
 
         <!-- The type of navigation to use. -->
@@ -544,7 +469,7 @@
     <declare-styleable name="SherlockView">
         <attr name="android:focusable"/>
     </declare-styleable>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__dimens.xml -->
     <dimen name="abs__action_bar_default_height">48dip</dimen>
     <dimen name="abs__action_bar_icon_vertical_padding">8dip</dimen>
     <dimen name="abs__action_bar_subtitle_bottom_margin">5dip</dimen>
@@ -552,25 +477,24 @@
     <dimen name="abs__action_bar_subtitle_top_margin">-3dp</dimen>
     <dimen name="abs__action_bar_title_text_size">18dp</dimen>
     <dimen name="abs__action_button_min_width">56dip</dimen>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__config.xml -->
     <dimen name="abs__config_prefDialogWidth">320dp</dimen>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__dimens.xml -->
     <dimen name="abs__dropdownitem_icon_width">32dip</dimen>
     <dimen name="abs__dropdownitem_text_padding_left">8dip</dimen>
     <dimen name="abs__dropdownitem_text_padding_right">8dip</dimen>
     <dimen name="abs__search_view_preferred_width">320dip</dimen>
     <dimen name="abs__search_view_text_min_width">160dip</dimen>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/dimens.xml -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__ids.xml -->
     <item name="abs__action_menu_divider" type="id"/>
     <item name="abs__action_menu_presenter" type="id"/>
     <item name="abs__home" type="id"/>
     <item name="abs__progress_circular" type="id"/>
     <item name="abs__progress_horizontal" type="id"/>
     <item name="abs__up" type="id"/>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__dimens.xml -->
     <integer name="abs__max_action_buttons">2</integer>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__strings.xml -->
     <string name="abs__action_bar_home_description">Navigate home</string>
     <string name="abs__action_bar_up_description">Navigate up</string>
     <string name="abs__action_menu_overflow_description">More options</string>
@@ -586,38 +510,22 @@
     <string name="abs__shareactionprovider_share_with_application">Share with
         <ns1:g id="application_name" example="Bluetooth">%s</ns1:g>
     </string>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/strings.xml -->
-    <string name="action_settings">Settings</string>
-    <string name="app_name">Krypto</string>
-    <string name="title_activity_login">Login</string>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/styles.xml -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-    </style>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__styles.xml -->
     <style name="Sherlock.__TextAppearance.Small" parent="Widget">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__themes.xml -->
     <style name="Sherlock.__Theme" parent="android:Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="Sherlock.__Theme.DarkActionBar" parent="Theme.Sherlock.Light"/>
+    <style name="Sherlock.__Theme.DarkActionBar" parent="Theme.Sherlock.Light"></style>
 
     <style name="Sherlock.__Theme.Light" parent="android:Theme.Light.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
     </style>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__styles.xml -->
     <style name="Sherlock.__Widget.ActionBar" parent="Widget">
         <item name="displayOptions">useLogo|showHome|showTitle</item>
         <item name="height">?attr/actionBarSize</item>
@@ -693,13 +601,14 @@
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="TextAppearance.Sherlock.Light.Small" parent="TextAppearance.Sherlock.Small"/>
+    <style name="TextAppearance.Sherlock.Light.Small"
+           parent="TextAppearance.Sherlock.Small"></style>
 
     <style name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large"
-           parent="TextAppearance.Sherlock.Widget.PopupMenu.Large"/>
+           parent="TextAppearance.Sherlock.Widget.PopupMenu.Large"></style>
 
     <style name="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small"
-           parent="TextAppearance.Sherlock.Widget.PopupMenu.Small"/>
+           parent="TextAppearance.Sherlock.Widget.PopupMenu.Small"></style>
 
     <style name="TextAppearance.Sherlock.SearchResult">
         <item name="android:textStyle">normal</item>
@@ -716,7 +625,7 @@
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="TextAppearance.Sherlock.Small" parent="Sherlock.__TextAppearance.Small"/>
+    <style name="TextAppearance.Sherlock.Small" parent="Sherlock.__TextAppearance.Small"></style>
 
     <style name="TextAppearance.Sherlock.Widget.ActionBar.Menu" parent="Widget">
         <item name="android:textSize">12sp</item>
@@ -793,7 +702,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">normal</item>
     </style>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__themes.xml -->
     <style name="Theme.Sherlock" parent="Sherlock.__Theme">
 
         <!-- Action bar styles (from Theme.Holo) -->
@@ -1017,8 +926,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="Widget"/>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/values/abs__styles.xml -->
+    <style name="Widget"></style>
 
     <style name="Widget.Sherlock.ActionBar" parent="Sherlock.__Widget.ActionBar">
         <item name="titleTextStyle">@style/TextAppearance.Sherlock.Widget.ActionBar.Title</item>
@@ -1098,7 +1007,7 @@
     </style>
 
     <style name="Widget.Sherlock.ActivityChooserView"
-           parent="Sherlock.__Widget.ActivityChooserView"/>
+           parent="Sherlock.__Widget.ActivityChooserView"></style>
 
     <style name="Widget.Sherlock.Button.Small" parent="Widget">
         <item name="android:textAppearance">?attr/textAppearanceSmall</item>
@@ -1108,7 +1017,7 @@
     </style>
 
     <style name="Widget.Sherlock.DropDownItem.Spinner"
-           parent="Sherlock.__Widget.Holo.DropDownItem"/>
+           parent="Sherlock.__Widget.Holo.DropDownItem"></style>
 
     <style name="Widget.Sherlock.Light.ActionBar" parent="Widget.Sherlock.ActionBar">
         <item name="titleTextStyle">@style/TextAppearance.Sherlock.Widget.ActionBar.Title</item>
@@ -1152,23 +1061,24 @@
         <item name="itemPadding">8dip</item>
     </style>
 
-    <style name="Widget.Sherlock.Light.ActionBar.TabBar" parent="Widget.Sherlock.ActionBar.TabBar"/>
+    <style name="Widget.Sherlock.Light.ActionBar.TabBar"
+           parent="Widget.Sherlock.ActionBar.TabBar"></style>
 
-    <style name="Widget.Sherlock.Light.ActionBar.TabBar.Inverse"/>
+    <style name="Widget.Sherlock.Light.ActionBar.TabBar.Inverse"></style>
 
     <style name="Widget.Sherlock.Light.ActionBar.TabText"
-           parent="Widget.Sherlock.ActionBar.TabText"/>
+           parent="Widget.Sherlock.ActionBar.TabText"></style>
 
     <style name="Widget.Sherlock.Light.ActionBar.TabText.Inverse">
         <item name="android:textColor">?attr/textColorPrimaryInverse</item>
     </style>
 
     <style name="Widget.Sherlock.Light.ActionBar.TabView"
-           parent="Widget.Sherlock.ActionBar.TabView"/>
+           parent="Widget.Sherlock.ActionBar.TabView"></style>
 
-    <style name="Widget.Sherlock.Light.ActionBar.TabView.Inverse"/>
+    <style name="Widget.Sherlock.Light.ActionBar.TabView.Inverse"></style>
 
-    <style name="Widget.Sherlock.Light.ActionButton" parent="Widget.Sherlock.ActionButton"/>
+    <style name="Widget.Sherlock.Light.ActionButton" parent="Widget.Sherlock.ActionButton"></style>
 
     <style name="Widget.Sherlock.Light.ActionButton.CloseMode">
         <item name="android:background">@drawable/abs__btn_cab_done_holo_light</item>
@@ -1205,7 +1115,7 @@
     </style>
 
     <style name="Widget.Sherlock.Light.DropDownItem.Spinner"
-           parent="Sherlock.__Widget.Holo.DropDownItem"/>
+           parent="Sherlock.__Widget.Holo.DropDownItem"></style>
 
     <style name="Widget.Sherlock.Light.ListPopupWindow" parent="Widget">
         <item name="android:dropDownSelector">@drawable/abs__list_selector_holo_light</item>
@@ -1220,13 +1130,14 @@
         <item name="android:listSelector">@drawable/abs__list_selector_holo_light</item>
     </style>
 
-    <style name="Widget.Sherlock.Light.PopupMenu" parent="Widget.Sherlock.Light.ListPopupWindow"/>
+    <style name="Widget.Sherlock.Light.PopupMenu"
+           parent="Widget.Sherlock.Light.ListPopupWindow"></style>
 
     <style name="Widget.Sherlock.Light.PopupWindow.ActionMode" parent="Widget">
         <item name="android:popupBackground">@android:color/white</item>
     </style>
 
-    <style name="Widget.Sherlock.Light.ProgressBar" parent="Widget.Sherlock.ProgressBar"/>
+    <style name="Widget.Sherlock.Light.ProgressBar" parent="Widget.Sherlock.ProgressBar"></style>
 
     <style name="Widget.Sherlock.Light.ProgressBar.Horizontal"
            parent="Widget.Sherlock.ProgressBar.Horizontal">
@@ -1254,11 +1165,12 @@
         <item name="android:dropDownWidth">wrap_content</item>
     </style>
 
-    <style name="Widget.Sherlock.ListView.DropDown" parent="Sherlock.__Widget.Holo.ListView"/>
+    <style name="Widget.Sherlock.ListView.DropDown"
+           parent="Sherlock.__Widget.Holo.ListView"></style>
 
-    <style name="Widget.Sherlock.PopupMenu" parent="Widget.Sherlock.ListPopupWindow"/>
+    <style name="Widget.Sherlock.PopupMenu" parent="Widget.Sherlock.ListPopupWindow"></style>
 
-    <style name="Widget.Sherlock.PopupWindow.ActionMode" parent="Widget"/>
+    <style name="Widget.Sherlock.PopupWindow.ActionMode" parent="Widget"></style>
 
     <style name="Widget.Sherlock.ProgressBar" parent="android:Widget.ProgressBar">
         <item name="android:indeterminateDrawable">@drawable/abs__progress_medium_holo</item>
