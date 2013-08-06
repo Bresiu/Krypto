@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <output url="file://$MODULE_DIR$/build/classes/debug" />
     <exclude-output />
     <content url="file://$APPLICATION_HOME_DIR$/android-workspace/Krypto">
       <excludeFolder url="file://$APPLICATION_HOME_DIR$/android-workspace/Krypto/.gradle" />
