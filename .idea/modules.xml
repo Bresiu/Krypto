@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Krypto/Krypto.iml" filepath="$PROJECT_DIR$/Krypto/Krypto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Krypto/Krypto-Krypto.iml" filepath="$PROJECT_DIR$/Krypto/Krypto-Krypto.iml" />
       <module fileurl="file://$PROJECT_DIR$/KryptoProject.iml" filepath="$PROJECT_DIR$/KryptoProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/libraries/actionbarsherlock/actionbarsherlock.iml" />
     </modules>

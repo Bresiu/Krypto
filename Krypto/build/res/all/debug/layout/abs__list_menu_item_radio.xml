@@ -22,4 +22,4 @@
     android:focusable="false"
     android:clickable="false"
     android:duplicateParentState="true" />
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__list_menu_item_radio.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__list_menu_item_radio.xml -->
+<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__list_menu_item_radio.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__list_menu_item_radio.xml -->

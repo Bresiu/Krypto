@@ -24,4 +24,4 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/dropdownListPreferredItemHeight"
     android:ellipsize="marquee" />
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout-v14/sherlock_spinner_dropdown_item.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/layout-v14/sherlock_spinner_dropdown_item.xml -->
+<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout-v14/sherlock_spinner_dropdown_item.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/layout-v14/sherlock_spinner_dropdown_item.xml -->

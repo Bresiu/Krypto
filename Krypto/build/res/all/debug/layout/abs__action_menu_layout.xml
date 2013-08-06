@@ -21,4 +21,4 @@
      android:divider="?attr/actionBarDivider"
      android:dividerPadding="12dip"
      android:gravity="center_vertical" />
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__action_menu_layout.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__action_menu_layout.xml -->
+<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__action_menu_layout.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__action_menu_layout.xml -->

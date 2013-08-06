@@ -58,4 +58,4 @@ the Action Bar enabled overlaying application content.
                   android:visibility="gone"
                   android:gravity="center"/>
 </FrameLayout>
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__screen_action_bar_overlay.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__screen_action_bar_overlay.xml -->
+<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__screen_action_bar_overlay.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__screen_action_bar_overlay.xml -->
