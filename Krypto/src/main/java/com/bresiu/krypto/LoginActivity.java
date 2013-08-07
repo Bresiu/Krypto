@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,13 +17,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static final String KEY_STORED = "KeyStored";
     private static final String KEY = "Key";
     private static String password;
+    private static int count;
     private static TextView mPass;
+    private static Button mCancel;
+    private static Button mBack;
     private static LinearLayout mProg;
     private static LinearLayout mProg1;
     private static LinearLayout mProg2;
     private static LinearLayout mProg3;
     private static LinearLayout mProg4;
-    private static int count = 0;
     private static SharedPreferences preferences;
 
     @Override
@@ -40,7 +43,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
     private void setupWidgets() {
+        count = 0;
         mPass = (TextView) findViewById(R.id.pass);
+
+        mBack = (Button) findViewById(R.id.back);
+        mCancel = (Button) findViewById(R.id.cancel);
 
         mProg = (LinearLayout) findViewById(R.id.prog);
         mProg1 = (LinearLayout) findViewById(R.id.prog1);
@@ -51,58 +58,112 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (count == 0) {
-            mPass.setText("");
-            mProg.setBackgroundColor(getResources().getColor(R.color.newest_orange));
-        }
-        mPass.append("*");
         switch (v.getId()) {
             case R.id.b0:
+                count++;
                 password += 0;
                 break;
             case R.id.b1:
+                count++;
                 password += 1;
                 break;
             case R.id.b2:
+                count++;
                 password += 2;
                 break;
             case R.id.b3:
+                count++;
                 password += 3;
                 break;
             case R.id.b4:
+                count++;
                 password += 4;
                 break;
             case R.id.b5:
+                count++;
                 password += 5;
                 break;
             case R.id.b6:
+                count++;
                 password += 6;
                 break;
             case R.id.b7:
+                count++;
                 password += 7;
                 break;
             case R.id.b8:
+                count++;
                 password += 8;
                 break;
             case R.id.b9:
+                count++;
                 password += 9;
                 break;
             case R.id.back:
-
+                if (count > 0) count--;
+                if (password.length() > 0) password = password.substring(0, password.length() - 1);
                 break;
             case R.id.cancel:
-
+                count = 0;
                 break;
         }
-        count++;
-        if (count == 4) {
-            if (password.equals(preferences.getString(KEY, ""))) {
-                loginComplete();
-            } else {
-                mPass.setText("Incorect Password");
+        showProg();
+        Log.d(TAG, password);
+    }
+
+    //TODO: back and cancel setEnabled(true|false)
+    private void showProg() {
+        switch (count) {
+            case 0:
                 password = "";
-                count = 0;
-            }
+                mPass.setText("");
+                mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                break;
+            case 1:
+                mPass.setText("*");
+                mProg1.setBackgroundColor(getResources().getColor(R.color.newest_green));
+                mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                break;
+
+            case 2:
+                mPass.setText("**");
+                mProg1.setBackgroundColor(getResources().getColor(R.color.newest_green));
+                mProg2.setBackgroundColor(getResources().getColor(R.color.newest_yellow));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                break;
+            case 3:
+                mPass.setText("***");
+                mProg1.setBackgroundColor(getResources().getColor(R.color.newest_green));
+                mProg2.setBackgroundColor(getResources().getColor(R.color.newest_yellow));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.newest_purple));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                break;
+            case 4:
+                if (password.equals(preferences.getString(KEY, ""))) {
+                    mPass.setText("PIN correct");
+                    password = "";
+                    count = 0;
+                    mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
+                    mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
+                    mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
+                    mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+                    loginComplete();
+                } else {
+                    password = "";
+                    count = 0;
+                    mPass.setText("Incorect PIN, try again");
+                    mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                    mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                    mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                    mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                }
+                break;
         }
     }
 
