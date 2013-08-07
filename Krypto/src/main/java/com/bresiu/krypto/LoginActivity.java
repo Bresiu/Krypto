@@ -16,6 +16,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
     private static final String KEY = "Key";
+    private static boolean isFirstAttempt;
+    private static String passFirstAttempt;
     private static String password;
     private static int count;
     private static TextView mPass;
@@ -27,33 +29,44 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static LinearLayout mProg3;
     private static LinearLayout mProg4;
     private static SharedPreferences preferences;
+    private SharedPreferences.Editor preferencesEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
+        preferencesEditor = preferences.edit();
+
         if (restoreData()) {
             setContentView(R.layout.activity_login);
             setupWidgets();
-            password = "";
+            initVars();
         } else {
             toRegister();
         }
     }
 
+    private void initVars() {
+        password = "";
+        count = 0;
+        isFirstAttempt = true;
+        passFirstAttempt = "";
+        password = "";
+    }
+
     private void setupWidgets() {
         count = 0;
         mPass = (TextView) findViewById(R.id.pass);
-
         mBack = (Button) findViewById(R.id.back);
         mCancel = (Button) findViewById(R.id.cancel);
-
         mProg = (LinearLayout) findViewById(R.id.prog);
         mProg1 = (LinearLayout) findViewById(R.id.prog1);
         mProg2 = (LinearLayout) findViewById(R.id.prog2);
         mProg3 = (LinearLayout) findViewById(R.id.prog3);
         mProg4 = (LinearLayout) findViewById(R.id.prog4);
+        mBack.setEnabled(false);
+        mCancel.setEnabled(false);
     }
 
     @Override
@@ -111,7 +124,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         Log.d(TAG, password);
     }
 
-    //TODO: back and cancel setEnabled(true|false)
     private void showProg() {
         switch (count) {
             case 0:
@@ -121,6 +133,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                 mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                 mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mBack.setEnabled(false);
+                mCancel.setEnabled(false);
                 break;
             case 1:
                 mPass.setText("*");
@@ -128,6 +142,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                 mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                 mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                mBack.setEnabled(true);
+                mCancel.setEnabled(true);
                 break;
 
             case 2:
@@ -147,6 +163,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case 4:
                 if (password.equals(preferences.getString(KEY, ""))) {
                     mPass.setText("PIN correct");
+                    //TODO
                     password = "";
                     count = 0;
                     mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
@@ -171,17 +188,17 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         return preferences.getBoolean(KEY_STORED, false);
     }
 
+    private void saveData() {
+        preferencesEditor.putBoolean(KEY_STORED, true);
+        preferencesEditor.putString(KEY, password);
+        preferencesEditor.commit();
+        loginComplete();
+    }
+
     private void loginComplete() {
         Intent login = new Intent(this,
                 ComposeActivity.class);
         startActivity(login);
-        finish();
-    }
-
-    private void toRegister() {
-        Intent register = new Intent(this,
-                RegisterActivity.class);
-        startActivity(register);
         finish();
     }
 }

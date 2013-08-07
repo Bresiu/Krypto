@@ -14,12 +14,10 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
     private static final String KEY = "Key";
-
     private static boolean isFirstAttempt = true;
     private static String passFirstAttempt;
     private static String password;
     private int count;
-
     private TextView Pass;
     private SharedPreferences preferences;
     private SharedPreferences.Editor preferencesEditor;

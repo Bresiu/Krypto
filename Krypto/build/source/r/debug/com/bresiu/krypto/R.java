@@ -838,9 +838,9 @@ public final class R {
         public static final int new_white = 0x7f060010;
         public static final int newest_black = 0x7f060011;
         public static final int newest_first_base = 0x7f060012;
-        public static final int newest_font = 0x7f060013;
-        public static final int newest_gray = 0x7f060014;
-        public static final int newest_green = 0x7f060015;
+        public static final int newest_gray = 0x7f060013;
+        public static final int newest_green = 0x7f060014;
+        public static final int newest_light_gray = 0x7f060015;
         public static final int newest_orange = 0x7f060016;
         public static final int newest_purple = 0x7f060017;
         public static final int newest_second_base = 0x7f060018;
@@ -875,7 +875,6 @@ public final class R {
         public static final int abs__search_view_text_min_width = 0x7f07000c;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/dimens.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values-sw720dp-land/dimens.xml
          */
         public static final int activity_horizontal_margin = 0x7f07000d;
         public static final int activity_vertical_margin = 0x7f07000e;
@@ -994,8 +993,9 @@ public final class R {
         public static final int abs__textfield_searchview_right_holo_dark = 0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light = 0x7f02006e;
         public static final int abs__toast_frame = 0x7f02006f;
-        public static final int ic_launcher = 0x7f020070;
-        public static final int web_hi_res_512 = 0x7f020071;
+        public static final int button = 0x7f020070;
+        public static final int ic_launcher = 0x7f020071;
+        public static final int web_hi_res_512 = 0x7f020072;
     }
 
     public static final class id {

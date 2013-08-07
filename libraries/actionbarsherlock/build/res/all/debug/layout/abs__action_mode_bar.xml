@@ -17,9 +17,9 @@
 */
 -->
 <com.actionbarsherlock.internal.widget.ActionBarContextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        style="?attr/actionModeStyle"/>
-        <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__action_mode_bar.xml -->
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:visibility="gone"
+     style="?attr/actionModeStyle" />
+<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__action_mode_bar.xml -->

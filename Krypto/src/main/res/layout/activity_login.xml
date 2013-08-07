@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:background="@color/newest_first_base"
                 tools:context=".LoginActivity">
 
@@ -49,7 +49,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     app:typeface="roboto_condensed"
                     android:text="Enter Your PIN:"
-                    android:textColor="@color/newest_font"
+                    android:textColor="@color/newest_light_gray"
                     android:id="@+id/info"/>
 
             <com.bresiu.krypto.utils.widget.RobotoTextView
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     app:typeface="roboto_condensed"
-                    android:textColor="@color/newest_font"
+                    android:textColor="@color/newest_white"
                     android:id="@+id/pass"/>
 
         </LinearLayout>
@@ -72,7 +72,7 @@
             android:id="@+id/prog"
             android:background="@color/newest_orange">
 
-    <LinearLayout
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="2dp"
                 android:layout_weight="1"
@@ -114,36 +114,38 @@
 
         <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="wrap_content">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b1"
                     android:text="1"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
-
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b2"
                     android:text="2"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b3"
                     android:text="3"/>
         </TableRow>
@@ -155,36 +157,38 @@
 
         <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="wrap_content">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b4"
                     android:text="4"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
-
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b5"
                     android:text="5"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b6"
                     android:text="6"/>
         </TableRow>
@@ -196,36 +200,38 @@
 
         <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="wrap_content">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b7"
                     android:text="7"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
-
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b8"
                     android:text="8"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b9"
                     android:text="9"/>
         </TableRow>
@@ -237,36 +243,38 @@
 
         <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="wrap_content">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/blue"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/cancel"
                     android:text="c"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
-
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/newest_orange"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/b0"
                     android:text="0"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:height="0px"
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
                     android:textColor="@color/blue"
-                    android:background="@color/newest_second_base"
+                    android:background="@drawable/button"
                     android:id="@+id/back"
                     android:text="@string/lower_than"/>
         </TableRow>
