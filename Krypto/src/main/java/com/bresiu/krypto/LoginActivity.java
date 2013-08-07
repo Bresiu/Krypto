@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
@@ -14,12 +15,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
     private static final String KEY = "Key";
-
     private static String password;
-    private int count = 0;
-
-    private TextView Pass;
-    private SharedPreferences preferences;
+    private static TextView mPass;
+    private static LinearLayout mProg;
+    private static LinearLayout mProg1;
+    private static LinearLayout mProg2;
+    private static LinearLayout mProg3;
+    private static LinearLayout mProg4;
+    private static int count = 0;
+    private static SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +40,22 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
     private void setupWidgets() {
-        Pass = (TextView) findViewById(R.id.pass);
+        mPass = (TextView) findViewById(R.id.pass);
+
+        mProg = (LinearLayout) findViewById(R.id.prog);
+        mProg1 = (LinearLayout) findViewById(R.id.prog1);
+        mProg2 = (LinearLayout) findViewById(R.id.prog2);
+        mProg3 = (LinearLayout) findViewById(R.id.prog3);
+        mProg4 = (LinearLayout) findViewById(R.id.prog4);
     }
 
     @Override
     public void onClick(View v) {
-        if (count == 0) Pass.setText("");
-        Pass.append("*");
+        if (count == 0) {
+            mPass.setText("");
+            mProg.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+        }
+        mPass.append("*");
         switch (v.getId()) {
             case R.id.b0:
                 password += 0;
@@ -74,14 +87,19 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case R.id.b9:
                 password += 9;
                 break;
+            case R.id.back:
+
+                break;
+            case R.id.cancel:
+
+                break;
         }
         count++;
-
         if (count == 4) {
             if (password.equals(preferences.getString(KEY, ""))) {
                 loginComplete();
             } else {
-                Pass.setText("Incorect Password");
+                mPass.setText("Incorect Password");
                 password = "";
                 count = 0;
             }

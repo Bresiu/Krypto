@@ -818,10 +818,10 @@ public final class R {
         public static final int abs__bright_foreground_disabled_holo_light = 0x7f060003;
         public static final int abs__bright_foreground_holo_dark = 0x7f060004;
         public static final int abs__bright_foreground_holo_light = 0x7f060005;
-        public static final int abs__primary_text_disable_only_holo_dark = 0x7f060012;
-        public static final int abs__primary_text_disable_only_holo_light = 0x7f060013;
-        public static final int abs__primary_text_holo_dark = 0x7f060014;
-        public static final int abs__primary_text_holo_light = 0x7f060015;
+        public static final int abs__primary_text_disable_only_holo_dark = 0x7f06001c;
+        public static final int abs__primary_text_disable_only_holo_light = 0x7f06001d;
+        public static final int abs__primary_text_holo_dark = 0x7f06001e;
+        public static final int abs__primary_text_holo_light = 0x7f06001f;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/colors.xml
          */
@@ -836,7 +836,17 @@ public final class R {
         public static final int new_light_gray = 0x7f06000e;
         public static final int new_orange = 0x7f06000f;
         public static final int new_white = 0x7f060010;
-        public static final int red = 0x7f060011;
+        public static final int newest_black = 0x7f060011;
+        public static final int newest_first_base = 0x7f060012;
+        public static final int newest_font = 0x7f060013;
+        public static final int newest_gray = 0x7f060014;
+        public static final int newest_green = 0x7f060015;
+        public static final int newest_orange = 0x7f060016;
+        public static final int newest_purple = 0x7f060017;
+        public static final int newest_second_base = 0x7f060018;
+        public static final int newest_white = 0x7f060019;
+        public static final int newest_yellow = 0x7f06001a;
+        public static final int red = 0x7f06001b;
     }
 
     public static final class dimen {
@@ -1045,7 +1055,7 @@ public final class R {
         public static final int b8 = 0x7f04005c;
         public static final int b9 = 0x7f04005d;
         public static final int back = 0x7f040060;
-        public static final int box = 0x7f04005e;
+        public static final int cancel = 0x7f04005e;
         public static final int disableHome = 0x7f04001c;
         public static final int edit_query = 0x7f04003a;
         public static final int homeAsUp = 0x7f040019;

@@ -3,7 +3,7 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/new_background"
+                android:background="@color/newest_first_base"
                 tools:context=".LoginActivity">
 
     <!--Move logo and app name to action bar?-->
@@ -24,7 +24,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             app:typeface="roboto_thin"
             android:text="@string/app_name"
-            android:textColor="@color/new_white"
+            android:textColor="@color/newest_white"
             android:id="@+id/app_name"/>
 
     <RelativeLayout
@@ -34,26 +34,33 @@
             android:layout_above="@+id/prog"
             android:layout_below="@+id/logo">
 
-        <com.bresiu.krypto.utils.widget.RobotoTextView
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|center_vertical"
                 android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                app:typeface="roboto_condensed"
-                android:text="Enter Your PIN:"
-                android:textColor="@color/blue"
-                android:id="@+id/info"/>
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true">
 
-        <com.bresiu.krypto.utils.widget.RobotoTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/info"
-                android:layout_centerHorizontal="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                app:typeface="roboto_condensed"
-                android:textColor="@color/blue"
-                android:id="@+id/pass"/>
+            <com.bresiu.krypto.utils.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:typeface="roboto_condensed"
+                    android:text="Enter Your PIN:"
+                    android:textColor="@color/newest_font"
+                    android:id="@+id/info"/>
+
+            <com.bresiu.krypto.utils.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:typeface="roboto_condensed"
+                    android:textColor="@color/newest_font"
+                    android:id="@+id/pass"/>
+
+        </LinearLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -63,9 +70,9 @@
             android:layout_alignParentLeft="true"
             android:orientation="horizontal"
             android:id="@+id/prog"
-            android:background="@color/new_orange">
+            android:background="@color/newest_orange">
 
-        <LinearLayout
+    <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="2dp"
                 android:layout_weight="1"
@@ -105,7 +112,7 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/tableLayout">
 
-    <TableRow
+        <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -114,8 +121,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b1"
                     android:text="1"/>
 
@@ -125,8 +132,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b2"
                     android:text="2"/>
 
@@ -135,15 +142,15 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b3"
                     android:text="3"/>
         </TableRow>
 
         <LinearLayout
                 android:layout_height="1dp"
-                android:background="@color/new_light_gray">
+                android:background="@color/newest_black">
         </LinearLayout>
 
         <TableRow
@@ -155,8 +162,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b4"
                     android:text="4"/>
 
@@ -166,8 +173,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b5"
                     android:text="5"/>
 
@@ -176,15 +183,15 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b6"
                     android:text="6"/>
         </TableRow>
 
         <LinearLayout
                 android:layout_height="1dp"
-                android:background="@color/new_light_gray">
+                android:background="@color/newest_black">
         </LinearLayout>
 
         <TableRow
@@ -196,8 +203,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b7"
                     android:text="7"/>
 
@@ -207,8 +214,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b8"
                     android:text="8"/>
 
@@ -217,15 +224,15 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b9"
                     android:text="9"/>
         </TableRow>
 
         <LinearLayout
                 android:layout_height="1dp"
-                android:background="@color/new_light_gray">
+                android:background="@color/newest_black">
         </LinearLayout>
 
         <TableRow
@@ -234,11 +241,13 @@
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
-                    android:id="@+id/box"/>
+                    android:textColor="@color/blue"
+                    android:background="@color/newest_second_base"
+                    android:id="@+id/cancel"
+                    android:text="c"/>
 
             <com.bresiu.krypto.utils.widget.RobotoButton
 
@@ -246,8 +255,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/newest_orange"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/b0"
                     android:text="0"/>
 
@@ -256,8 +265,8 @@
                     android:onClick="onClick"
                     android:textSize="40sp"
                     app:typeface="roboto_light"
-                    android:textColor="@color/new_orange"
-                    android:background="@color/new_dark_gray"
+                    android:textColor="@color/blue"
+                    android:background="@color/newest_second_base"
                     android:id="@+id/back"
                     android:text="@string/lower_than"/>
         </TableRow>

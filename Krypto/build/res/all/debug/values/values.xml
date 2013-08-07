@@ -57,6 +57,16 @@
     <color name="new_light_gray">#6c6c6c</color>
     <color name="new_orange">#fb3c08</color>
     <color name="new_white">#fcfcfc</color>
+    <color name="newest_black">#272a2f</color>
+    <color name="newest_first_base">#4d5967</color>
+    <color name="newest_font">#a9acb1</color>
+    <color name="newest_gray">#656c76</color>
+    <color name="newest_green">#3be4bd</color>
+    <color name="newest_orange">#e06c6f</color>
+    <color name="newest_purple">#cb96ee</color>
+    <color name="newest_second_base">#3f4752</color>
+    <color name="newest_white">#fdfdfd</color>
+    <color name="newest_yellow">#ffc67d</color>
     <color name="red">#bf2f1b</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml -->
     <declare-styleable name="RobotoAutoCompleteTextView">
