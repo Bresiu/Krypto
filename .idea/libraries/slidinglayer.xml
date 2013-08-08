@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="slidinglayer">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/libraries/actionbarsherlock/libs/slidinglayer" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

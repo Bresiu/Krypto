@@ -4,7 +4,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@color/newest_first_base"
-                tools:context=".LoginActivity">
+                tools:context=".LoginActivity"
+                android:id="@+id/bottom">
 
     <!--Move logo and app name to action bar?-->
     <ImageView
@@ -31,7 +32,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_centerHorizontal="true"
-            android:layout_above="@+id/prog"
+            android:id="@+id/relative"
+            android:layout_above="@+id/tableLayout"
             android:layout_below="@+id/logo">
 
         <LinearLayout
@@ -60,51 +62,50 @@
                     app:typeface="roboto_condensed"
                     android:textColor="@color/newest_white"
                     android:id="@+id/pass"/>
+        </LinearLayout>
 
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:id="@+id/prog"
+                android:background="@color/newest_orange">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/prog1">
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/prog2">
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/prog3">
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/prog4">
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-
-    <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/tableLayout"
-            android:layout_alignParentLeft="true"
-            android:orientation="horizontal"
-            android:id="@+id/prog"
-            android:background="@color/newest_orange">
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:id="@+id/prog1">
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:id="@+id/prog2">
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:id="@+id/prog3">
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:id="@+id/prog4">
-        </LinearLayout>
-    </LinearLayout>
 
     <TableLayout
             android:layout_width="fill_parent"
@@ -281,4 +282,29 @@
         </TableRow>
     </TableLayout>
 
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/splash"
+            android:background="@color/transparent"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+        <com.bresiu.krypto.utils.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_centerVertical="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:typeface="roboto_thin"
+                android:text="Welcome in Krypto!
+
+You are here for the first time.
+In a moment, you enter your PIN,
+which will allow you to login to Krypto.
+Remember it and do not transfer to third parties.
+If you forget it, you will not be able
+to read your encrypted text messages, so be carefully!"
+                android:textColor="@color/newest_white"/>
+    </RelativeLayout>
 </RelativeLayout>

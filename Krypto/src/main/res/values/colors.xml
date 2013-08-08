@@ -29,5 +29,6 @@
     <color name="newest_green">#3be4bd</color>
     <color name="newest_purple">#cb96ee</color>
     <color name="newest_yellow">#ffc67d</color>
+    <color name="transparent">#7f000000</color>
 
 </resources>

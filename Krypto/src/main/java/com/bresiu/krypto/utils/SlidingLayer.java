@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 
-package com.bresiu.krypto.utils.slidinglayer;
+package com.bresiu.krypto.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -50,8 +50,6 @@ import java.lang.reflect.Method;
 import java.util.Random;
 
 public class SlidingLayer extends FrameLayout {
-
-    // TODO Document
 
     /**
      * Default value for the position of the layer. STICK_TO_AUTO shall inspect the container and choose a stick
@@ -216,7 +214,7 @@ public class SlidingLayer extends FrameLayout {
     }
 
     public void openLayer(boolean smoothAnim) {
-        openLayer(smoothAnim, false);
+        openLayer(smoothAnim, true);
     }
 
     private void openLayer(boolean smoothAnim, boolean forceOpen) {

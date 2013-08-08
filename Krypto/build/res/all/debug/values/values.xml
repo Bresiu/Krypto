@@ -68,6 +68,7 @@
     <color name="newest_white">#fdfdfd</color>
     <color name="newest_yellow">#ffc67d</color>
     <color name="red">#bf2f1b</color>
+    <color name="transparent">#7f000000</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml -->
     <declare-styleable name="RobotoAutoCompleteTextView">
         <attr name="typeface"/>
@@ -1052,7 +1053,17 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles.xml -->
+    <style name="Theme.Transparent" parent="android:Theme">
 
+        <!-- <item name="android:windowIsTranslucent">true</item> -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Widget"/>
 
     <style name="Widget.Sherlock.ActionBar" parent="Sherlock.__Widget.ActionBar">

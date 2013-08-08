@@ -8,9 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
-
-import com.bresiu.krypto.utils.slidinglayer.SlidingLayer;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
 
@@ -18,10 +18,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
     private static final String KEY = "Key";
+    private static boolean noKey;
     private static boolean isFirstAttempt;
     private static String passFirstAttempt;
     private static String password;
     private static int count;
+    private static TextView mInfo;
     private static TextView mPass;
     private static Button mCancel;
     private static Button mBack;
@@ -30,9 +32,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static LinearLayout mProg2;
     private static LinearLayout mProg3;
     private static LinearLayout mProg4;
-    private static SlidingLayer slidingLayer;
+    private static RelativeLayout mRelative;
+    private static RelativeLayout mSplash;
+    private static TableLayout mTable;
     private static SharedPreferences preferences;
-    private SharedPreferences.Editor preferencesEditor;
+    private static SharedPreferences.Editor preferencesEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,25 +44,31 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
-        if (restoreData()) {
-            setContentView(R.layout.activity_login);
-            setupWidgets();
-            initVars();
-        } else {
-            //toRegister();
-        }
+        setContentView(R.layout.activity_login);
+        setupWidgets();
+        if (!restoreData()) {
+            //TODO font builder with html black roboto etc...
+            mTable.setVisibility(View.INVISIBLE);
+            mRelative.setVisibility(View.INVISIBLE);
+            mSplash.setVisibility(View.VISIBLE);
+            mInfo.setText("[1] Enter Your PIN:");
+            noKey = true;
+            isFirstAttempt = true;
+            passFirstAttempt = "";
+        } else noKey = false;
+        initVars();
     }
 
     private void initVars() {
         password = "";
         count = 0;
-        isFirstAttempt = true;
-        passFirstAttempt = "";
-        password = "";
     }
 
     private void setupWidgets() {
-        count = 0;
+        mTable = (TableLayout) findViewById(R.id.tableLayout);
+        mSplash = (RelativeLayout) findViewById(R.id.splash);
+        mRelative = (RelativeLayout) findViewById(R.id.relative);
+        mInfo = (TextView) findViewById(R.id.info);
         mPass = (TextView) findViewById(R.id.pass);
         mBack = (Button) findViewById(R.id.back);
         mCancel = (Button) findViewById(R.id.cancel);
@@ -121,9 +131,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case R.id.cancel:
                 count = 0;
                 break;
+            case R.id.splash:
+                mTable.setVisibility(View.VISIBLE);
+                mRelative.setVisibility(View.VISIBLE);
+                mSplash.setVisibility(View.INVISIBLE);
+                break;
         }
         showProg();
-        Log.d(TAG, password);
     }
 
     private void showProg() {
@@ -163,26 +177,62 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                 break;
             case 4:
-                if (password.equals(preferences.getString(KEY, ""))) {
-                    mPass.setText("PIN correct");
-                    //TODO
-                    password = "";
-                    count = 0;
-                    mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
-                    mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
-                    mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
-                    mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
-                    loginComplete();
+                if (noKey) {
+                    if (isFirstAttempt) {
+                        mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mPass.setText("");
+                        passFirstAttempt = password;
+                        isFirstAttempt = false;
+                        initVars();
+                        mInfo.setText("Enter Your PIN again:");
+                    } else {
+                        if (password.equals(passFirstAttempt)) {
+                            mInfo.setText("PIN set succesfully!\nLogging in...");
+                            password = "";
+                            count = 0;
+                            mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
+                            mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
+                            mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
+                            mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+                            saveData();
+                        } else {
+                            mInfo.setText("PINS do not match.\nTry again...");
+                            mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                            mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                            mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                            mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                            mPass.setText("");
+                            isFirstAttempt = true;
+                            passFirstAttempt = "";
+                            initVars();
+                        }
+                    }
                 } else {
-                    password = "";
-                    count = 0;
-                    mPass.setText("Incorect PIN, try again");
-                    mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
-                    mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
-                    mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
-                    mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                    if (password.equals(preferences.getString(KEY, ""))) {
+                        mInfo.setText("PIN correct");
+                        mPass.setText("");
+                        password = "";
+                        count = 0;
+                        mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
+                        mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
+                        mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
+                        mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+                        loginComplete();
+                    } else {
+                        password = "";
+                        count = 0;
+                        mInfo.setText("Incorect PIN, try again");
+                        mPass.setText("");
+                        mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                        mProg4.setBackgroundColor(getResources().getColor(R.color.newest_orange));
+                    }
+                    break;
                 }
-                break;
         }
     }
 
