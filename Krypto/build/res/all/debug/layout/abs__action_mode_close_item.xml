@@ -14,7 +14,8 @@
      limitations under the License.
 -->
 
-<com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/abs__action_mode_close_button"
         android:focusable="true"
         android:clickable="true"
@@ -23,10 +24,12 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_marginRight="16dip">
-    <ImageView android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_gravity="center"
-               android:scaleType="fitCenter"
-               android:src="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="?attr/actionModeCloseDrawable"/>
 </com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout>
-<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__action_mode_close_item.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__action_mode_close_item.xml -->
+        <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__action_mode_close_item.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/layout/abs__action_mode_close_item.xml -->

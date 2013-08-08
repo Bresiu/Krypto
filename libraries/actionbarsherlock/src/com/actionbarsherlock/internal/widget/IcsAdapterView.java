@@ -36,11 +36,11 @@ import android.widget.ListView;
 
 /**
  * An AdapterView is a view whose children are determined by an {@link Adapter}.
- *
+ * <p/>
  * <p>
  * See {@link ListView}, {@link GridView}, {@link Spinner} and
- *      {@link Gallery} for commonly used subclasses of AdapterView.
- *
+ * {@link Gallery} for commonly used subclasses of AdapterView.
+ * <p/>
  * <div class="special reference">
  * <h3>Developer Guides</h3>
  * <p>For more information about using AdapterView, read the
@@ -248,7 +248,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
 
     /**
      * @return The callback to be invoked with an item in this AdapterView has
-     *         been clicked, or null id no callback has been set.
+     * been clicked, or null id no callback has been set.
      */
     public final OnItemClickListener getOnItemClickListener() {
         return mOnItemClickListener;
@@ -257,11 +257,11 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
     /**
      * Call the OnItemClickListener, if it is defined.
      *
-     * @param view The view within the AdapterView that was clicked.
+     * @param view     The view within the AdapterView that was clicked.
      * @param position The position of the view in the adapter.
-     * @param id The row id of the item that was clicked.
+     * @param id       The row id of the item that was clicked.
      * @return True if there was an assigned OnItemClickListener that was
-     *         called, false otherwise is returned.
+     * called, false otherwise is returned.
      */
     public boolean performItemClick(View view, int position, long id) {
         if (mOnItemClickListener != null) {
@@ -284,15 +284,14 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
         /**
          * Callback method to be invoked when an item in this view has been
          * clicked and held.
-         *
+         * <p/>
          * Implementers can call getItemAtPosition(position) if they need to access
          * the data associated with the selected item.
          *
-         * @param parent The AbsListView where the click happened
-         * @param view The view within the AbsListView that was clicked
+         * @param parent   The AbsListView where the click happened
+         * @param view     The view within the AbsListView that was clicked
          * @param position The position of the view in the list
-         * @param id The row id of the item that was clicked
-         *
+         * @param id       The row id of the item that was clicked
          * @return true if the callback consumed the long click, false otherwise
          */
         boolean onItemLongClick(IcsAdapterView<?> parent, View view, int position, long id);
@@ -314,7 +313,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
 
     /**
      * @return The callback to be invoked with an item in this AdapterView has
-     *         been clicked and held, or null id no callback as been set.
+     * been clicked and held, or null id no callback as been set.
      */
     public final OnItemLongClickListener getOnItemLongClickListener() {
         return mOnItemLongClickListener;
@@ -330,14 +329,14 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
          * selected. This callback is invoked only when the newly selected
          * position is different from the previously selected position or if
          * there was no selected item.</p>
-         *
+         * <p/>
          * Impelmenters can call getItemAtPosition(position) if they need to access the
          * data associated with the selected item.
          *
-         * @param parent The AdapterView where the selection happened
-         * @param view The view within the AdapterView that was clicked
+         * @param parent   The AdapterView where the selection happened
+         * @param view     The view within the AdapterView that was clicked
          * @param position The position of the view in the adapter
-         * @param id The row id of the item that is selected
+         * @param id       The row id of the item that is selected
          */
         void onItemSelected(IcsAdapterView<?> parent, View view, int position, long id);
 
@@ -370,7 +369,6 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * Extra menu information provided to the
      * {@link android.view.View.OnCreateContextMenuListener#onCreateContextMenu(ContextMenu, View, ContextMenuInfo) }
      * callback when a context menu is brought up for this AdapterView.
-     *
      */
     public static class AdapterContextMenuInfo implements ContextMenu.ContextMenuInfo {
 
@@ -417,7 +415,6 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * This method is not supported and throws an UnsupportedOperationException when called.
      *
      * @param child Ignored.
-     *
      * @throws UnsupportedOperationException Every time this method is invoked.
      */
     @Override
@@ -430,7 +427,6 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      *
      * @param child Ignored.
      * @param index Ignored.
-     *
      * @throws UnsupportedOperationException Every time this method is invoked.
      */
     @Override
@@ -441,9 +437,8 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
     /**
      * This method is not supported and throws an UnsupportedOperationException when called.
      *
-     * @param child Ignored.
+     * @param child  Ignored.
      * @param params Ignored.
-     *
      * @throws UnsupportedOperationException Every time this method is invoked.
      */
     @Override
@@ -455,10 +450,9 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
     /**
      * This method is not supported and throws an UnsupportedOperationException when called.
      *
-     * @param child Ignored.
-     * @param index Ignored.
+     * @param child  Ignored.
+     * @param index  Ignored.
      * @param params Ignored.
-     *
      * @throws UnsupportedOperationException Every time this method is invoked.
      */
     @Override
@@ -471,7 +465,6 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * This method is not supported and throws an UnsupportedOperationException when called.
      *
      * @param child Ignored.
-     *
      * @throws UnsupportedOperationException Every time this method is invoked.
      */
     @Override
@@ -483,7 +476,6 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * This method is not supported and throws an UnsupportedOperationException when called.
      *
      * @param index Ignored.
-     *
      * @throws UnsupportedOperationException Every time this method is invoked.
      */
     @Override
@@ -547,8 +539,8 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
 
     /**
      * @return The number of items owned by the Adapter associated with this
-     *         AdapterView. (This is the number of data items, which may be
-     *         larger than the number of visible views.)
+     * AdapterView. (This is the number of data items, which may be
+     * larger than the number of visible views.)
      */
     @ViewDebug.CapturedViewProperty
     public int getCount() {
@@ -560,9 +552,9 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * or a descendant of an adapter item.
      *
      * @param view an adapter item, or a descendant of an adapter item. This must be visible in this
-     *        AdapterView at the time of the call.
+     *             AdapterView at the time of the call.
      * @return the position within the adapter's data set of the view, or {@link #INVALID_POSITION}
-     *         if the view does not correspond to a list item (or it is not currently visible).
+     * if the view does not correspond to a list item (or it is not currently visible).
      */
     public int getPositionForView(View view) {
         View listItem = view;
@@ -918,7 +910,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
         if (adapter != null) {
             final int itemCount = adapter.getCount();
             return itemCount > 0
-                && (getFirstVisiblePosition() > 0 || getLastVisiblePosition() < itemCount - 1);
+                    && (getFirstVisiblePosition() > 0 || getLastVisiblePosition() < itemCount - 1);
         }
         return false;
     }
@@ -1005,7 +997,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * 2) we run out of time, or 3) we have looked at every position
      *
      * @return Position of the row that matches mSyncRowId, or {@link #INVALID_POSITION} if it can't
-     *         be found
+     * be found
      */
     int findSyncPosition() {
         int count = mItemCount;
@@ -1092,7 +1084,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
      * @param position The starting position to look at.
      * @param lookDown Whether to look down for other positions.
      * @return The next selectable position starting at position and then searching either up or
-     *         down. Returns {@link #INVALID_POSITION} if nothing can be found.
+     * down. Returns {@link #INVALID_POSITION} if nothing can be found.
      */
     int lookForSelectablePosition(int position, boolean lookDown) {
         return position;
@@ -1100,6 +1092,7 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
 
     /**
      * Utility to keep mSelectedPosition and mSelectedRowId in sync
+     *
      * @param position Our current position
      */
     void setSelectedPositionInt(int position) {
@@ -1109,8 +1102,9 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
 
     /**
      * Utility to keep mNextSelectedPosition and mNextSelectedRowId in sync
+     *
      * @param position Intended value for mSelectedPosition the next time we go
-     * through layout
+     *                 through layout
      */
     void setNextSelectedPositionInt(int position) {
         mNextSelectedPosition = position;
@@ -1125,7 +1119,6 @@ public abstract class IcsAdapterView<T extends Adapter> extends ViewGroup {
     /**
      * Remember enough information to restore the screen state when the data has
      * changed.
-     *
      */
     void rememberSyncState() {
         if (getChildCount() > 0) {

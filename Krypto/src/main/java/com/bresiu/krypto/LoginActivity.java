@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bresiu.krypto.utils.slidinglayer.SlidingLayer;
+
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = "LoginActivity";
@@ -28,6 +30,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static LinearLayout mProg2;
     private static LinearLayout mProg3;
     private static LinearLayout mProg4;
+    private static SlidingLayer slidingLayer;
     private static SharedPreferences preferences;
     private SharedPreferences.Editor preferencesEditor;
 
@@ -37,13 +40,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
-
         if (restoreData()) {
             setContentView(R.layout.activity_login);
             setupWidgets();
             initVars();
         } else {
-            toRegister();
+            //toRegister();
         }
     }
 

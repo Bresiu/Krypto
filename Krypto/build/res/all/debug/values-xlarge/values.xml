@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-xlarge/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-xlarge/values.xml -->
     <dimen name="abs__action_bar_default_height">56dip</dimen>
     <dimen name="abs__action_bar_icon_vertical_padding">4dip</dimen>
     <dimen name="abs__action_bar_subtitle_bottom_margin">9dip</dimen>

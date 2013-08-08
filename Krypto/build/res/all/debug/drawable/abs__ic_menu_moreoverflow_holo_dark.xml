@@ -14,6 +14,6 @@
      limitations under the License.
 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/abs__ic_menu_moreoverflow_normal_holo_dark" />
+    <item android:drawable="@drawable/abs__ic_menu_moreoverflow_normal_holo_dark"/>
 </selector>
-<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml -->
+        <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml --><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/drawable/abs__ic_menu_moreoverflow_holo_dark.xml -->

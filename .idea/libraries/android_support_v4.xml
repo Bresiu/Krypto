@@ -1,13 +1,6 @@
 <component name="libraryTable">
   <library name="android-support-v4">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:HelloWorld/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:HelloWorld/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:HelloWorld/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:HelloWorld/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:Krypto/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:Krypto/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/:Krypto/libs/android-support-v4.jar!/" />
       <root url="jar://$PROJECT_DIR$/libraries/actionbarsherlock/libs/android-support-v4.jar!/" />
     </CLASSES>
     <JAVADOC />

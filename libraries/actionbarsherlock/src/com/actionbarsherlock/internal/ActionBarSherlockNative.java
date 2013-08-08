@@ -8,6 +8,7 @@ import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
+
 import com.actionbarsherlock.ActionBarSherlock;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.internal.app.ActionBarWrapper;
@@ -77,7 +78,8 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
 
     @Override
     public boolean dispatchOptionsItemSelected(android.view.MenuItem item) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[dispatchOptionsItemSelected] item: " + item.getTitleCondensed());
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[dispatchOptionsItemSelected] item: " + item.getTitleCondensed());
 
         MenuItem wrapped;
         if (mMenu == null) {
@@ -90,7 +92,8 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
             wrapped = mMenu.findItem(item);
         }
         final boolean result = callbackOptionsItemSelected(wrapped);
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[dispatchOptionsItemSelected] returning " + result);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[dispatchOptionsItemSelected] returning " + result);
         return result;
     }
 
@@ -121,7 +124,8 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
 
     @Override
     public void setUiOptions(int uiOptions, int mask) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[setUiOptions] uiOptions: " + uiOptions + ", mask: " + mask);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[setUiOptions] uiOptions: " + uiOptions + ", mask: " + mask);
 
         mActivity.getWindow().setUiOptions(uiOptions, mask);
     }
@@ -136,7 +140,8 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
 
     @Override
     public void setContentView(View view, LayoutParams params) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[setContentView] view: " + view + ", params: " + params);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[setContentView] view: " + view + ", params: " + params);
 
         mActivity.getWindow().setContentView(view, params);
         initActionBar();
@@ -144,7 +149,8 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
 
     @Override
     public void addContentView(View view, LayoutParams params) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[addContentView] view: " + view + ", params: " + params);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[addContentView] view: " + view + ", params: " + params);
 
         mActivity.getWindow().addContentView(view, params);
         initActionBar();
@@ -166,14 +172,16 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
 
     @Override
     public void setProgressBarIndeterminateVisibility(boolean visible) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[setProgressBarIndeterminateVisibility] visible: " + visible);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[setProgressBarIndeterminateVisibility] visible: " + visible);
 
         mActivity.setProgressBarIndeterminateVisibility(visible);
     }
 
     @Override
     public void setProgressBarIndeterminate(boolean indeterminate) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[setProgressBarIndeterminate] indeterminate: " + indeterminate);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[setProgressBarIndeterminate] indeterminate: " + indeterminate);
 
         mActivity.setProgressBarIndeterminate(indeterminate);
     }
@@ -187,7 +195,8 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
 
     @Override
     public void setSecondaryProgress(int secondaryProgress) {
-        if (ActionBarSherlock.DEBUG) Log.d(TAG, "[setSecondaryProgress] secondaryProgress: " + secondaryProgress);
+        if (ActionBarSherlock.DEBUG)
+            Log.d(TAG, "[setSecondaryProgress] secondaryProgress: " + secondaryProgress);
 
         mActivity.setSecondaryProgress(secondaryProgress);
     }
@@ -226,7 +235,7 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
             mActionMode = null;
         }
         if (mActivity instanceof OnActionModeStartedListener && mActionMode != null) {
-            ((OnActionModeStartedListener)mActivity).onActionModeStarted(mActionMode);
+            ((OnActionModeStartedListener) mActivity).onActionModeStarted(mActionMode);
         }
 
         return mActionMode;
@@ -261,7 +270,7 @@ public class ActionBarSherlockNative extends ActionBarSherlock {
         public void onDestroyActionMode(android.view.ActionMode mode) {
             mCallback.onDestroyActionMode(mActionMode);
             if (mActivity instanceof OnActionModeFinishedListener) {
-                ((OnActionModeFinishedListener)mActivity).onActionModeFinished(mActionMode);
+                ((OnActionModeFinishedListener) mActivity).onActionModeFinished(mActionMode);
             }
         }
     }

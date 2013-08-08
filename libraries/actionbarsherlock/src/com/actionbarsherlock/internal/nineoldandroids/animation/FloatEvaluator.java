@@ -33,7 +33,7 @@ public class FloatEvaluator implements TypeEvaluator<Number> {
      *                   <code>Float</code>
      * @param endValue   The end value; should be of type <code>float</code> or <code>Float</code>
      * @return A linear interpolation between the start and end values, given the
-     *         <code>fraction</code> parameter.
+     * <code>fraction</code> parameter.
      */
     public Float evaluate(float fraction, Number startValue, Number endValue) {
         float startFloat = startValue.floatValue();

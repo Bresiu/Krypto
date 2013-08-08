@@ -177,7 +177,7 @@ public final class R {
          */
         public static final int activityChooserViewStyle = 0x7f010060;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
          * <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
          * or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -205,6 +205,15 @@ public final class R {
          * or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonStyleSmall = 0x7f010033;
+        /**
+         * <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         */
+        public static final int closeOnTapEnabled = 0x7f010065;
         /**
          * Specifies a layout for custom navigation. Overrides navigationMode.
          * <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -441,6 +450,26 @@ public final class R {
          */
         public static final int navigationMode = 0x7f010007;
         /**
+         * <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+         * Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+         * in (inches), mm (millimeters).
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         */
+        public static final int offsetWidth = 0x7f010067;
+        /**
+         * <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         */
+        public static final int openOnTapEnabled = 0x7f010066;
+        /**
          * <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
          * or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -562,6 +591,26 @@ public final class R {
          */
         public static final int selectableItemBackground = 0x7f010034;
         /**
+         * <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         */
+        public static final int shadowDrawable = 0x7f010063;
+        /**
+         * <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+         * Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+         * in (inches), mm (millimeters).
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         */
+        public static final int shadowWidth = 0x7f010064;
+        /**
          * <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
          * or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -571,6 +620,22 @@ public final class R {
          * or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int spinnerItemStyle = 0x7f01003c;
+        /**
+         * <p>Must be one of the following constant values.</p>
+         * <table>
+         * <colgroup align="left" />
+         * <colgroup align="left" />
+         * <colgroup align="left" />
+         * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+         * <tr><td><code>auto</code></td><td>0</td><td></td></tr>
+         * <tr><td><code>right</code></td><td>-1</td><td></td></tr>
+         * <tr><td><code>left</code></td><td>-2</td><td></td></tr>
+         * <tr><td><code>middle</code></td><td>-3</td><td></td></tr>
+         * <tr><td><code>top</code></td><td>-4</td><td></td></tr>
+         * <tr><td><code>bottom</code></td><td>-5</td><td></td></tr>
+         * </table>
+         */
+        public static final int stickTo = 0x7f010068;
         /**
          * Specifies subtitle text used for navigationMode="normal"
          * <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -676,7 +741,7 @@ public final class R {
          */
         public static final int titleTextStyle = 0x7f010005;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p>Must be one of the following constant values.</p>
          * <table>
          * <colgroup align="left" />
@@ -797,12 +862,12 @@ public final class R {
 
     public static final class bool {
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-w480dp/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-w480dp/values.xml
          */
         public static final int abs__action_bar_embed_tabs = 0x7f050000;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-sw600dp/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-sw600dp/values.xml
          */
         public static final int abs__action_bar_expanded_action_views_exclusive = 0x7f050001;
         public static final int abs__config_actionMenuItemAllCaps = 0x7f050002;
@@ -823,7 +888,7 @@ public final class R {
         public static final int abs__primary_text_holo_dark = 0x7f06001e;
         public static final int abs__primary_text_holo_light = 0x7f06001f;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/colors.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml
          */
         public static final int background = 0x7f060006;
         public static final int black = 0x7f060007;
@@ -851,12 +916,13 @@ public final class R {
 
     public static final class dimen {
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-land/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-large-hdpi-1024x600/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-large-mdpi-1024x600/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-large-land-hdpi-1024x600/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-large-land-mdpi-1024x600/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-xlarge/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-land/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-large-hdpi-1024x600/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-large-mdpi-1024x600/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-large-land-hdpi-1024x600/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-large-land-mdpi-1024x600/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-xlarge/values.xml
          */
         public static final int abs__action_bar_default_height = 0x7f070000;
         public static final int abs__action_bar_icon_vertical_padding = 0x7f070001;
@@ -866,18 +932,21 @@ public final class R {
         public static final int abs__action_bar_title_text_size = 0x7f070005;
         public static final int abs__action_button_min_width = 0x7f070006;
         public static final int abs__config_prefDialogWidth = 0x7f070007;
-        public static final int abs__dialog_min_width_major = 0x7f07000f;
-        public static final int abs__dialog_min_width_minor = 0x7f070010;
+        public static final int abs__dialog_min_width_major = 0x7f070012;
+        public static final int abs__dialog_min_width_minor = 0x7f070013;
         public static final int abs__dropdownitem_icon_width = 0x7f070008;
         public static final int abs__dropdownitem_text_padding_left = 0x7f070009;
         public static final int abs__dropdownitem_text_padding_right = 0x7f07000a;
         public static final int abs__search_view_preferred_width = 0x7f07000b;
         public static final int abs__search_view_text_min_width = 0x7f07000c;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/dimens.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/dimens.xml
          */
         public static final int activity_horizontal_margin = 0x7f07000d;
         public static final int activity_vertical_margin = 0x7f07000e;
+        public static final int layer_width = 0x7f07000f;
+        public static final int offset_width = 0x7f070010;
+        public static final int shadow_width = 0x7f070011;
     }
 
     public static final class drawable {
@@ -995,82 +1064,89 @@ public final class R {
         public static final int abs__toast_frame = 0x7f02006f;
         public static final int button = 0x7f020070;
         public static final int ic_launcher = 0x7f020071;
-        public static final int web_hi_res_512 = 0x7f020072;
+        public static final int sidebar_shadow = 0x7f020072;
+        public static final int web_hi_res_512 = 0x7f020073;
     }
 
     public static final class id {
-        public static final int PhoneNumberInfo = 0x7f040046;
-        public static final int abs__action_bar = 0x7f040034;
-        public static final int abs__action_bar_container = 0x7f040033;
-        public static final int abs__action_bar_subtitle = 0x7f040025;
-        public static final int abs__action_bar_title = 0x7f040024;
-        public static final int abs__action_context_bar = 0x7f040035;
+        public static final int PhoneNumberInfo = 0x7f04004c;
+        public static final int abs__action_bar = 0x7f04003a;
+        public static final int abs__action_bar_container = 0x7f040039;
+        public static final int abs__action_bar_subtitle = 0x7f04002b;
+        public static final int abs__action_bar_title = 0x7f04002a;
+        public static final int abs__action_context_bar = 0x7f04003b;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
          */
-        public static final int abs__action_menu_divider = 0x7f04001e;
-        public static final int abs__action_menu_presenter = 0x7f04001f;
-        public static final int abs__action_mode_bar = 0x7f040039;
-        public static final int abs__action_mode_bar_stub = 0x7f040038;
-        public static final int abs__action_mode_close_button = 0x7f040028;
-        public static final int abs__activity_chooser_view_content = 0x7f040029;
-        public static final int abs__checkbox = 0x7f040030;
-        public static final int abs__content = 0x7f040036;
-        public static final int abs__default_activity_button = 0x7f04002c;
-        public static final int abs__expand_activities_button = 0x7f04002a;
-        public static final int abs__home = 0x7f040020;
-        public static final int abs__icon = 0x7f04002e;
-        public static final int abs__image = 0x7f04002b;
-        public static final int abs__imageButton = 0x7f040026;
-        public static final int abs__list_item = 0x7f04002d;
-        public static final int abs__progress_circular = 0x7f040021;
-        public static final int abs__progress_horizontal = 0x7f040022;
-        public static final int abs__radio = 0x7f040031;
-        public static final int abs__search_badge = 0x7f04003c;
-        public static final int abs__search_bar = 0x7f04003b;
-        public static final int abs__search_button = 0x7f04003d;
-        public static final int abs__search_close_btn = 0x7f040042;
-        public static final int abs__search_edit_frame = 0x7f04003e;
-        public static final int abs__search_go_btn = 0x7f040044;
-        public static final int abs__search_mag_icon = 0x7f04003f;
-        public static final int abs__search_plate = 0x7f040040;
-        public static final int abs__search_src_text = 0x7f040041;
-        public static final int abs__search_voice_btn = 0x7f040045;
-        public static final int abs__shortcut = 0x7f040032;
-        public static final int abs__split_action_bar = 0x7f040037;
-        public static final int abs__submit_area = 0x7f040043;
-        public static final int abs__textButton = 0x7f040027;
-        public static final int abs__title = 0x7f04002f;
-        public static final int abs__up = 0x7f040023;
-        public static final int action_settings = 0x7f040061;
-        public static final int app_name = 0x7f04004c;
-        public static final int b0 = 0x7f04005f;
-        public static final int b1 = 0x7f040055;
-        public static final int b2 = 0x7f040056;
-        public static final int b3 = 0x7f040057;
-        public static final int b4 = 0x7f040058;
-        public static final int b5 = 0x7f040059;
-        public static final int b6 = 0x7f04005a;
-        public static final int b7 = 0x7f04005b;
-        public static final int b8 = 0x7f04005c;
-        public static final int b9 = 0x7f04005d;
-        public static final int back = 0x7f040060;
-        public static final int cancel = 0x7f04005e;
+        public static final int abs__action_menu_divider = 0x7f040024;
+        public static final int abs__action_menu_presenter = 0x7f040025;
+        public static final int abs__action_mode_bar = 0x7f04003f;
+        public static final int abs__action_mode_bar_stub = 0x7f04003e;
+        public static final int abs__action_mode_close_button = 0x7f04002e;
+        public static final int abs__activity_chooser_view_content = 0x7f04002f;
+        public static final int abs__checkbox = 0x7f040036;
+        public static final int abs__content = 0x7f04003c;
+        public static final int abs__default_activity_button = 0x7f040032;
+        public static final int abs__expand_activities_button = 0x7f040030;
+        public static final int abs__home = 0x7f040026;
+        public static final int abs__icon = 0x7f040034;
+        public static final int abs__image = 0x7f040031;
+        public static final int abs__imageButton = 0x7f04002c;
+        public static final int abs__list_item = 0x7f040033;
+        public static final int abs__progress_circular = 0x7f040027;
+        public static final int abs__progress_horizontal = 0x7f040028;
+        public static final int abs__radio = 0x7f040037;
+        public static final int abs__search_badge = 0x7f040042;
+        public static final int abs__search_bar = 0x7f040041;
+        public static final int abs__search_button = 0x7f040043;
+        public static final int abs__search_close_btn = 0x7f040048;
+        public static final int abs__search_edit_frame = 0x7f040044;
+        public static final int abs__search_go_btn = 0x7f04004a;
+        public static final int abs__search_mag_icon = 0x7f040045;
+        public static final int abs__search_plate = 0x7f040046;
+        public static final int abs__search_src_text = 0x7f040047;
+        public static final int abs__search_voice_btn = 0x7f04004b;
+        public static final int abs__shortcut = 0x7f040038;
+        public static final int abs__split_action_bar = 0x7f04003d;
+        public static final int abs__submit_area = 0x7f040049;
+        public static final int abs__textButton = 0x7f04002d;
+        public static final int abs__title = 0x7f040035;
+        public static final int abs__up = 0x7f040029;
+        public static final int action_settings = 0x7f040068;
+        public static final int app_name = 0x7f040052;
+        public static final int auto = 0x7f04001e;
+        public static final int b0 = 0x7f040066;
+        public static final int b1 = 0x7f04005c;
+        public static final int b2 = 0x7f04005d;
+        public static final int b3 = 0x7f04005e;
+        public static final int b4 = 0x7f04005f;
+        public static final int b5 = 0x7f040060;
+        public static final int b6 = 0x7f040061;
+        public static final int b7 = 0x7f040062;
+        public static final int b8 = 0x7f040063;
+        public static final int b9 = 0x7f040064;
+        public static final int back = 0x7f040067;
+        public static final int bottom = 0x7f040023;
+        public static final int cancel = 0x7f040065;
         public static final int disableHome = 0x7f04001c;
-        public static final int edit_query = 0x7f04003a;
+        public static final int edit_query = 0x7f040040;
         public static final int homeAsUp = 0x7f040019;
-        public static final int info = 0x7f04004e;
+        public static final int info = 0x7f040055;
+        public static final int left = 0x7f040020;
+        public static final int linearLayout = 0x7f040054;
         public static final int listMode = 0x7f040015;
-        public static final int logo = 0x7f04004b;
-        public static final int message = 0x7f04004a;
+        public static final int logo = 0x7f040051;
+        public static final int message = 0x7f040050;
+        public static final int middle = 0x7f040021;
         public static final int normal = 0x7f040014;
-        public static final int pass = 0x7f04004f;
-        public static final int phoneNumber = 0x7f040047;
-        public static final int prog = 0x7f04004d;
-        public static final int prog1 = 0x7f040051;
-        public static final int prog2 = 0x7f040052;
-        public static final int prog3 = 0x7f040053;
-        public static final int prog4 = 0x7f040054;
+        public static final int pass = 0x7f040056;
+        public static final int phoneNumber = 0x7f04004d;
+        public static final int prog = 0x7f040053;
+        public static final int prog1 = 0x7f040058;
+        public static final int prog2 = 0x7f040059;
+        public static final int prog3 = 0x7f04005a;
+        public static final int prog4 = 0x7f04005b;
+        public static final int right = 0x7f04001f;
         public static final int roboto_black = 0x7f04000a;
         public static final int roboto_black_italic = 0x7f04000b;
         public static final int roboto_bold = 0x7f040008;
@@ -1091,22 +1167,23 @@ public final class R {
         public static final int robotoslab_light = 0x7f040011;
         public static final int robotoslab_regular = 0x7f040012;
         public static final int robotoslab_thin = 0x7f040010;
-        public static final int scrollView = 0x7f040048;
-        public static final int send = 0x7f040049;
+        public static final int scrollView = 0x7f04004e;
+        public static final int send = 0x7f04004f;
         public static final int showCustom = 0x7f04001b;
         public static final int showHome = 0x7f040018;
         public static final int showTitle = 0x7f04001a;
         public static final int tabMode = 0x7f040016;
-        public static final int tableLayout = 0x7f040050;
+        public static final int tableLayout = 0x7f040057;
+        public static final int top = 0x7f040022;
         public static final int useLogo = 0x7f040017;
         public static final int wrap_content = 0x7f04001d;
     }
 
     public static final class integer {
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-w360dp/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-w500dp/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-w600dp/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-w360dp/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-w500dp/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-w600dp/values.xml
          */
         public static final int abs__max_action_buttons = 0x7f080000;
     }
@@ -1160,7 +1237,7 @@ public final class R {
         public static final int abs__shareactionprovider_share_with = 0x7f09000b;
         public static final int abs__shareactionprovider_share_with_application = 0x7f09000c;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/strings.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml
          */
         public static final int action_settings = 0x7f09000d;
         public static final int app_name = 0x7f09000e;
@@ -1170,15 +1247,15 @@ public final class R {
 
     public static final class style {
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/styles.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles.xml
          * <p/>
          * Theme customizations available in newer API levels can go in
          * res/values-vXX/styles.xml, while customizations related to
          * backward-compatibility can go here.
          * <p/>
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values-v11/styles.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values-v11/styles.xml
          * API 11 theme customizations can go here.
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values-v14/styles.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values-v14/styles.xml
          * API 14 theme customizations can go here.
          */
         public static final int AppBaseTheme = 0x7f0a0000;
@@ -1187,12 +1264,12 @@ public final class R {
          */
         public static final int AppTheme = 0x7f0a0001;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
          */
         public static final int Sherlock___TextAppearance_Small = 0x7f0a0002;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-v11/values.xml
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-v14/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-v11/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-v14/values.xml
          */
         public static final int Sherlock___Theme = 0x7f0a0003;
         public static final int Sherlock___Theme_DarkActionBar = 0x7f0a0004;
@@ -1286,13 +1363,13 @@ public final class R {
 
     public static final class styleable {
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p>Includes the following attributes:</p>
          * <table>
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoAutoCompleteTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoAutoCompleteTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoAutoCompleteTextView_typeface
@@ -1304,7 +1381,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1345,7 +1422,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoButton_typeface
@@ -1357,7 +1434,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1398,7 +1475,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoCheckBox_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoCheckBox_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoCheckBox_typeface
@@ -1410,7 +1487,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1451,7 +1528,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoCheckedTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoCheckedTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoCheckedTextView_typeface
@@ -1463,7 +1540,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1504,7 +1581,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoChronometer_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoChronometer_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoChronometer_typeface
@@ -1516,7 +1593,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1557,7 +1634,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoCompoundButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoCompoundButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoCompoundButton_typeface
@@ -1569,7 +1646,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1610,7 +1687,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoDigitalClock_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoDigitalClock_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoDigitalClock_typeface
@@ -1622,7 +1699,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1663,7 +1740,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoEditText_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoEditText_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoEditText_typeface
@@ -1675,7 +1752,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1716,7 +1793,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoExtractEditText_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoExtractEditText_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoExtractEditText_typeface
@@ -1728,7 +1805,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1769,7 +1846,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoMultiAutoCompleteTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoMultiAutoCompleteTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoMultiAutoCompleteTextView_typeface
@@ -1781,7 +1858,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1822,7 +1899,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoRadioButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoRadioButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoRadioButton_typeface
@@ -1834,7 +1911,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1875,7 +1952,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoSwitch_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoSwitch_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoSwitch_typeface
@@ -1887,7 +1964,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1928,7 +2005,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoTextClock_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoTextClock_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoTextClock_typeface
@@ -1940,7 +2017,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -1981,7 +2058,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoTextView_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoTextView_typeface
@@ -1993,7 +2070,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -2034,7 +2111,7 @@ public final class R {
          * <colgroup align="left" />
          * <colgroup align="left" />
          * <tr><th>Attribute</th><th>Description</th></tr>
-         * <tr><td><code>{@link #RobotoToggleButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.</td></tr>
+         * <tr><td><code>{@link #RobotoToggleButton_typeface com.bresiu.krypto:typeface}</code></td><td> From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.</td></tr>
          * </table>
          *
          * @see #RobotoToggleButton_typeface
@@ -2046,7 +2123,7 @@ public final class R {
          * <p/>
          *
          * @attr description
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/values/attrs.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml
          * <p/>
          * <p/>
          * <p>Must be one of the following constant values.</p>
@@ -2081,7 +2158,7 @@ public final class R {
          */
         public static final int RobotoToggleButton_typeface = 0;
         /**
-         * From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
          * <p>Includes the following attributes:</p>
          * <table>
          * <colgroup align="left" />
@@ -4232,6 +4309,133 @@ public final class R {
          * @attr name android:android_focusable
          */
         public static final int SherlockView_android_focusable = 0;
+        /**
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/slidinglayer-attrs.xml
+         * <p>Includes the following attributes:</p>
+         * <table>
+         * <colgroup align="left" />
+         * <colgroup align="left" />
+         * <tr><th>Attribute</th><th>Description</th></tr>
+         * <tr><td><code>{@link #SlidingLayer_closeOnTapEnabled com.bresiu.krypto:closeOnTapEnabled}</code></td><td></td></tr>
+         * <tr><td><code>{@link #SlidingLayer_offsetWidth com.bresiu.krypto:offsetWidth}</code></td><td></td></tr>
+         * <tr><td><code>{@link #SlidingLayer_openOnTapEnabled com.bresiu.krypto:openOnTapEnabled}</code></td><td></td></tr>
+         * <tr><td><code>{@link #SlidingLayer_shadowDrawable com.bresiu.krypto:shadowDrawable}</code></td><td></td></tr>
+         * <tr><td><code>{@link #SlidingLayer_shadowWidth com.bresiu.krypto:shadowWidth}</code></td><td></td></tr>
+         * <tr><td><code>{@link #SlidingLayer_stickTo com.bresiu.krypto:stickTo}</code></td><td></td></tr>
+         * </table>
+         *
+         * @see #SlidingLayer_closeOnTapEnabled
+         * @see #SlidingLayer_offsetWidth
+         * @see #SlidingLayer_openOnTapEnabled
+         * @see #SlidingLayer_shadowDrawable
+         * @see #SlidingLayer_shadowWidth
+         * @see #SlidingLayer_stickTo
+         */
+        public static final int[] SlidingLayer = {
+                0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066,
+                0x7f010067, 0x7f010068
+        };
+        /**
+         * <p>This symbol is the offset where the {@link com.bresiu.krypto.R.attr#closeOnTapEnabled}
+         * attribute's value can be found in the {@link #SlidingLayer} array.
+         * <p/>
+         * <p/>
+         * <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         *
+         * @attr name android:closeOnTapEnabled
+         */
+        public static final int SlidingLayer_closeOnTapEnabled = 2;
+        /**
+         * <p>This symbol is the offset where the {@link com.bresiu.krypto.R.attr#offsetWidth}
+         * attribute's value can be found in the {@link #SlidingLayer} array.
+         * <p/>
+         * <p/>
+         * <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+         * Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+         * in (inches), mm (millimeters).
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         *
+         * @attr name android:offsetWidth
+         */
+        public static final int SlidingLayer_offsetWidth = 4;
+        /**
+         * <p>This symbol is the offset where the {@link com.bresiu.krypto.R.attr#openOnTapEnabled}
+         * attribute's value can be found in the {@link #SlidingLayer} array.
+         * <p/>
+         * <p/>
+         * <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         *
+         * @attr name android:openOnTapEnabled
+         */
+        public static final int SlidingLayer_openOnTapEnabled = 3;
+        /**
+         * <p>This symbol is the offset where the {@link com.bresiu.krypto.R.attr#shadowDrawable}
+         * attribute's value can be found in the {@link #SlidingLayer} array.
+         * <p/>
+         * <p/>
+         * <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         *
+         * @attr name android:shadowDrawable
+         */
+        public static final int SlidingLayer_shadowDrawable = 0;
+        /**
+         * <p>This symbol is the offset where the {@link com.bresiu.krypto.R.attr#shadowWidth}
+         * attribute's value can be found in the {@link #SlidingLayer} array.
+         * <p/>
+         * <p/>
+         * <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+         * Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+         * in (inches), mm (millimeters).
+         * <p>This may also be a reference to a resource (in the form
+         * "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+         * theme attribute (in the form
+         * "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+         * containing a value of this type.
+         *
+         * @attr name android:shadowWidth
+         */
+        public static final int SlidingLayer_shadowWidth = 1;
+        /**
+         * <p>This symbol is the offset where the {@link com.bresiu.krypto.R.attr#stickTo}
+         * attribute's value can be found in the {@link #SlidingLayer} array.
+         * <p/>
+         * <p/>
+         * <p>Must be one of the following constant values.</p>
+         * <table>
+         * <colgroup align="left" />
+         * <colgroup align="left" />
+         * <colgroup align="left" />
+         * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+         * <tr><td><code>auto</code></td><td>0</td><td></td></tr>
+         * <tr><td><code>right</code></td><td>-1</td><td></td></tr>
+         * <tr><td><code>left</code></td><td>-2</td><td></td></tr>
+         * <tr><td><code>middle</code></td><td>-3</td><td></td></tr>
+         * <tr><td><code>top</code></td><td>-4</td><td></td></tr>
+         * <tr><td><code>bottom</code></td><td>-5</td><td></td></tr>
+         * </table>
+         *
+         * @attr name android:stickTo
+         */
+        public static final int SlidingLayer_stickTo = 5;
     }
 
     ;

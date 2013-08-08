@@ -41,7 +41,8 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true">
+                android:layout_alignParentRight="true"
+                android:id="@+id/linearLayout">
 
             <com.bresiu.krypto.utils.widget.RobotoTextView
                     android:layout_width="wrap_content"
@@ -279,4 +280,5 @@
                     android:text="@string/lower_than"/>
         </TableRow>
     </TableLayout>
-</RelativeLayout><!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/src/main/res/layout/activity_login.xml -->
+
+</RelativeLayout><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/layout/activity_login.xml -->

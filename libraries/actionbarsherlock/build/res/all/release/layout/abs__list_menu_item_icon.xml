@@ -15,15 +15,15 @@
 -->
 
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/abs__icon"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
-    android:layout_marginLeft="8dip"
-    android:layout_marginRight="-8dip"
-    android:layout_marginTop="8dip"
-    android:layout_marginBottom="8dip"
-    android:scaleType="centerInside"
-    android:duplicateParentState="true" />
+           android:id="@+id/abs__icon"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+           android:layout_marginLeft="8dip"
+           android:layout_marginRight="-8dip"
+           android:layout_marginTop="8dip"
+           android:layout_marginBottom="8dip"
+           android:scaleType="centerInside"
+           android:duplicateParentState="true"/>
 
-<!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/libraries/actionbarsherlock/res/layout/abs__list_menu_item_icon.xml -->
+<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__list_menu_item_icon.xml -->

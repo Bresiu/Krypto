@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/Krypto/Krypto/build/exploded-bundles/KryptoLibrariesActionbarsherlockUnspecified.aar/res/values-w600dp/values.xml -->
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-w600dp/values.xml -->
     <integer name="abs__max_action_buttons">5</integer>
 
 </resources>
