@@ -3,8 +3,10 @@
       android:background="@color/newest_black">
     <item
             android:id="@+id/delete_key"
+            style="@style/Theme.Sherlock"
             android:title="Delete Key"
             android:showAsAction="never"/>
     <!--android:icon="@drawable/phone"-->
+    <!--style="@style/Theme.Sherlock"/>-->
 
-</menu>
+</menu><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/menu/login_menu.xml -->
