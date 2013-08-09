@@ -9,8 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class LoginActivity extends Activity implements View.OnClickListener {
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+
+public class LoginActivity extends SherlockActivity implements View.OnClickListener {
 
     private static final String TAG = "LoginActivity";
     private static final String PREFERENCES_NAME = "Preferences";
@@ -39,6 +45,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
         setContentView(R.layout.activity_login);
+        final ActionBar ab = getSupportActionBar();
         setupWidgets();
         if (!restoreData()) {
             noKey = true;
@@ -48,22 +55,22 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         initVars();
     }
 
-    private void initVars() {
-        password = "";
-        count = 0;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getSupportMenuInflater().inflate(R.menu.login_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
-    private void setupWidgets() {
-        mInfo = (TextView) findViewById(R.id.info);
-        mPass = (TextView) findViewById(R.id.pass);
-        mBack = (Button) findViewById(R.id.back);
-        mCancel = (Button) findViewById(R.id.cancel);
-        mProg1 = (LinearLayout) findViewById(R.id.prog1);
-        mProg2 = (LinearLayout) findViewById(R.id.prog2);
-        mProg3 = (LinearLayout) findViewById(R.id.prog3);
-        mProg4 = (LinearLayout) findViewById(R.id.prog4);
-        mBack.setEnabled(false);
-        mCancel.setEnabled(false);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        switch (item.getItemId()) {
+            case R.id.delete_key:
+                Toast.makeText(getBaseContext(), "TROLOLO", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
     }
 
     @Override
@@ -111,13 +118,36 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.back:
                 if (count > 0) count--;
-                if (password.length() > 0) password = password.substring(0, password.length() - 1);
+                if (password.length() > 0)
+                    password = password.substring(0, password.length() - 1);
                 break;
             case R.id.cancel:
                 count = 0;
                 break;
         }
         showProg();
+    }
+
+    private boolean restoreData() {
+        return preferences.getBoolean(KEY_STORED, false);
+    }
+
+    private void initVars() {
+        password = "";
+        count = 0;
+    }
+
+    private void setupWidgets() {
+        mInfo = (TextView) findViewById(R.id.info);
+        mPass = (TextView) findViewById(R.id.pass);
+        mBack = (Button) findViewById(R.id.back);
+        mCancel = (Button) findViewById(R.id.cancel);
+        mProg1 = (LinearLayout) findViewById(R.id.prog1);
+        mProg2 = (LinearLayout) findViewById(R.id.prog2);
+        mProg3 = (LinearLayout) findViewById(R.id.prog3);
+        mProg4 = (LinearLayout) findViewById(R.id.prog4);
+        mBack.setEnabled(false);
+        mCancel.setEnabled(false);
     }
 
     private void showProg() {
@@ -210,10 +240,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     break;
                 }
         }
-    }
-
-    private boolean restoreData() {
-        return preferences.getBoolean(KEY_STORED, false);
     }
 
     private void saveData() {

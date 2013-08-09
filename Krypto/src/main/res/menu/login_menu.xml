@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      style="@style/Theme.Sherlock"
+      android:background="@color/newest_black">
+    <item
+            android:id="@+id/delete_key"
+            style="@style/Theme.Sherlock"
+            android:title="Delete Key"
+            android:showAsAction="never"/>
+    <!--android:icon="@drawable/phone"-->
+    <!--style="@style/Theme.Sherlock"/>-->
+
+</menu>

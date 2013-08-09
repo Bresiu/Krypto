@@ -627,8 +627,8 @@
     <string name="lower_than">&lt;</string>
     <string name="title_activity_login">Login</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles.xml -->
-    <style name="AppTheme" parent="Theme.Sherlock.NoActionBar">
-        <item name="android:background">@color/newest_second_base</item>
+    <style name="AppTheme" parent="Theme.Sherlock">
+        <item name="background">@color/newest_second_base</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Sherlock.__TextAppearance.Small" parent="Widget">
@@ -1045,17 +1045,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles.xml -->
-    <style name="Theme.Transparent" parent="android:Theme">
 
-        <!-- <item name="android:windowIsTranslucent">true</item> -->
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:backgroundDimEnabled">false</item>
-    </style>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Widget"/>
 
     <style name="Widget.Sherlock.ActionBar" parent="Sherlock.__Widget.ActionBar">
