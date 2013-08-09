@@ -8,8 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
@@ -27,14 +25,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private static TextView mPass;
     private static Button mCancel;
     private static Button mBack;
-    private static LinearLayout mProg;
     private static LinearLayout mProg1;
     private static LinearLayout mProg2;
     private static LinearLayout mProg3;
     private static LinearLayout mProg4;
-    private static RelativeLayout mRelative;
-    private static RelativeLayout mSplash;
-    private static TableLayout mTable;
     private static SharedPreferences preferences;
     private static SharedPreferences.Editor preferencesEditor;
 
@@ -47,11 +41,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
         setupWidgets();
         if (!restoreData()) {
-            //TODO font builder with html black roboto etc...
-            mTable.setVisibility(View.INVISIBLE);
-            mRelative.setVisibility(View.INVISIBLE);
-            mSplash.setVisibility(View.VISIBLE);
-            mInfo.setText("[1] Enter Your PIN:");
             noKey = true;
             isFirstAttempt = true;
             passFirstAttempt = "";
@@ -65,14 +54,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
     private void setupWidgets() {
-        mTable = (TableLayout) findViewById(R.id.tableLayout);
-        mSplash = (RelativeLayout) findViewById(R.id.splash);
-        mRelative = (RelativeLayout) findViewById(R.id.relative);
         mInfo = (TextView) findViewById(R.id.info);
         mPass = (TextView) findViewById(R.id.pass);
         mBack = (Button) findViewById(R.id.back);
         mCancel = (Button) findViewById(R.id.cancel);
-        mProg = (LinearLayout) findViewById(R.id.prog);
         mProg1 = (LinearLayout) findViewById(R.id.prog1);
         mProg2 = (LinearLayout) findViewById(R.id.prog2);
         mProg3 = (LinearLayout) findViewById(R.id.prog3);
@@ -131,11 +116,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             case R.id.cancel:
                 count = 0;
                 break;
-            case R.id.splash:
-                mTable.setVisibility(View.VISIBLE);
-                mRelative.setVisibility(View.VISIBLE);
-                mSplash.setVisibility(View.INVISIBLE);
-                break;
         }
         showProg();
     }
@@ -187,11 +167,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                         passFirstAttempt = password;
                         isFirstAttempt = false;
                         initVars();
-                        mInfo.setText("Enter Your PIN again:");
+                        mInfo.setText("Confim PIN:");
                     } else {
                         if (password.equals(passFirstAttempt)) {
                             mInfo.setText("PIN set succesfully!\nLogging in...");
-                            password = "";
                             count = 0;
                             mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
                             mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
@@ -199,7 +178,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                             mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
                             saveData();
                         } else {
-                            mInfo.setText("PINS do not match.\nTry again...");
+                            mInfo.setText("PIN do not match.\nTry again...");
                             mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                             mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                             mProg3.setBackgroundColor(getResources().getColor(R.color.newest_orange));
@@ -214,16 +193,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     if (password.equals(preferences.getString(KEY, ""))) {
                         mInfo.setText("PIN correct");
                         mPass.setText("");
-                        password = "";
-                        count = 0;
                         mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
                         mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
                         mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
                         mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
                         loginComplete();
                     } else {
-                        password = "";
-                        count = 0;
+                        initVars();
                         mInfo.setText("Incorect PIN, try again");
                         mPass.setText("");
                         mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
@@ -244,6 +220,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         preferencesEditor.putBoolean(KEY_STORED, true);
         preferencesEditor.putString(KEY, password);
         preferencesEditor.commit();
+        initVars();
         loginComplete();
     }
 

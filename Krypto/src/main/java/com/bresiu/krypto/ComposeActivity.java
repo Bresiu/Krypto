@@ -4,8 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -38,8 +36,8 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
         s.setSpan(new TypefaceSpan(this, "Roboto-Light"), 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        ab.setTitle(s);
-        ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f3f4f3")));
+        //ab.setTitle(s);
+        //ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f3f4f3")));
         setContentView(R.layout.activity_compose);
         setupWidgets();
 

@@ -627,16 +627,8 @@
     <string name="lower_than">&lt;</string>
     <string name="title_activity_login">Login</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles.xml -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="AppTheme" parent="Theme.Sherlock.NoActionBar">
+        <item name="android:background">@color/newest_second_base</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Sherlock.__TextAppearance.Small" parent="Widget">
