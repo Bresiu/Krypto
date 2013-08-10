@@ -3,8 +3,7 @@
       android:background="@color/newest_black">
     <item
             android:id="@+id/delete_key"
-            android:title="Delete Key"
-            android:showAsAction="never"/>
+            android:title="Delete Key"/>
     <!--android:icon="@drawable/phone"-->
 
 </menu>

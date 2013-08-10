@@ -67,6 +67,9 @@
     <color name="newest_second_base">#3f4752</color>
     <color name="newest_white">#fdfdfd</color>
     <color name="newest_yellow">#ffc67d</color>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors_kryptotheme.xml -->
+    <color name="pressed_kryptotheme">#CC4D5967</color>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml -->
     <color name="red">#bf2f1b</color>
     <color name="transparent">#7f000000</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml -->
@@ -626,9 +629,45 @@
     <string name="app_name">Krypto</string>
     <string name="lower_than">&lt;</string>
     <string name="title_activity_login">Login</string>
-    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles.xml -->
-    <style name="AppTheme" parent="Theme.Sherlock">
-        <item name="background">@color/newest_second_base</item>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_kryptotheme.xml -->
+    <style name="ActionBar.Solid.Kryptotheme" parent="@style/Widget.Sherlock.ActionBar.Solid">
+        <item name="background">@drawable/ab_solid_kryptotheme</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_kryptotheme</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_kryptotheme</item>
+        <item name="progressBarStyle">@style/ProgressBar.Kryptotheme</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Kryptotheme" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/ab_transparent_kryptotheme</item>
+        <item name="progressBarStyle">@style/ProgressBar.Kryptotheme</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Kryptotheme" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_kryptotheme</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Kryptotheme"
+           parent="@style/Widget.Sherlock.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_kryptotheme</item>
+    </style>
+
+    <style name="DropDownListView.Kryptotheme" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_kryptotheme</item>
+    </style>
+
+    <style name="DropDownNav.Kryptotheme"
+           parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_kryptotheme</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_kryptotheme</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_kryptotheme</item>
+    </style>
+
+    <style name="PopupMenu.Kryptotheme" parent="@style/Widget.Sherlock.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_kryptotheme</item>
+    </style>
+
+    <style name="ProgressBar.Kryptotheme" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_kryptotheme</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Sherlock.__TextAppearance.Small" parent="Widget">
@@ -821,7 +860,24 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">normal</item>
     </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_kryptotheme.xml -->
+    <style name="Theme.Kryptotheme" parent="@style/Theme.Sherlock">
+        <item name="actionBarItemBackground">@drawable/selectable_background_kryptotheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Kryptotheme</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Kryptotheme</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Kryptotheme</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Kryptotheme</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Kryptotheme</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_kryptotheme</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_kryptotheme</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Kryptotheme</item>
+    </style>
 
+    <style name="Theme.Kryptotheme.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Kryptotheme</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Kryptotheme</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Theme.Sherlock" parent="Sherlock.__Theme">
 
         <!-- Action bar styles (from Theme.Holo) -->

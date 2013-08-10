@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -45,7 +44,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
         setContentView(R.layout.activity_login);
-        final ActionBar ab = getSupportActionBar();
+        //final ActionBar ab = getSupportActionBar();
+        //ab.setBackgroundDrawable(new ColorDrawable(R.color.newest_first_base));
         setupWidgets();
         if (!restoreData()) {
             noKey = true;

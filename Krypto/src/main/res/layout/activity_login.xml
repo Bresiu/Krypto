@@ -23,6 +23,7 @@
                 android:gravity="center"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/newest_light_gray"
                 android:text="Enter Your PIN:"
                 android:id="@+id/info"/>
 
@@ -35,6 +36,7 @@
                 android:background="@color/newest_first_base"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/newest_white"
                 android:id="@+id/pass"/>
 
     </RelativeLayout>
@@ -54,7 +56,7 @@
                 android:orientation="horizontal"
                 android:background="@color/newest_orange">
 
-        <LinearLayout
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="2dp"
                     android:layout_weight="1"
