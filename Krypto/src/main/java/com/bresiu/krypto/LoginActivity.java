@@ -51,11 +51,10 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
         if (!restoreData()) {
-            noKey = true;
-            isFirstAttempt = true;
-            passFirstAttempt = "";
-            mInfo.setText("Enter Your New PIN:");
-        } else noKey = false;
+            initNewKey();
+        } else {
+            noKey = false;
+        }
         initVars();
     }
 
@@ -144,6 +143,13 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
     private boolean restoreData() {
         return preferences.getBoolean(KEY_STORED, false);
+    }
+
+    private void initNewKey() {
+        noKey = true;
+        isFirstAttempt = true;
+        passFirstAttempt = "";
+        mInfo.setText("Enter Your New PIN:");
     }
 
     private void initVars() {
@@ -260,7 +266,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         reload();
     }
 
-    public void reload() {
+    private void reload() {
 
         Intent intent = getIntent();
         overridePendingTransition(0, 0);
