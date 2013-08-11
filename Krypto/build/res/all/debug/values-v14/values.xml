@@ -7,6 +7,8 @@
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_kryptotheme</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_kryptotheme</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Kryptotheme</item>
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="displayOptions">showHome|useLogo</item>
     </style>
 
     <style name="ActionBar.Transparent.Kryptotheme" parent="@style/Widget.Sherlock.ActionBar">

@@ -5,12 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -26,6 +27,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private static String passFirstAttempt;
     private static String password;
     private static int count;
+    private static ActionBar mActionBar;
+    private static LayoutInflater mInflater;
+    private static View mAbsView;
     private static TextView mInfo;
     private static TextView mPass;
     private static Button mCancel;
@@ -41,16 +45,16 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        setupActionBar();
+        setupWidgets();
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
-        setContentView(R.layout.activity_login);
-        //final ActionBar ab = getSupportActionBar();
-        //ab.setBackgroundDrawable(new ColorDrawable(R.color.newest_first_base));
-        setupWidgets();
         if (!restoreData()) {
             noKey = true;
             isFirstAttempt = true;
             passFirstAttempt = "";
+            mInfo.setText("Enter Your New PIN:");
         } else noKey = false;
         initVars();
     }
@@ -67,7 +71,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
         switch (item.getItemId()) {
             case R.id.delete_key:
-                Toast.makeText(getBaseContext(), "TROLOLO", Toast.LENGTH_SHORT).show();
+                cleanData();
                 break;
         }
         return true;
@@ -123,9 +127,19 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 break;
             case R.id.cancel:
                 count = 0;
+                password = "";
                 break;
         }
         showProg();
+    }
+
+    private void setupActionBar() {
+        mActionBar = getSupportActionBar();
+        mActionBar.setDisplayShowTitleEnabled(false);
+        mInflater = LayoutInflater.from(this);
+        mAbsView = mInflater.inflate(R.layout.abs_custom_font, null);
+        mActionBar.setCustomView(mAbsView);
+        mActionBar.setDisplayShowCustomEnabled(true);
     }
 
     private boolean restoreData() {
@@ -153,7 +167,6 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private void showProg() {
         switch (count) {
             case 0:
-                password = "";
                 mPass.setText("");
                 mProg1.setBackgroundColor(getResources().getColor(R.color.newest_orange));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.newest_orange));
@@ -201,7 +214,6 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                     } else {
                         if (password.equals(passFirstAttempt)) {
                             mInfo.setText("PIN set succesfully!\nLogging in...");
-                            count = 0;
                             mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
                             mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
                             mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
@@ -240,6 +252,23 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                     break;
                 }
         }
+    }
+
+    private void cleanData() {
+        preferencesEditor.putBoolean(KEY_STORED, false);
+        preferencesEditor.commit();
+        reload();
+    }
+
+    public void reload() {
+
+        Intent intent = getIntent();
+        overridePendingTransition(0, 0);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        finish();
+
+        overridePendingTransition(0, 0);
+        startActivity(intent);
     }
 
     private void saveData() {

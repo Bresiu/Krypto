@@ -17,8 +17,8 @@
         <com.bresiu.krypto.utils.widget.RobotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
+                android:layout_above="@+id/pass"
                 android:background="@color/newest_first_base"
                 android:gravity="center"
                 app:typeface="roboto_condensed"
@@ -30,10 +30,11 @@
         <com.bresiu.krypto.utils.widget.RobotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/info"
                 android:layout_marginTop="10dp"
                 android:background="@color/newest_first_base"
+                android:gravity="center"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/newest_white"
