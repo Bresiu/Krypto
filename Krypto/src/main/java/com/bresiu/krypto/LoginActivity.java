@@ -15,6 +15,7 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.bresiu.krypto.utils.SlidingLayer;
 
 public class LoginActivity extends SherlockActivity implements View.OnClickListener {
 
@@ -56,6 +57,14 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             noKey = false;
         }
         initVars();
+/*        //---------------------------
+        SlidingLayer slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayer);
+
+        slidingLayer.setShadowWidthRes(R.dimen.shadow_width);
+        slidingLayer.setShadowDrawable(R.drawable.sidebar_shadow);
+        slidingLayer.setStickTo(SlidingLayer.STICK_TO_LEFT);
+        slidingLayer.setCloseOnTapEnabled(true);
+        //---------------------------*/
     }
 
     @Override
@@ -69,8 +78,10 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         super.onOptionsItemSelected(item);
 
         switch (item.getItemId()) {
-            case R.id.delete_key:
-                cleanData();
+            case R.id.menu:
+                //cleanData();
+                SlidingLayer slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayer);
+                slidingLayer.openLayer(true);
                 break;
         }
         return true;

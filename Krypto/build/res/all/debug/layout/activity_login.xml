@@ -19,7 +19,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/pass"
-                android:background="@color/newest_first_base"
                 android:gravity="center"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -33,7 +32,6 @@
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:background="@color/newest_first_base"
                 android:gravity="center"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -261,4 +259,37 @@
                     android:id="@+id/back"/>
         </LinearLayout>
     </LinearLayout>
+
+    <com.bresiu.krypto.utils.SlidingLayer
+            xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
+            android:id="@+id/slidingLayer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            slidingLayer:shadowDrawable="@drawable/sidebar_shadow"
+            slidingLayer:shadowWidth="3dp"
+            slidingLayer:offsetWidth="25dp"
+            slidingLayer:stickTo="top"
+            slidingLayer:closeOnTapEnabled="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="25dp"
+                android:background="@color/newest_first_base">
+
+            <com.bresiu.krypto.utils.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    app:typeface="roboto_condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/newest_light_gray"
+                    android:text="menu"
+                    android:id="@+id/menu"/>
+
+        </RelativeLayout>
+
+    </com.bresiu.krypto.utils.SlidingLayer>
+
 </RelativeLayout><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/layout/activity_login.xml -->

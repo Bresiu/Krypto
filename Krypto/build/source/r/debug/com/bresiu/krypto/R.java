@@ -1093,20 +1093,21 @@ public final class R {
         public static final int progress_primary_kryptotheme = 0x7f020084;
         public static final int progress_secondary_kryptotheme = 0x7f020085;
         public static final int selectable_background_kryptotheme = 0x7f020086;
-        public static final int sidebar_shadow = 0x7f020087;
-        public static final int spinner_ab_default_kryptotheme = 0x7f020088;
-        public static final int spinner_ab_disabled_kryptotheme = 0x7f020089;
-        public static final int spinner_ab_focused_kryptotheme = 0x7f02008a;
-        public static final int spinner_ab_pressed_kryptotheme = 0x7f02008b;
-        public static final int spinner_background_ab_kryptotheme = 0x7f02008c;
-        public static final int tab_indicator_ab_kryptotheme = 0x7f02008d;
-        public static final int tab_selected_focused_kryptotheme = 0x7f02008e;
-        public static final int tab_selected_kryptotheme = 0x7f02008f;
-        public static final int tab_selected_pressed_kryptotheme = 0x7f020090;
-        public static final int tab_unselected_focused_kryptotheme = 0x7f020091;
-        public static final int tab_unselected_kryptotheme = 0x7f020092;
-        public static final int tab_unselected_pressed_kryptotheme = 0x7f020093;
-        public static final int web_hi_res_512 = 0x7f020094;
+        public static final int settings = 0x7f020087;
+        public static final int sidebar_shadow = 0x7f020088;
+        public static final int spinner_ab_default_kryptotheme = 0x7f020089;
+        public static final int spinner_ab_disabled_kryptotheme = 0x7f02008a;
+        public static final int spinner_ab_focused_kryptotheme = 0x7f02008b;
+        public static final int spinner_ab_pressed_kryptotheme = 0x7f02008c;
+        public static final int spinner_background_ab_kryptotheme = 0x7f02008d;
+        public static final int tab_indicator_ab_kryptotheme = 0x7f02008e;
+        public static final int tab_selected_focused_kryptotheme = 0x7f02008f;
+        public static final int tab_selected_kryptotheme = 0x7f020090;
+        public static final int tab_selected_pressed_kryptotheme = 0x7f020091;
+        public static final int tab_unselected_focused_kryptotheme = 0x7f020092;
+        public static final int tab_unselected_kryptotheme = 0x7f020093;
+        public static final int tab_unselected_pressed_kryptotheme = 0x7f020094;
+        public static final int web_hi_res_512 = 0x7f020095;
     }
 
     public static final class id {
@@ -1168,13 +1169,13 @@ public final class R {
         public static final int back = 0x7f040065;
         public static final int bottom = 0x7f040023;
         public static final int cancel = 0x7f040063;
-        public static final int delete_key = 0x7f040066;
         public static final int disableHome = 0x7f04001c;
         public static final int edit_query = 0x7f040040;
         public static final int homeAsUp = 0x7f040019;
         public static final int info = 0x7f040055;
         public static final int left = 0x7f040020;
         public static final int listMode = 0x7f040015;
+        public static final int menu = 0x7f040067;
         public static final int message = 0x7f040051;
         public static final int middle = 0x7f040021;
         public static final int normal = 0x7f040014;
@@ -1211,6 +1212,7 @@ public final class R {
         public static final int showCustom = 0x7f04001b;
         public static final int showHome = 0x7f040018;
         public static final int showTitle = 0x7f04001a;
+        public static final int slidingLayer = 0x7f040066;
         public static final int tabMode = 0x7f040016;
         public static final int tableLayout = 0x7f040053;
         public static final int top = 0x7f040022;

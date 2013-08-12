@@ -26,4 +26,4 @@
           android:drawable="@drawable/spinner_ab_focused_kryptotheme"/>
     <item android:drawable="@drawable/spinner_ab_default_kryptotheme"/>
 </selector>
-        <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/drawable/spinner_background_ab_kryptotheme.xml -->
+<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/drawable/spinner_background_ab_kryptotheme.xml -->

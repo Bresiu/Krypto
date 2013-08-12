@@ -1,9 +1,0 @@
-<resources>
-    <!--
-        <style name="AppTheme" parent="Theme.Sherlock">
-            <item name="background">@color/newest_first_base</item>
-            <item name="android:windowBackground">@color/newest_second_base</item>
-            <item name="android:colorBackground">@color/newest_first_base</item>
-        </style>
-    -->
-</resources>

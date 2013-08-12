@@ -871,6 +871,9 @@
         <item name="actionModeBackground">@drawable/cab_background_top_kryptotheme</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_kryptotheme</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Kryptotheme</item>
+        <item name="background">@color/newest_first_base</item>
+        <item name="android:windowBackground">@color/newest_second_base</item>
+        <item name="android:colorBackground">@color/newest_first_base</item>
     </style>
 
     <style name="Theme.Kryptotheme.Widget" parent="@style/Theme.Sherlock">
