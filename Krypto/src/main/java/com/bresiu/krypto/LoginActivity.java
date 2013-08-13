@@ -17,12 +17,16 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.utils.SlidingLayer;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 public class LoginActivity extends SherlockActivity implements View.OnClickListener {
 
     private static final String TAG = "LoginActivity";
     private static final String PREFERENCES_NAME = "Preferences";
     private static final String KEY_STORED = "KeyStored";
     private static final String KEY = "Key";
+    private static final String LAST_LOGGED = "LastLogged";
     private static boolean noKey;
     private static boolean isFirstAttempt;
     private static String passFirstAttempt;
@@ -33,8 +37,10 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private static View mAbsView;
     private static TextView mInfo;
     private static TextView mPass;
+    private static TextView mLastLogged;
     private static Button mCancel;
     private static Button mBack;
+    private static SlidingLayer slidingLayer;
     private static LinearLayout mProg1;
     private static LinearLayout mProg2;
     private static LinearLayout mProg3;
@@ -54,17 +60,10 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         if (!restoreData()) {
             initNewKey();
         } else {
+            mLastLogged.setText("Last logged in:\n" + preferences.getString(LAST_LOGGED, ""));
             noKey = false;
         }
         initVars();
-/*        //---------------------------
-        SlidingLayer slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayer);
-
-        slidingLayer.setShadowWidthRes(R.dimen.shadow_width);
-        slidingLayer.setShadowDrawable(R.drawable.sidebar_shadow);
-        slidingLayer.setStickTo(SlidingLayer.STICK_TO_LEFT);
-        slidingLayer.setCloseOnTapEnabled(true);
-        //---------------------------*/
     }
 
     @Override
@@ -79,9 +78,11 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
         switch (item.getItemId()) {
             case R.id.menu:
-                //cleanData();
-                SlidingLayer slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayer);
-                slidingLayer.openLayer(true);
+                if (!slidingLayer.isOpened()) {
+                    slidingLayer.openLayer(true);
+                } else {
+                    slidingLayer.closeLayer(true);
+                }
                 break;
         }
         return true;
@@ -139,6 +140,13 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 count = 0;
                 password = "";
                 break;
+            case R.id.delete_button:
+                cleanData();
+                break;
+            case R.id.about:
+                break;
+            case R.id.licences:
+                break;
         }
         showProg();
     }
@@ -171,8 +179,10 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private void setupWidgets() {
         mInfo = (TextView) findViewById(R.id.info);
         mPass = (TextView) findViewById(R.id.pass);
+        mLastLogged = (TextView) findViewById(R.id.last_logged_in);
         mBack = (Button) findViewById(R.id.back);
         mCancel = (Button) findViewById(R.id.cancel);
+        slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayer);
         mProg1 = (LinearLayout) findViewById(R.id.prog1);
         mProg2 = (LinearLayout) findViewById(R.id.prog2);
         mProg3 = (LinearLayout) findViewById(R.id.prog3);
@@ -182,6 +192,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void showProg() {
+        if (slidingLayer.isOpened()) {
+            slidingLayer.closeLayer(true);
+        }
         switch (count) {
             case 0:
                 mPass.setText("");
@@ -278,7 +291,6 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void reload() {
-
         Intent intent = getIntent();
         overridePendingTransition(0, 0);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -297,6 +309,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void loginComplete() {
+        String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+        preferencesEditor.putString(LAST_LOGGED, currentDateTimeString);
+        preferencesEditor.commit();
         Intent login = new Intent(this,
                 ComposeActivity.class);
         startActivity(login);

@@ -1112,6 +1112,7 @@ public final class R {
 
     public static final class id {
         public static final int PhoneNumberInfo = 0x7f04004d;
+        public static final int about = 0x7f040069;
         public static final int abs__action_bar = 0x7f04003a;
         public static final int abs__action_bar_container = 0x7f040039;
         public static final int abs__action_bar_subtitle = 0x7f04002b;
@@ -1169,13 +1170,16 @@ public final class R {
         public static final int back = 0x7f040065;
         public static final int bottom = 0x7f040023;
         public static final int cancel = 0x7f040063;
+        public static final int delete_button = 0x7f040067;
         public static final int disableHome = 0x7f04001c;
         public static final int edit_query = 0x7f040040;
         public static final int homeAsUp = 0x7f040019;
         public static final int info = 0x7f040055;
+        public static final int last_logged_in = 0x7f04006b;
         public static final int left = 0x7f040020;
+        public static final int licences = 0x7f040068;
         public static final int listMode = 0x7f040015;
-        public static final int menu = 0x7f040067;
+        public static final int menu = 0x7f04006a;
         public static final int message = 0x7f040051;
         public static final int middle = 0x7f040021;
         public static final int normal = 0x7f040014;

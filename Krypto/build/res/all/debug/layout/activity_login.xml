@@ -264,29 +264,92 @@
             xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
             android:id="@+id/slidingLayer"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             slidingLayer:shadowDrawable="@drawable/sidebar_shadow"
             slidingLayer:shadowWidth="3dp"
-            slidingLayer:offsetWidth="25dp"
             slidingLayer:stickTo="top"
             slidingLayer:closeOnTapEnabled="true">
 
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="25dp"
-                android:background="@color/newest_first_base">
+                android:padding="3dp"
+                android:background="@color/newest_gray">
+
+            <com.bresiu.krypto.utils.widget.RobotoButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="onClick"
+                    app:typeface="roboto_light"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/newest_orange"
+                    android:text="Delete Your Account"
+                    android:id="@+id/delete_button"/>
+
+            <com.bresiu.krypto.utils.widget.RobotoButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/delete_button"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/delete_button"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="onClick"
+                    app:typeface="roboto_light"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/newest_orange"
+                    android:text="Licenses"
+                    android:id="@+id/licences"/>
+
+            <com.bresiu.krypto.utils.widget.RobotoButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/licences"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/delete_button"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:background="@drawable/button"
+                    android:onClick="onClick"
+                    app:typeface="roboto_light"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/newest_orange"
+                    android:text="About"
+                    android:id="@+id/about"/>
 
             <com.bresiu.krypto.utils.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
                     android:gravity="center"
-                    app:typeface="roboto_condensed"
+                    app:typeface="roboto_thin"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/newest_light_gray"
+                    android:textColor="@color/newest_white"
                     android:text="menu"
                     android:id="@+id/menu"/>
+
+            <com.bresiu.krypto.utils.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="roboto_thin"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/newest_white"
+                    android:id="@+id/last_logged_in"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"/>
 
         </RelativeLayout>
 
