@@ -36,8 +36,6 @@ public class ComposeActivity extends SherlockActivity implements View.OnClickLis
         s.setSpan(new TypefaceSpan(this, "Roboto-Light"), 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        //ab.setTitle(s);
-        //ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#f3f4f3")));
         setContentView(R.layout.activity_compose);
         setupWidgets();
 

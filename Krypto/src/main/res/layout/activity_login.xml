@@ -335,7 +335,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
                     android:gravity="center"
-                    app:typeface="roboto_thin"
+                    app:typeface="roboto_light"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/newest_white"
                     android:text="menu"
@@ -344,7 +344,7 @@
             <com.bresiu.krypto.utils.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:typeface="roboto_thin"
+                    app:typeface="roboto_light"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/newest_white"
                     android:id="@+id/last_logged_in"

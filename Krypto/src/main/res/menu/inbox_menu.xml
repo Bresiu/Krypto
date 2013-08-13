@@ -1,8 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       style="@style/Theme.Sherlock">
+
     <item
-            android:id="@+id/menu"
+            android:id="@+id/compose"
+            android:title="Compose"
+            android:showAsAction="always"
+            android:icon="@drawable/settings"/>
+    <item
+            android:id="@+id/settings"
             android:title="Menu"
             android:showAsAction="always"
             android:icon="@drawable/settings"/>
-</menu><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/menu/login_menu.xml -->
+</menu>

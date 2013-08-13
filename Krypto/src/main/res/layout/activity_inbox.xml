@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/newest_first_base"
+                tools:context=".ComposeActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.bresiu.krypto.utils.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tutaj pojawi się lista wiadomości"
+                android:id="@+id/PhoneNumberInfo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+    </ScrollView>
+
+    <com.bresiu.krypto.utils.SlidingLayer
+            xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
+            android:id="@+id/slidingLayerCompose"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            slidingLayer:shadowDrawable="@drawable/sidebar_shadow"
+            slidingLayer:shadowWidth="3dp"
+            slidingLayer:stickTo="top"
+            slidingLayer:closeOnTapEnabled="true">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:background="@color/newest_gray">
+        </RelativeLayout>
+
+        <com.bresiu.krypto.utils.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Phone: "
+                android:id="@+id/PhoneNumberInfo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+
+        <com.bresiu.krypto.utils.widget.RobotoEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:id="@+id/phoneNumber"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/PhoneNumberInfo"/>
+
+        <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/send">
+
+            <com.bresiu.krypto.utils.widget.RobotoEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:singleLine="false"
+                    android:lines="3"/>
+
+        </ScrollView>
+
+        <com.bresiu.krypto.utils.widget.RobotoButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Send"
+                android:id="@+id/send"
+                android:onClick="onClick"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+    </com.bresiu.krypto.utils.SlidingLayer>
+
+</RelativeLayout>

@@ -1,7 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      style="@style/Theme.Sherlock"
-      android:background="@color/newest_black">
-    <item
+      style="@style/Theme.Sherlock">
+<item
             android:id="@+id/menu"
             android:title="Menu"
             android:showAsAction="always"

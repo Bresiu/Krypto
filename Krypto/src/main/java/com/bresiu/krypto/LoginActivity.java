@@ -313,7 +313,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         preferencesEditor.putString(LAST_LOGGED, currentDateTimeString);
         preferencesEditor.commit();
         Intent login = new Intent(this,
-                ComposeActivity.class);
+                InboxActivity.class);
         startActivity(login);
         finish();
     }
