@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.bresiu.krypto.sms.SendSMS;
 import com.bresiu.krypto.utils.SlidingLayer;
 
 public class InboxActivity extends SherlockActivity implements View.OnClickListener {
@@ -23,13 +26,19 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     private static SlidingLayer slidingLayer;
     private static BroadcastReceiver receiver;
     private static IntentFilter filter;
+    private static final int PHONE_NUMBER_MIN_LENGTH = 9;
+    private static Context context;
+    private static EditText mPhoneNumber;
+    private static EditText mMessage;
+    private static String phno;
+    private static String msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
-        setupActionBar();
+        //setupActionBar();
         setupWidgets();
         setupReceiver();
     }
@@ -43,11 +52,11 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        /*Log.d(TAG, "onClick");
+        Log.d(TAG, "onClick");
         switch (v.getId()) {
             case R.id.send:
-                String phno = mPhoneNumber.getText().toString();
-                String msg = mMessage.getText().toString();
+                phno = mPhoneNumber.getText().toString();
+                msg = mMessage.getText().toString();
                 context = getApplicationContext();
                 if (phno.length() >= PHONE_NUMBER_MIN_LENGTH && msg.length() > 0) {
                     SendSMS sendSMS = new SendSMS();
@@ -58,7 +67,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
                             Toast.LENGTH_SHORT).show();
                 }
                 break;
-        }*/
+        }
     }
 
     @Override
@@ -82,6 +91,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
             case R.id.compose:
                 if (!slidingLayer.isOpened()) {
                     slidingLayer.openLayer(true);
+                    mPhoneNumber.requestFocus();
                 } else {
                     slidingLayer.closeLayer(true);
                 }
@@ -98,19 +108,15 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
 
     private void setupWidgets() {
         slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayerCompose);
-    }
-
-    private void setupActionBar() {
-        mActionBar = getSupportActionBar();
-        mActionBar.setDisplayShowTitleEnabled(false);
-        mInflater = LayoutInflater.from(this);
-        mAbsView = mInflater.inflate(R.layout.abs_custom_font, null);
-        mActionBar.setCustomView(mAbsView);
-        mActionBar.setDisplayShowCustomEnabled(true);
+        slidingLayer.setSlidingEnabled(false);
+        mPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
+        mMessage = (EditText) findViewById(R.id.message);
     }
 
     private void showDataFromIntent(Intent intent) {
-        Log.d(TAG, "trololo");
+        mPhoneNumber.setText("");
+        mMessage.setText("");
+        slidingLayer.closeLayer(true);
     }
 
     private class BReceiver extends BroadcastReceiver {
