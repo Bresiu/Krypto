@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- base colours -->
-    <color name="background">#f3f4f3</color>
-    <color name="gray">#989998</color>
-    <color name="dark_gray">#434443</color>
-    <color name="black">#333332</color>
+    <!-- redesign colours -->
+    <color name="background">#f7f7f7</color>
+    <color name="action_bar">#e8e8e8</color>
+    <color name="tabs">#d6d6d6</color>
+
+    <color name="tabs_indicator">#4f5b6b</color>
+    <color name="orange">#c0392b</color>
 
     <color name="blue">#2a86ac</color>
+
+    <color name="green">#3be4bd</color>
+    <color name="yellow">#ffc67d</color>
+    <color name="purple">#cb96ee</color>
+
+    <!-- base colours -->
+
+    <color name="dark_gray">#434443</color>
+    <color name="black">#333332</color>
     <color name="light_blue">#43bad8</color>
     <color name="red">#bf2f1b</color>
 
@@ -19,16 +30,14 @@
     <color name="new_white">#fcfcfc</color>
 
     <!-- newest colours -->
-    <color name="newest_first_base">#4d5967</color>
-    <color name="newest_second_base">#3f4752</color>
-    <color name="newest_light_gray">#a9acb1</color>
-    <color name="newest_gray">#CC656c76</color>
-    <color name="newest_black">#272a2f</color>
-    <color name="newest_white">#fdfdfd</color>
-    <color name="newest_orange">#e06c6f</color>
-    <color name="newest_green">#3be4bd</color>
-    <color name="newest_purple">#cb96ee</color>
-    <color name="newest_yellow">#ffc67d</color>
+    <color name="newest_first_base">#2980B9</color>
+    <color name="newest_second_base">#f7f7f7</color>
+    <color name="newest_light_gray">#e8e8e8</color>
+    <color name="newest_gray">#e8e8e8</color>
+    <color name="newest_black">#2a86ac</color>
+    <color name="newest_white">#c0392b</color>
+    <color name="newest_orange">#2c3e50</color>
+
     <color name="transparent">#7f000000</color>
 
 </resources>

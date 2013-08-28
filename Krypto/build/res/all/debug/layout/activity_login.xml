@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_above="@+id/tableLayout"
-            android:background="@color/newest_first_base">
+            android:background="@color/background">
 
         <com.bresiu.krypto.utils.widget.RobotoTextView
                 android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
                 android:gravity="center"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/newest_light_gray"
+                android:textColor="@color/tabs_indicator"
                 android:text="Enter Your PIN:"
                 android:id="@+id/info"/>
 
@@ -35,7 +35,7 @@
                 android:gravity="center"
                 app:typeface="roboto_condensed"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/newest_white"
+                android:textColor="@color/orange"
                 android:id="@+id/pass"/>
 
     </RelativeLayout>
@@ -46,14 +46,13 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:orientation="vertical"
-            android:background="@color/newest_black"
+            android:background="@color/blue"
             android:id="@+id/tableLayout">
 
         <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/newest_orange">
+                android:orientation="horizontal">
 
             <LinearLayout
                     android:layout_width="wrap_content"
@@ -99,9 +98,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="1"
                     android:id="@+id/b1"/>
 
@@ -111,9 +110,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="2"
                     android:id="@+id/b2"/>
 
@@ -123,9 +122,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="3"
                     android:id="@+id/b3"/>
         </LinearLayout>
@@ -142,9 +141,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="4"
                     android:id="@+id/b4"/>
 
@@ -154,9 +153,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="5"
                     android:id="@+id/b5"/>
 
@@ -166,9 +165,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="6"
                     android:id="@+id/b6"/>
         </LinearLayout>
@@ -185,9 +184,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="7"
                     android:id="@+id/b7"/>
 
@@ -197,9 +196,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="8"
                     android:id="@+id/b8"/>
 
@@ -209,9 +208,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="9"
                     android:id="@+id/b9"/>
         </LinearLayout>
@@ -228,7 +227,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
                     android:textColor="@color/blue"
                     android:text="c"
@@ -240,9 +239,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="0"
                     android:id="@+id/b0"/>
 
@@ -252,7 +251,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textSize="40sp"
                     android:textColor="@color/blue"
                     android:text="@string/lower_than"
@@ -266,7 +265,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             slidingLayer:shadowDrawable="@drawable/sidebar_shadow"
-            slidingLayer:shadowWidth="3dp"
+            slidingLayer:shadowWidth="2dp"
             slidingLayer:stickTo="top"
             slidingLayer:closeOnTapEnabled="true">
 
@@ -274,7 +273,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="3dp"
-                android:background="@color/newest_gray">
+                android:background="@color/action_bar">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                     android:layout_width="wrap_content"
@@ -287,9 +286,9 @@
                     android:padding="10dp"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="Delete Your Account"
                     android:id="@+id/delete_button"/>
 
@@ -305,9 +304,9 @@
                     android:padding="10dp"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="Licenses"
                     android:id="@+id/licences"/>
 
@@ -323,9 +322,9 @@
                     android:padding="10dp"
                     android:background="@drawable/button"
                     android:onClick="onClick"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/newest_orange"
+                    android:textColor="@color/tabs_indicator"
                     android:text="About"
                     android:id="@+id/about"/>
 
@@ -335,7 +334,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
                     android:gravity="center"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/newest_white"
                     android:text="menu"
@@ -344,7 +343,7 @@
             <com.bresiu.krypto.utils.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:typeface="roboto_light"
+                    app:typeface="roboto_condensed"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/newest_white"
                     android:id="@+id/last_logged_in"
