@@ -30,6 +30,9 @@
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
 
+        <item name="background">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
 
     </style>
 

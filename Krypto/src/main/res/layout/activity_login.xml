@@ -261,7 +261,7 @@
 
     <com.bresiu.krypto.utils.SlidingLayer
             xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
-            android:id="@+id/slidingLayer"
+            android:id="@+id/slidingMenu"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             slidingLayer:shadowDrawable="@drawable/sidebar_shadow"
@@ -328,17 +328,6 @@
                     android:text="About"
                     android:id="@+id/about"/>
 
-            <com.bresiu.krypto.utils.widget.RobotoTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:gravity="center"
-                    app:typeface="roboto_condensed"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/orange"
-                    android:text="menu"
-                    android:id="@+id/menu"/>
 
             <com.bresiu.krypto.utils.widget.RobotoTextView
                     android:layout_width="wrap_content"

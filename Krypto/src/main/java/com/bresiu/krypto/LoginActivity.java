@@ -40,7 +40,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private static TextView mLastLogged;
     private static Button mCancel;
     private static Button mBack;
-    private static SlidingLayer slidingLayer;
+    private static SlidingLayer slidingMenu;
     private static LinearLayout mProg1;
     private static LinearLayout mProg2;
     private static LinearLayout mProg3;
@@ -78,10 +78,10 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
         switch (item.getItemId()) {
             case R.id.menu:
-                if (!slidingLayer.isOpened()) {
-                    slidingLayer.openLayer(true);
+                if (!slidingMenu.isOpened()) {
+                    slidingMenu.openLayer(true);
                 } else {
-                    slidingLayer.closeLayer(true);
+                    slidingMenu.closeLayer(true);
                 }
                 break;
         }
@@ -182,7 +182,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         mLastLogged = (TextView) findViewById(R.id.last_logged_in);
         mBack = (Button) findViewById(R.id.back);
         mCancel = (Button) findViewById(R.id.cancel);
-        slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayer);
+        slidingMenu = (SlidingLayer) findViewById(R.id.slidingMenu);
         mProg1 = (LinearLayout) findViewById(R.id.prog1);
         mProg2 = (LinearLayout) findViewById(R.id.prog2);
         mProg3 = (LinearLayout) findViewById(R.id.prog3);
@@ -192,8 +192,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void showProg() {
-        if (slidingLayer.isOpened()) {
-            slidingLayer.closeLayer(true);
+        if (slidingMenu.isOpened()) {
+            slidingMenu.closeLayer(true);
         }
         switch (count) {
             case 0:

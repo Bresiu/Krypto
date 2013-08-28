@@ -1,17 +1,17 @@
 package com.bresiu.krypto;
 
+import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -20,27 +20,26 @@ import com.bresiu.krypto.utils.SlidingLayer;
 
 public class InboxActivity extends SherlockActivity implements View.OnClickListener {
     private static final String TAG = "InBoxActivity";
-    private static ActionBar mActionBar;
-    private static LayoutInflater mInflater;
-    private static View mAbsView;
-    private static SlidingLayer slidingLayer;
+    private static final int PHONE_NUMBER_MIN_LENGTH = 9;
+    private static SlidingLayer slidingCompose;
+    private static SlidingLayer slidingSettings;
     private static BroadcastReceiver receiver;
     private static IntentFilter filter;
-    private static final int PHONE_NUMBER_MIN_LENGTH = 9;
     private static Context context;
     private static EditText mPhoneNumber;
     private static EditText mMessage;
     private static String phno;
     private static String msg;
+    private static InputMethodManager imm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
-        //setupActionBar();
         setupWidgets();
         setupReceiver();
+        imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
     }
 
     @Override
@@ -82,18 +81,28 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
 
         switch (item.getItemId()) {
             case R.id.settings:
-                if (!slidingLayer.isOpened()) {
-                    slidingLayer.openLayer(true);
+                if (slidingCompose.isOpened()) {
+                    slidingCompose.closeLayer(true);
+
+                    imm.hideSoftInputFromWindow(mPhoneNumber.getWindowToken(), 0);
+                }
+                if (!slidingSettings.isOpened()) {
+                    slidingSettings.openLayer(true);
                 } else {
-                    slidingLayer.closeLayer(true);
+                    slidingSettings.closeLayer(true);
                 }
                 break;
             case R.id.compose:
-                if (!slidingLayer.isOpened()) {
-                    slidingLayer.openLayer(true);
+                if (slidingSettings.isOpened()) {
+                    slidingSettings.closeLayer(true);
+                }
+                if (!slidingCompose.isOpened()) {
+                    slidingCompose.openLayer(true);
                     mPhoneNumber.requestFocus();
+                    imm.showSoftInput(mPhoneNumber, 0);
                 } else {
-                    slidingLayer.closeLayer(true);
+                    slidingCompose.closeLayer(true);
+                    imm.hideSoftInputFromWindow(mPhoneNumber.getWindowToken(), 0);
                 }
                 break;
         }
@@ -107,8 +116,9 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void setupWidgets() {
-        slidingLayer = (SlidingLayer) findViewById(R.id.slidingLayerCompose);
-        slidingLayer.setSlidingEnabled(false);
+        slidingCompose = (SlidingLayer) findViewById(R.id.slidingCompose);
+        slidingCompose.setSlidingEnabled(false);
+        slidingSettings = (SlidingLayer) findViewById(R.id.slidingMenu);
         mPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
         mMessage = (EditText) findViewById(R.id.message);
     }
@@ -116,7 +126,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     private void showDataFromIntent(Intent intent) {
         mPhoneNumber.setText("");
         mMessage.setText("");
-        slidingLayer.closeLayer(true);
+        slidingCompose.closeLayer(true);
     }
 
     private class BReceiver extends BroadcastReceiver {

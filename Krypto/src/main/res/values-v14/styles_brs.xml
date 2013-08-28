@@ -30,7 +30,9 @@
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
 
-
+        <item name="background">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
     </style>
 
     <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
@@ -38,6 +40,9 @@
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_brs</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_brs</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Brs</item>
+
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="displayOptions">showHome|useLogo</item>
     </style>
 
     <style name="ActionBar.Transparent.Brs" parent="@style/Widget.Sherlock.Light.ActionBar">

@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      style="@style/Theme.Sherlock">
-<item
+      style="@style/Theme.Brs">
+    <item
             android:id="@+id/menu"
             android:title="Menu"
             android:showAsAction="always"
