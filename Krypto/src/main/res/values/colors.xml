@@ -1,20 +1,21 @@
 <resources>
 
     <!-- redesign colours -->
-    <color name="pressed_brs">#CCD6D6D6</color>
+    <color name="pressed_brs">#CCCC181E</color>
 
-    <color name="background">#F7F7F7</color>
+    <color name="background">#010005</color>
+    <color name="test">#CCCC181E</color>
+    <color name="oranget">#CCCC181E</color>
+
+    <color name="orange">#CCCC181E</color>
+    <color name="blue">#2A86AC</color>
+
+    <!--<color name="background">#F7F7F7</color>-->
     <color name="action_bar">#E8E8E8</color>
     <color name="tabs">#D6D6D6</color>
-
-    <color name="tabs_indicator">#4F5B6B</color>
-    <color name="orange">#C0392B</color>
-    <color name="blue">#2A86AC</color>
 
     <color name="green">#3BE4BD</color>
     <color name="yellow">#FFC67D</color>
     <color name="purple">#CB96EE</color>
-
-    <color name="transparent">#7F000000</color>
 
 </resources>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2010 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,9 +18,9 @@
     android:layout_height="?attr/dropdownListPreferredItemHeight"
     android:minWidth="196dip"
     android:paddingRight="16dip">
-    
+
     <!-- Icon will be inserted here. -->
-    
+
     <!-- The title and summary have some gap between them, and this 'group' should be centered vertically. -->
     <RelativeLayout
         android:layout_width="0dip"
@@ -30,8 +29,8 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="16dip"
         android:duplicateParentState="true">
-        
-        <TextView 
+
+        <TextView
             android:id="@+id/abs__title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -56,6 +55,5 @@
     </RelativeLayout>
 
     <!-- Checkbox, and/or radio button will be inserted here. -->
-    
-</com.actionbarsherlock.internal.view.menu.ListMenuItemView>
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__popup_menu_item_layout.xml -->
+
+</com.actionbarsherlock.internal.view.menu.ListMenuItemView><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__popup_menu_item_layout.xml -->

@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -99,10 +100,11 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
                 if (!slidingCompose.isOpened()) {
                     slidingCompose.openLayer(true);
                     mPhoneNumber.requestFocus();
-                    imm.showSoftInput(mPhoneNumber, 0);
+                    new ShowKeyboard().execute();
                 } else {
                     slidingCompose.closeLayer(true);
-                    imm.hideSoftInputFromWindow(mPhoneNumber.getWindowToken(), 0);
+                    hideVirturalKeyboard();
+                    //new HideKeyboard().execute();
                 }
                 break;
         }
@@ -129,6 +131,14 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         slidingCompose.closeLayer(true);
     }
 
+    private void hideVirturalKeyboard() {
+        View v = getCurrentFocus();
+        if (v != null && v instanceof EditText) {
+            InputMethodManager mgr = (InputMethodManager) (v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE));
+            mgr.hideSoftInputFromWindow(v.getWindowToken(), 0);
+        }
+    }
+
     private class BReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -136,4 +146,19 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         }
     }
 
+    private class ShowKeyboard extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            imm.showSoftInput(mPhoneNumber, 0);
+            return null;
+        }
+    }
+
+    private class HideKeyboard extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            imm.hideSoftInputFromWindow(slidingCompose.getWindowToken(), 0);
+            return null;
+        }
+    }
 }

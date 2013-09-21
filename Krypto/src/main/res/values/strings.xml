@@ -5,5 +5,22 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">Login</string>
     <string name="lower_than">&lt;</string>
+    <string name="last_logged">LastLogged</string>
+    <string name="on_create">onCreate</string>
+    <string name="last_logged_in">Last logged in:\u0020</string>
+    <string name="blank" />
+    <string name="enter_pin">Enter Your New PIN:</string>
+    <string name="one_star">*</string>
+    <string name="two_stars">**</string>
+    <string name="three_stars">***</string>
+    <string name="confirm_pin">Confim PIN:</string>
+    <string name="pin_do_not_match">PIN do not match.
+        Try again…
+    </string>
+    <string name="pin_set">PIN set successfully!
+        Logging in…
+    </string>
+    <string name="pin_correct">PIN correct</string>
+    <string name="pin_incorrect">Incorrect PIN, try again</string>
 
 </resources>

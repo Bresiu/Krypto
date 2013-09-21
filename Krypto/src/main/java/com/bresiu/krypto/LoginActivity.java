@@ -22,19 +22,11 @@ import java.util.Date;
 
 public class LoginActivity extends SherlockActivity implements View.OnClickListener {
 
-    private static final String TAG = "LoginActivity";
-    private static final String PREFERENCES_NAME = "Preferences";
-    private static final String KEY_STORED = "KeyStored";
-    private static final String KEY = "Key";
-    private static final String LAST_LOGGED = "LastLogged";
     private static boolean noKey;
     private static boolean isFirstAttempt;
     private static String passFirstAttempt;
     private static String password;
     private static int count;
-    private static ActionBar mActionBar;
-    private static LayoutInflater mInflater;
-    private static View mAbsView;
     private static TextView mInfo;
     private static TextView mPass;
     private static TextView mLastLogged;
@@ -47,20 +39,25 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private static LinearLayout mProg4;
     private static SharedPreferences preferences;
     private static SharedPreferences.Editor preferencesEditor;
+    private final String TAG = "LoginActivity";
+    private final String KEY_STORED = "KeyStored";
+    private final String KEY = "Key";
+    private final String LAST_LOGGED = "LastLogged";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "onCreate");
+        Log.d(TAG, getString(R.string.on_create));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupActionBar();
         setupWidgets();
+        String PREFERENCES_NAME = "Preferences";
         preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
         preferencesEditor = preferences.edit();
         if (!restoreData()) {
             initNewKey();
         } else {
-            mLastLogged.setText("Last logged in:\n" + preferences.getString(LAST_LOGGED, ""));
+            mLastLogged.setText(String.format("%s%s", getString(R.string.last_logged_in), preferences.getString(LAST_LOGGED, getString(R.string.blank))));
             noKey = false;
         }
         initVars();
@@ -152,6 +149,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void setupActionBar() {
+        ActionBar mActionBar;
+        LayoutInflater mInflater;
+        View mAbsView;
         mActionBar = getSupportActionBar();
         mActionBar.setDisplayShowTitleEnabled(false);
         mInflater = LayoutInflater.from(this);
@@ -168,7 +168,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         noKey = true;
         isFirstAttempt = true;
         passFirstAttempt = "";
-        mInfo.setText("Enter Your New PIN:");
+        mInfo.setText(getString(R.string.enter_pin));
     }
 
     private void initVars() {
@@ -197,13 +197,13 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         }
         switch (count) {
             case 0:
-                mPass.setText("");
+                mPass.setText(getString(R.string.blank));
                 setBlue();
                 mBack.setEnabled(false);
                 mCancel.setEnabled(false);
                 break;
             case 1:
-                mPass.setText("*");
+                mPass.setText(getString(R.string.one_star));
                 mProg1.setBackgroundColor(getResources().getColor(R.color.green));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
                 mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
@@ -213,14 +213,14 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 break;
 
             case 2:
-                mPass.setText("**");
+                mPass.setText(getString(R.string.two_stars));
                 mProg1.setBackgroundColor(getResources().getColor(R.color.green));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.yellow));
                 mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
                 mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
                 break;
             case 3:
-                mPass.setText("***");
+                mPass.setText(getString(R.string.three_stars));
                 mProg1.setBackgroundColor(getResources().getColor(R.color.green));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.yellow));
                 mProg3.setBackgroundColor(getResources().getColor(R.color.purple));
@@ -230,35 +230,35 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 if (noKey) {
                     if (isFirstAttempt) {
                         setBlue();
-                        mPass.setText("");
+                        mPass.setText(getString(R.string.blank));
                         passFirstAttempt = password;
                         isFirstAttempt = false;
                         initVars();
-                        mInfo.setText("Confim PIN:");
+                        mInfo.setText(getString(R.string.confirm_pin));
                     } else {
                         if (password.equals(passFirstAttempt)) {
-                            mInfo.setText("PIN set succesfully!\nLogging in...");
+                            mInfo.setText(getString(R.string.pin_set));
                             setBlue();
                             saveData();
                         } else {
-                            mInfo.setText("PIN do not match.\nTry again...");
+                            mInfo.setText(getString(R.string.pin_do_not_match));
                             setBlue();
-                            mPass.setText("");
+                            mPass.setText(getString(R.string.blank));
                             isFirstAttempt = true;
-                            passFirstAttempt = "";
+                            passFirstAttempt = getString(R.string.blank);
                             initVars();
                         }
                     }
                 } else {
-                    if (password.equals(preferences.getString(KEY, ""))) {
-                        mInfo.setText("PIN correct");
-                        mPass.setText("");
+                    if (password.equals(preferences.getString(KEY, getString(R.string.blank)))) {
+                        mInfo.setText(getString(R.string.pin_correct));
+                        mPass.setText(getString(R.string.blank));
                         setBlue();
                         loginComplete();
                     } else {
                         initVars();
-                        mInfo.setText("Incorect PIN, try again");
-                        mPass.setText("");
+                        mInfo.setText(getString(R.string.pin_incorrect));
+                        mPass.setText(getString(R.string.blank));
                         setBlue();
                     }
                     break;

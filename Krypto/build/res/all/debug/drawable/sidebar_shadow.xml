@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ sidebar_shadow.xml
   ~ 
   ~ Copyright (C) 2013 6 Wunderkinder GmbH
@@ -22,10 +21,9 @@
   ~ limitations under the License.
 -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-       android:shape="rectangle">
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
 
     <!--<solid android:color="#22000000"/>-->
-    <solid android:color="@color/blue"/>
+    <solid android:color="@color/pressed_brs" />
 
 </shape><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/drawable/sidebar_shadow.xml -->

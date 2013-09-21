@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 **
 ** Copyright 2011, The Android Open Source Project
 **
@@ -32,7 +31,8 @@
         android:addStatesFromChildren="true"
         android:background="?attr/actionBarItemBackground">
 
-        <ImageView android:id="@+id/abs__image"
+        <ImageView
+            android:id="@+id/abs__image"
             android:layout_width="56dip"
             android:layout_height="36dip"
             android:layout_gravity="center"
@@ -54,7 +54,8 @@
         android:addStatesFromChildren="true"
         android:background="?attr/actionBarItemBackground">
 
-        <ImageView android:id="@+id/abs__image"
+        <ImageView
+            android:id="@+id/abs__image"
             android:layout_width="56dip"
             android:layout_height="36dip"
             android:layout_gravity="center"
@@ -67,5 +68,4 @@
 
     </FrameLayout>
 
-</com.actionbarsherlock.internal.widget.IcsLinearLayout>
-<!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__activity_chooser_view.xml -->
+</com.actionbarsherlock.internal.widget.IcsLinearLayout><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/layout/abs__activity_chooser_view.xml -->
