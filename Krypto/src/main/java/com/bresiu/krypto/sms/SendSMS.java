@@ -26,7 +26,7 @@ public class SendSMS {
 
         try {
             SmsManager sms = SmsManager.getDefault();
-            ArrayList<String> smsParts = sms.divideMessage(KRYPTO_TAG + caesarEncrypt.CaesarEncrypt(message));
+            ArrayList<String> smsParts = sms.divideMessage(KRYPTO_TAG + caesarEncrypt.caesarEncrypt(message));
             for (int i = 0; i < smsParts.size(); i++) {
                 sentPendingIntents.add(i, sentPI);
                 deliveredPendingIntents.add(i, deliveredPI);

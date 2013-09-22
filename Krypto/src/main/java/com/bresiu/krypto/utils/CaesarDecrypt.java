@@ -5,7 +5,7 @@ public class CaesarDecrypt {
     private final String ALPHABET = "abcdefghijklmnopqrstuvwxyz .";
     private final int SHIFT = 6;
 
-    public String CaesarDecrypt(String cipherText) {
+    public String caesarDecrypt(String cipherText) {
         cipherText = cipherText.toLowerCase();
         String message = "";
         for (int i = 1; i < cipherText.length() - 1; i++) {

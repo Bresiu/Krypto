@@ -20,6 +20,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.db.Message;
 import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.sms.SendSMS;
+import com.bresiu.krypto.utils.CaesarDecrypt;
 import com.bresiu.krypto.utils.SlidingLayer;
 
 import java.util.List;
@@ -140,7 +141,8 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         String list = "";
         values = datasource.getAllMessages();
         for (int i = 0; i < values.size(); i++) {
-            list += values.get(i).getMessage() + "\n";
+            CaesarDecrypt cd = new CaesarDecrypt();
+            list += cd.caesarDecrypt(values.get(i).getMessage()) + "\n";
         }
         mMessagesList.setText(list);
     }
