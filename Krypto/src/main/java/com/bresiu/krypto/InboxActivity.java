@@ -11,13 +11,18 @@ import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.bresiu.krypto.db.Message;
+import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.sms.SendSMS;
 import com.bresiu.krypto.utils.SlidingLayer;
+
+import java.util.List;
 
 public class InboxActivity extends SherlockActivity implements View.OnClickListener {
     private static final String TAG = "InBoxActivity";
@@ -29,17 +34,24 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     private static Context context;
     private static EditText mPhoneNumber;
     private static EditText mMessage;
+    private static TextView mMessagesList;
     private static String phno;
     private static String msg;
     private static InputMethodManager imm;
+    private MessagesDataSource datasource;
+    private List<Message> values;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
+        datasource = new MessagesDataSource(this);
+        datasource.open();
+
         setupWidgets();
         setupReceiver();
+        reload();
         imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
     }
 
@@ -48,6 +60,19 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         Log.d(TAG, "onDestroy");
         unregisterReceiver(receiver);
         super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        datasource.open();
+        reload();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        datasource.close();
+        super.onPause();
     }
 
     @Override
@@ -111,6 +136,15 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         return true;
     }
 
+    private void reload() {
+        String list = "";
+        values = datasource.getAllMessages();
+        for (int i = 0; i < values.size(); i++) {
+            list += values.get(i).getMessage() + "\n";
+        }
+        mMessagesList.setText(list);
+    }
+
     private void setupReceiver() {
         receiver = new BReceiver();
         filter = new IntentFilter("SmsDeliveredReceiver");
@@ -123,6 +157,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         slidingSettings = (SlidingLayer) findViewById(R.id.slidingMenu);
         mPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
         mMessage = (EditText) findViewById(R.id.message);
+        mMessagesList = (TextView) findViewById(R.id.messages_list);
     }
 
     private void showDataFromIntent(Intent intent) {
@@ -146,6 +181,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         }
     }
 
+    //TODO: delete this
     private class ShowKeyboard extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... params) {

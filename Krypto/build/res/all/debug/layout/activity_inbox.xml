@@ -6,8 +6,9 @@
 
     <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
 
-        <com.bresiu.krypto.utils.widget.RobotoTextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:typeface="roboto_condensed"
+        <com.bresiu.krypto.utils.widget.RobotoTextView android:id="@+id/messages_list"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            app:typeface="roboto_condensed"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/orange" android:text="Tutaj pojawi się lista wiadomości" />
     </ScrollView>

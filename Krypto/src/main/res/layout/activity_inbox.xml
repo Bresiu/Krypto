@@ -11,6 +11,7 @@
         android:layout_height="wrap_content">
 
         <com.bresiu.krypto.utils.widget.RobotoTextView
+            android:id="@+id/messages_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:typeface="roboto_condensed"

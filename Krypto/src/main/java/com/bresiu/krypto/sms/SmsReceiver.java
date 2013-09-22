@@ -13,6 +13,7 @@ import android.util.Log;
 
 import com.bresiu.krypto.LoginActivity;
 import com.bresiu.krypto.R;
+import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.utils.CaesarDecrypt;
 
 public class SmsReceiver extends BroadcastReceiver {
@@ -41,6 +42,10 @@ public class SmsReceiver extends BroadcastReceiver {
                 //TODO AsyncTask
                 CaesarDecrypt caesarDecrypt = new CaesarDecrypt();
 
+                MessagesDataSource datasource = new MessagesDataSource(context);
+                datasource.open();
+                //Message message = datasource.createMessage(comments[nextInt]);
+                datasource.close();
                 createNotification(context, msgs[0].getOriginatingAddress(), caesarDecrypt.CaesarDecrypt(str));
                 Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(100);
