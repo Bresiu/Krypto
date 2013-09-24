@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.telephony.SmsManager;
 import android.widget.Toast;
 
-import com.bresiu.krypto.utils.CaesarEncrypt;
+import com.bresiu.krypto.utils.cipher.CaesarEncrypt;
 
 import java.util.ArrayList;
 

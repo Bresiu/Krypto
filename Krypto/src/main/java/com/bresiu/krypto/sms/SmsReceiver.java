@@ -9,8 +9,8 @@ import android.telephony.SmsMessage;
 import android.util.Log;
 
 import com.bresiu.krypto.db.MessagesDataSource;
-import com.bresiu.krypto.utils.CaesarDecrypt;
 import com.bresiu.krypto.utils.CreateNotification;
+import com.bresiu.krypto.utils.cipher.CaesarDecrypt;
 
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsSender";
@@ -38,7 +38,7 @@ public class SmsReceiver extends BroadcastReceiver {
                 //TODO AsyncTask
                 CaesarDecrypt caesarDecrypt = new CaesarDecrypt();
 
-
+                //TODO: Decrypt("algorithm name", key)
                 MessagesDataSource datasource = new MessagesDataSource(context);
                 datasource.open();
                 datasource.createMessage(str);

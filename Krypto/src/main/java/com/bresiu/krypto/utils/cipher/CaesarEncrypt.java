@@ -1,4 +1,4 @@
-package com.bresiu.krypto.utils;
+package com.bresiu.krypto.utils.cipher;
 
 //Dummy Caesar cipher for test
 public class CaesarEncrypt {

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +20,8 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.db.Message;
 import com.bresiu.krypto.db.MessagesDataSource;
+import com.bresiu.krypto.listViewAdapter.ListViewAdapter;
 import com.bresiu.krypto.sms.SendSMS;
-import com.bresiu.krypto.utils.CaesarDecrypt;
 import com.bresiu.krypto.utils.SlidingLayer;
 
 import java.util.List;
@@ -33,6 +34,8 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     private static BroadcastReceiver receiver;
     private static IntentFilter filter;
     private static Context context;
+    private static ListView lview;
+    private static ListViewAdapter lviewAdapter;
     private static EditText mPhoneNumber;
     private static EditText mMessage;
     private static TextView mMessagesList;
@@ -47,12 +50,14 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
+        //TODO: Add logs, and check if datasource.open() is necessary here
         datasource = new MessagesDataSource(this);
         datasource.open();
 
         setupWidgets();
         setupReceiver();
         reload();
+
         imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
     }
 
@@ -138,13 +143,9 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void reload() {
-        String list = "";
         values = datasource.getAllMessages();
-        for (int i = 0; i < values.size(); i++) {
-            CaesarDecrypt cd = new CaesarDecrypt();
-            list += cd.caesarDecrypt(values.get(i).getMessage()) + "\n";
-        }
-        mMessagesList.setText(list);
+        lviewAdapter = new ListViewAdapter(this, values);
+        lview.setAdapter(lviewAdapter);
     }
 
     private void setupReceiver() {
@@ -154,12 +155,12 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void setupWidgets() {
+        lview = (ListView) findViewById(R.id.listView);
         slidingCompose = (SlidingLayer) findViewById(R.id.slidingCompose);
         slidingCompose.setSlidingEnabled(false);
         slidingSettings = (SlidingLayer) findViewById(R.id.slidingMenu);
         mPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
         mMessage = (EditText) findViewById(R.id.message);
-        mMessagesList = (TextView) findViewById(R.id.messages_list);
     }
 
     private void showDataFromIntent(Intent intent) {

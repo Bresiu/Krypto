@@ -48,6 +48,7 @@
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml -->
     <color name="action_bar">#E8E8E8</color>
     <color name="background">#010005</color>
+    <color name="background_black">#000</color>
     <color name="blue">#2A86AC</color>
     <color name="green">#3BE4BD</color>
     <color name="orange">#CCCC181E</color>

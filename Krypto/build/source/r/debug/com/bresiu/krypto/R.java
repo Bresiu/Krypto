@@ -883,24 +883,25 @@ public final class R {
         public static final int abs__bright_foreground_disabled_holo_light = 0x7f060003;
         public static final int abs__bright_foreground_holo_dark = 0x7f060004;
         public static final int abs__bright_foreground_holo_light = 0x7f060005;
-        public static final int abs__primary_text_disable_only_holo_dark = 0x7f060011;
-        public static final int abs__primary_text_disable_only_holo_light = 0x7f060012;
-        public static final int abs__primary_text_holo_dark = 0x7f060013;
-        public static final int abs__primary_text_holo_light = 0x7f060014;
+        public static final int abs__primary_text_disable_only_holo_dark = 0x7f060012;
+        public static final int abs__primary_text_disable_only_holo_light = 0x7f060013;
+        public static final int abs__primary_text_holo_dark = 0x7f060014;
+        public static final int abs__primary_text_holo_light = 0x7f060015;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml
          */
         public static final int action_bar = 0x7f060006;
         public static final int background = 0x7f060007;
-        public static final int blue = 0x7f060008;
-        public static final int green = 0x7f060009;
-        public static final int orange = 0x7f06000a;
-        public static final int oranget = 0x7f06000b;
-        public static final int pressed_brs = 0x7f06000c;
-        public static final int purple = 0x7f06000d;
-        public static final int tabs = 0x7f06000e;
-        public static final int test = 0x7f06000f;
-        public static final int yellow = 0x7f060010;
+        public static final int background_black = 0x7f060008;
+        public static final int blue = 0x7f060009;
+        public static final int green = 0x7f06000a;
+        public static final int orange = 0x7f06000b;
+        public static final int oranget = 0x7f06000c;
+        public static final int pressed_brs = 0x7f06000d;
+        public static final int purple = 0x7f06000e;
+        public static final int tabs = 0x7f06000f;
+        public static final int test = 0x7f060010;
+        public static final int yellow = 0x7f060011;
     }
 
     public static final class dimen {
@@ -1152,7 +1153,8 @@ public final class R {
         public static final int back = 0x7f04006b;
         public static final int bottom = 0x7f040023;
         public static final int cancel = 0x7f040069;
-        public static final int compose = 0x7f04006d;
+        public static final int compose = 0x7f040070;
+        public static final int date_box = 0x7f04006d;
         public static final int delete_button = 0x7f040055;
         public static final int disableHome = 0x7f04001c;
         public static final int edit_query = 0x7f040040;
@@ -1162,13 +1164,15 @@ public final class R {
         public static final int left = 0x7f040020;
         public static final int licences = 0x7f040056;
         public static final int listMode = 0x7f040015;
-        public static final int menu = 0x7f04006f;
+        public static final int listView = 0x7f04004d;
+        public static final int menu = 0x7f040072;
         public static final int message = 0x7f040053;
-        public static final int messages_list = 0x7f04004d;
+        public static final int message_box = 0x7f04006f;
         public static final int middle = 0x7f040021;
         public static final int normal = 0x7f040014;
         public static final int pass = 0x7f04005b;
         public static final int phoneNumber = 0x7f040050;
+        public static final int phone_box = 0x7f04006e;
         public static final int prog1 = 0x7f04005c;
         public static final int prog2 = 0x7f04005d;
         public static final int prog3 = 0x7f04005e;
@@ -1197,7 +1201,7 @@ public final class R {
         public static final int robotoslab_thin = 0x7f040010;
         public static final int scrollView = 0x7f040051;
         public static final int send = 0x7f040052;
-        public static final int settings = 0x7f04006e;
+        public static final int settings = 0x7f040071;
         public static final int showCustom = 0x7f04001b;
         public static final int showHome = 0x7f040018;
         public static final int showTitle = 0x7f04001a;
@@ -1244,8 +1248,9 @@ public final class R {
         public static final int abs_custom_font = 0x7f030015;
         public static final int activity_inbox = 0x7f030016;
         public static final int activity_login = 0x7f030017;
-        public static final int sherlock_spinner_dropdown_item = 0x7f030018;
-        public static final int sherlock_spinner_item = 0x7f030019;
+        public static final int message = 0x7f030018;
+        public static final int sherlock_spinner_dropdown_item = 0x7f030019;
+        public static final int sherlock_spinner_item = 0x7f03001a;
     }
 
     public static final class menu {
