@@ -46,17 +46,18 @@
     <color name="abs__bright_foreground_holo_dark">@color/abs__background_holo_light</color>
     <color name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml -->
-    <color name="action_bar">#E8E8E8</color>
-    <color name="background">#010005</color>
-    <color name="background_black">#000</color>
+    <color name="action_bar">#df4931</color>
+    <color name="background">#ebebeb</color>
+    <color name="background_black">#ebebeb</color>
     <color name="blue">#2A86AC</color>
     <color name="green">#3BE4BD</color>
-    <color name="orange">#CCCC181E</color>
-    <color name="oranget">#CCCC181E</color>
+    <color name="grey">#999999</color>
+    <color name="orange">#999999</color>
     <color name="pressed_brs">#CCCC181E</color>
     <color name="purple">#CB96EE</color>
-    <color name="tabs">#D6D6D6</color>
-    <color name="test">#CCCC181E</color>
+    <color name="tabs">#333333</color>
+    <color name="test">#CC181E</color>
+    <color name="transparent">#00000000</color>
     <color name="yellow">#FFC67D</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml -->
     <declare-styleable name="RobotoAutoCompleteTextView">
@@ -633,43 +634,106 @@
     <string name="title_activity_login">Login</string>
     <string name="two_stars">**</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_brs.xml -->
-    <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
+    <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.ActionBar.Solid">
         <item name="background">@drawable/ab_solid_brs</item>
         <item name="backgroundStacked">@drawable/ab_stacked_solid_brs</item>
         <item name="backgroundSplit">@drawable/ab_bottom_solid_brs</item>
         <item name="progressBarStyle">@style/ProgressBar.Brs</item>
     </style>
 
-    <style name="ActionBar.Transparent.Brs" parent="@style/Widget.Sherlock.Light.ActionBar">
+    <style name="ActionBar.Transparent.Brs" parent="@style/Widget.Sherlock.ActionBar">
         <item name="background">@drawable/ab_transparent_brs</item>
         <item name="progressBarStyle">@style/ProgressBar.Brs</item>
     </style>
 
-    <style name="ActionBarTabStyle.Brs" parent="@style/Widget.Sherlock.Light.ActionBar.TabView">
+    <style name="ActionBarTabStyle.Brs" parent="@style/Widget.Sherlock.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_brs</item>
     </style>
 
-    <style name="ActionButton.CloseMode.Brs"
-        parent="@style/Widget.Sherlock.Light.ActionButton.CloseMode">
+    <style name="ActionButton.CloseMode.Brs" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_brs</item>
     </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/themes_apptheme.xml -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:editTextStyle">@style/EditTextAppTheme</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewAppTheme</item>
+        <item name="android:checkboxStyle">@style/CheckBoxAppTheme</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonAppTheme</item>
+        <item name="android:buttonStyle">@style/ButtonAppTheme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonAppTheme</item>
+        <item name="android:spinnerStyle">@style/SpinnerAppTheme</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerAppTheme.DropDown</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemAppTheme</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarAppTheme</item>
+        <item name="android:buttonStyleToggle">@style/ToggleAppTheme</item>
+        <item name="android:listViewStyle">@style/ListViewAppTheme</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewAppTheme.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemAppTheme</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_apptheme.xml -->
+    <style name="AutoCompleteTextViewAppTheme" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:dropDownSelector">@drawable/list_selector_holo_light</item>
+        <item name="android:background">@drawable/edit_text_holo_light</item>
+        <item name="android:textColor">#000000</item>
+    </style>
 
-    <style name="DropDownListView.Brs" parent="@style/Widget.Sherlock.Light.ListView.DropDown">
+    <style name="ButtonAppTheme" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="CheckBoxAppTheme" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/btn_check_holo_light</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_brs.xml -->
+    <style name="DropDownListView.Brs" parent="@style/Widget.Sherlock.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_brs</item>
     </style>
 
-    <style name="DropDownNav.Brs" parent="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar">
+    <style name="DropDownNav.Brs" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
         <item name="android:background">@drawable/spinner_background_ab_brs</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_brs</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_brs</item>
     </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_apptheme.xml -->
+    <style name="EditTextAppTheme" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/edit_text_holo_light</item>
+        <item name="android:textColor">#000000</item>
+    </style>
 
-    <style name="PopupMenu.Brs" parent="@style/Widget.Sherlock.Light.ListPopupWindow">
+    <style name="ImageButtonAppTheme" parent="android:Widget.ImageButton">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+    </style>
+
+    <style name="ListViewAppTheme" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+    </style>
+
+    <style name="ListViewAppTheme.White" parent="android:Widget.ListView.White">
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_brs.xml -->
+    <style name="PopupMenu.Brs" parent="@style/Widget.Sherlock.ListPopupWindow">
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_brs</item>
     </style>
 
-    <style name="ProgressBar.Brs" parent="@style/Widget.Sherlock.Light.ProgressBar.Horizontal">
+    <style name="ProgressBar.Brs" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_brs</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_apptheme.xml -->
+    <style name="ProgressBarAppTheme" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">
+            @drawable/progress_indeterminate_horizontal_holo_light
+        </item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+    <style name="RadioButtonAppTheme" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/btn_radio_holo_light</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Sherlock.__TextAppearance.Small" parent="Widget">
@@ -747,7 +811,24 @@
         <item name="android:completionThreshold">2</item>
         <item name="android:dropDownWidth">wrap_content</item>
     </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_apptheme.xml -->
+    <style name="SpinnerAppTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/list_selector_holo_light</item>
+    </style>
 
+    <style name="SpinnerAppTheme.DropDown">
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+
+    <style name="SpinnerDropDownItemAppTheme" parent="android:Widget.DropDownItem.Spinner">
+        <item name="android:checkMark">@drawable/btn_radio_holo_light</item>
+    </style>
+
+    <style name="SpinnerItemAppTheme" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="TextAppearance.Sherlock" parent="@android:style/TextAppearance" />
 
     <style name="TextAppearance.Sherlock.Light.SearchResult"
@@ -863,7 +944,7 @@
         <item name="android:textStyle">normal</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_brs.xml -->
-    <style name="Theme.Brs" parent="@style/Theme.Sherlock.Light">
+    <style name="Theme.Brs" parent="@style/Theme.Sherlock">
         <item name="actionBarItemBackground">@drawable/selectable_background_brs</item>
         <item name="popupMenuStyle">@style/PopupMenu.Brs</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Brs</item>
@@ -873,9 +954,6 @@
         <item name="actionModeBackground">@drawable/cab_background_top_brs</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
-        <item name="background">@color/background</item>
-        <item name="android:windowBackground">@color/background</item>
-        <item name="android:colorBackground">@color/background</item>
     </style>
 
     <style name="Theme.Brs.Widget" parent="@style/Theme.Sherlock">
@@ -1106,7 +1184,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_apptheme.xml -->
+    <style name="ToggleAppTheme" parent="android:Widget.Button.Toggle">
+        <item name="android:background">@drawable/btn_toggle_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <style name="Widget" />
 
     <style name="Widget.Sherlock.ActionBar" parent="Sherlock.__Widget.ActionBar">

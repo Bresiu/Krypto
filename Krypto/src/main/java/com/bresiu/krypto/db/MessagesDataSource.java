@@ -15,7 +15,10 @@ public class MessagesDataSource {
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
-    private String[] allColumns = {MySQLiteHelper.COLUMN_ID,
+    private String[] allColumns = {
+            MySQLiteHelper.COLUMN_ID,
+            MySQLiteHelper.COLUMN_PHONE,
+            MySQLiteHelper.COLUMN_TIME,
             MySQLiteHelper.COLUMN_SMS};
 
     public MessagesDataSource(Context context) {
@@ -30,14 +33,18 @@ public class MessagesDataSource {
         dbHelper.close();
     }
 
-    public Message createMessage(String message) {
+    public Message createMessage(String time, String phone, String message) {
         ContentValues values = new ContentValues();
+        values.put(MySQLiteHelper.COLUMN_TIME, time);
+        values.put(MySQLiteHelper.COLUMN_PHONE, phone);
         values.put(MySQLiteHelper.COLUMN_SMS, message);
         long insertId = database.insert(MySQLiteHelper.TABLE_SMS, null,
                 values);
-        Cursor cursor = database.query(MySQLiteHelper.TABLE_SMS,
-                allColumns, MySQLiteHelper.COLUMN_ID + " = " + insertId, null,
-                null, null, null);
+        Cursor cursor = database.query(
+                MySQLiteHelper.TABLE_SMS,
+                allColumns,
+                MySQLiteHelper.COLUMN_ID + " = " + insertId
+                , null, null, null, null);
         cursor.moveToFirst();
         Message newMessage = cursorToMessage(cursor);
         cursor.close();
@@ -46,7 +53,7 @@ public class MessagesDataSource {
 
     public void deleteMessage(Message message) {
         long id = message.getId();
-        Log.d(TAG, "Comment deleted with id: " + id);
+        Log.d(TAG, "Message deleted with id: " + id);
         database.delete(MySQLiteHelper.TABLE_SMS, MySQLiteHelper.COLUMN_ID
                 + " = " + id, null);
     }
@@ -71,7 +78,9 @@ public class MessagesDataSource {
     private Message cursorToMessage(Cursor cursor) {
         Message message = new Message();
         message.setId(cursor.getLong(0));
-        message.setMessage(cursor.getString(1));
+        message.setPhone(cursor.getString(1));
+        message.setTime(cursor.getString(2));
+        message.setMessage(cursor.getString(3));
         return message;
     }
 }

@@ -52,35 +52,36 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:id="@+id/prog1"
                 android:layout_width="wrap_content"
                 android:layout_height="3dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal" />
 
             <LinearLayout
                 android:id="@+id/prog2"
                 android:layout_width="wrap_content"
                 android:layout_height="3dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal" />
 
             <LinearLayout
                 android:id="@+id/prog3"
                 android:layout_width="wrap_content"
                 android:layout_height="3dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal" />
 
             <LinearLayout
                 android:id="@+id/prog4"
                 android:layout_width="wrap_content"
                 android:layout_height="3dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal" />
         </LinearLayout>
 
         <LinearLayout
@@ -260,9 +261,6 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         slidingLayer:closeOnTapEnabled="true"
-        slidingLayer:offsetWidth="3dp"
-        slidingLayer:shadowDrawable="@drawable/sidebar_shadow"
-        slidingLayer:shadowWidth="4dp"
         slidingLayer:stickTo="top">
 
         <RelativeLayout

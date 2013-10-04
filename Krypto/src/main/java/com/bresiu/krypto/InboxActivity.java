@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockActivity;
@@ -38,7 +37,6 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     private static ListViewAdapter lviewAdapter;
     private static EditText mPhoneNumber;
     private static EditText mMessage;
-    private static TextView mMessagesList;
     private static String phno;
     private static String msg;
     private static InputMethodManager imm;
@@ -65,6 +63,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     protected void onDestroy() {
         Log.d(TAG, "onDestroy");
         unregisterReceiver(receiver);
+        datasource.close();
         super.onDestroy();
     }
 

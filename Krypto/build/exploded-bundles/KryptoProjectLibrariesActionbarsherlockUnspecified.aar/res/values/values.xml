@@ -507,9 +507,7 @@
     <string name="abs__searchview_description_submit">Submit query</string>
     <string name="abs__searchview_description_voice">Voice search</string>
     <string name="abs__shareactionprovider_share_with">Share with</string>
-    <string name="abs__shareactionprovider_share_with_application">Share with
-        <ns1:g id="application_name" example="Bluetooth">%s</ns1:g>
-    </string>
+    <string name="abs__shareactionprovider_share_with_application">Share with<ns1:g id="application_name" example="Bluetooth">%s</ns1:g></string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/libraries/actionbarsherlock/res/values/abs__styles.xml -->
     <style name="Sherlock.__TextAppearance.Small" parent="Widget">
         <item name="android:textSize">14sp</item>

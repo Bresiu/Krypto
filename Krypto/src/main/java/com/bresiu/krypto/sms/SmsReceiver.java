@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.telephony.SmsMessage;
+import android.text.format.Time;
 import android.util.Log;
 
 import com.bresiu.krypto.db.MessagesDataSource;
@@ -35,13 +36,15 @@ public class SmsReceiver extends BroadcastReceiver {
                 str += "\n";
             }
             if (msgs[0].getMessageBody().startsWith(SendSMS.KRYPTO_TAG)) {
+                abortBroadcast();
                 //TODO AsyncTask
                 CaesarDecrypt caesarDecrypt = new CaesarDecrypt();
-
+                Time now = new Time();
+                now.setToNow();
                 //TODO: Decrypt("algorithm name", key)
                 MessagesDataSource datasource = new MessagesDataSource(context);
                 datasource.open();
-                datasource.createMessage(str);
+                datasource.createMessage(now.toString(), msgs[0].getOriginatingAddress(), str);
                 datasource.close();
 //                Message message = datasource.createMessage("sad");
 //                adapter.add(comment);
@@ -54,8 +57,6 @@ public class SmsReceiver extends BroadcastReceiver {
                     vibrator.vibrate(30);
                     SystemClock.sleep(DELAY);
                 }*/
-                // TODO: uncomment
-                abortBroadcast();
             }
         }
     }

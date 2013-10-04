@@ -46,6 +46,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/PhoneNumberInfo"
+                android:textColor="@color/orange"
                 android:inputType="phone" />
 
             <ScrollView
@@ -60,6 +61,7 @@
                     android:id="@+id/message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
                     android:ems="10"
                     android:gravity="bottom"
                     android:lines="3"

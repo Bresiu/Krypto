@@ -44,17 +44,23 @@ public class ListViewAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.message, null);
             holder = new ViewHolder();
             holder.messageView = (TextView) convertView.findViewById(R.id.message_box);
+            holder.phoneView = (TextView) convertView.findViewById(R.id.phone_box);
+            holder.dateView = (TextView) convertView.findViewById(R.id.date_box);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.messageView.setText(cd.caesarDecrypt(values.get(position).getMessage()));
+        holder.dateView.setText(values.get(position).getTime());
+        holder.phoneView.setText(values.get(position).getPhone());
 
         return convertView;
     }
 
     private class ViewHolder {
         TextView messageView;
+        TextView phoneView;
+        TextView dateView;
     }
 
 }

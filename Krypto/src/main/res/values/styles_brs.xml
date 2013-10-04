@@ -18,7 +18,7 @@
 
 <resources>
 
-    <style name="Theme.Brs" parent="@style/Theme.Sherlock.Light">
+    <style name="Theme.Brs" parent="@style/Theme.Sherlock">
         <item name="actionBarItemBackground">@drawable/selectable_background_brs</item>
         <item name="popupMenuStyle">@style/PopupMenu.Brs</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Brs</item>
@@ -29,47 +29,44 @@
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
 
-        <item name="background">@color/background</item>
-        <item name="android:windowBackground">@color/background</item>
-        <item name="android:colorBackground">@color/background</item>
 
     </style>
 
-    <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
+    <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.ActionBar.Solid">
         <item name="background">@drawable/ab_solid_brs</item>
         <item name="backgroundStacked">@drawable/ab_stacked_solid_brs</item>
         <item name="backgroundSplit">@drawable/ab_bottom_solid_brs</item>
         <item name="progressBarStyle">@style/ProgressBar.Brs</item>
     </style>
 
-    <style name="ActionBar.Transparent.Brs" parent="@style/Widget.Sherlock.Light.ActionBar">
+    <style name="ActionBar.Transparent.Brs" parent="@style/Widget.Sherlock.ActionBar">
         <item name="background">@drawable/ab_transparent_brs</item>
         <item name="progressBarStyle">@style/ProgressBar.Brs</item>
     </style>
 
-    <style name="PopupMenu.Brs" parent="@style/Widget.Sherlock.Light.ListPopupWindow">
+    <style name="PopupMenu.Brs" parent="@style/Widget.Sherlock.ListPopupWindow">
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_brs</item>
     </style>
 
-    <style name="DropDownListView.Brs" parent="@style/Widget.Sherlock.Light.ListView.DropDown">
+    <style name="DropDownListView.Brs" parent="@style/Widget.Sherlock.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_brs</item>
     </style>
 
-    <style name="ActionBarTabStyle.Brs" parent="@style/Widget.Sherlock.Light.ActionBar.TabView">
+    <style name="ActionBarTabStyle.Brs" parent="@style/Widget.Sherlock.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_brs</item>
     </style>
 
-    <style name="DropDownNav.Brs" parent="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar">
+    <style name="DropDownNav.Brs" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
         <item name="android:background">@drawable/spinner_background_ab_brs</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_brs</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_brs</item>
     </style>
 
-    <style name="ProgressBar.Brs" parent="@style/Widget.Sherlock.Light.ProgressBar.Horizontal">
+    <style name="ProgressBar.Brs" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_brs</item>
     </style>
 
-    <style name="ActionButton.CloseMode.Brs" parent="@style/Widget.Sherlock.Light.ActionButton.CloseMode">
+    <style name="ActionButton.CloseMode.Brs" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_brs</item>
     </style>
 

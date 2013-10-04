@@ -15,6 +15,7 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.bresiu.krypto.db.MySQLiteHelper;
 import com.bresiu.krypto.utils.SlidingLayer;
 
 import java.text.DateFormat;
@@ -276,6 +277,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private void cleanData() {
         preferencesEditor.putBoolean(KEY_STORED, false);
         preferencesEditor.commit();
+        getApplication().deleteDatabase(MySQLiteHelper.TABLE_SMS);
         reload();
     }
 
