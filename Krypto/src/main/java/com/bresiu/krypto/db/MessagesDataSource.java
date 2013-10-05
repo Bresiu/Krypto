@@ -7,6 +7,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.bresiu.krypto.InboxActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +52,7 @@ public class MessagesDataSource {
         cursor.moveToFirst();
         Message newMessage = cursorToMessage(cursor);
         cursor.close();
+        InboxActivity.notifyList();
         return newMessage;
     }
 

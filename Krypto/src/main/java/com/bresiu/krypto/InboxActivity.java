@@ -33,15 +33,15 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     private static BroadcastReceiver receiver;
     private static IntentFilter filter;
     private static Context context;
-    private static ListView lview;
-    private static ListViewAdapter lviewAdapter;
+    public static ListView lview;
+    public static ListViewAdapter lviewAdapter;
     private static EditText mPhoneNumber;
     private static EditText mMessage;
     private static String phno;
     private static String msg;
     private static InputMethodManager imm;
-    private MessagesDataSource datasource;
-    private List<Message> values;
+    private static MessagesDataSource datasource;
+    private static List<Message> values;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
 
         setupWidgets();
         setupReceiver();
-        reload();
+        makeList();
 
         imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
     }
@@ -69,15 +69,15 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
 
     @Override
     protected void onResume() {
-        datasource.open();
-        reload();
         super.onResume();
+        datasource.open();
+        notifyList();
     }
 
     @Override
     protected void onPause() {
-        datasource.close();
         super.onPause();
+        datasource.close();
     }
 
     @Override
@@ -141,7 +141,13 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         return true;
     }
 
-    private void reload() {
+    public static void notifyList() {
+        values.clear();
+        values.addAll(datasource.getAllMessages());
+        lviewAdapter.notifyDataSetChanged();
+    }
+
+    public void makeList() {
         values = datasource.getAllMessages();
         lviewAdapter = new ListViewAdapter(this, values);
         lview.setAdapter(lviewAdapter);

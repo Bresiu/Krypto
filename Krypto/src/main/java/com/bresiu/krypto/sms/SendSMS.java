@@ -47,7 +47,8 @@ public class SendSMS {
         now.setToNow();
         MessagesDataSource datasource = new MessagesDataSource(context);
         datasource.open();
-        datasource.createMessage(now.toString(), phoneNumber, message, 1);
+        // todo check time format
+        datasource.createMessage(now.format2445(), phoneNumber, message, 1);
         datasource.close();
     }
 }

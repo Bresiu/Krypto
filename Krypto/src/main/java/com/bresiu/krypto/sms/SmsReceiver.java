@@ -15,8 +15,6 @@ import com.bresiu.krypto.utils.cipher.CaesarDecrypt;
 
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsSender";
-    private static final int DELAY = 2000;
-    Context context;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -41,21 +39,19 @@ public class SmsReceiver extends BroadcastReceiver {
                 CaesarDecrypt caesarDecrypt = new CaesarDecrypt();
                 Time now = new Time();
                 now.setToNow();
+                String phoneNo = msgs[0].getOriginatingAddress();
                 //TODO: Decrypt("algorithm name", key)
                 //Cipher cipher = new Cipher();
                 //cipher.decrypt("caesar", key, message);
                 MessagesDataSource datasource = new MessagesDataSource(context);
                 datasource.open();
-                datasource.createMessage(now.toString(), msgs[0].getOriginatingAddress(), str, 0);
+                datasource.createMessage(now.format2445(), phoneNo, str, 0);
                 datasource.close();
-                CreateNotification.createNotification(context, msgs[0].getOriginatingAddress(), caesarDecrypt.caesarDecrypt(str));
+
+
+                CreateNotification.createNotification(context, phoneNo, caesarDecrypt.caesarDecrypt(str));
                 Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(100);
-                /*for (int i = 0; i < 3; i++) {
-                    Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-                    vibrator.vibrate(30);
-                    SystemClock.sleep(DELAY);
-                }*/
             }
         }
     }
