@@ -19,7 +19,8 @@ public class MessagesDataSource {
             MySQLiteHelper.COLUMN_ID,
             MySQLiteHelper.COLUMN_PHONE,
             MySQLiteHelper.COLUMN_TIME,
-            MySQLiteHelper.COLUMN_SMS};
+            MySQLiteHelper.COLUMN_SMS,
+            MySQLiteHelper.COLUMN_OWN};
 
     public MessagesDataSource(Context context) {
         dbHelper = new MySQLiteHelper(context);
@@ -33,11 +34,12 @@ public class MessagesDataSource {
         dbHelper.close();
     }
 
-    public Message createMessage(String time, String phone, String message) {
+    public Message createMessage(String time, String phone, String message, int own) {
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_TIME, time);
         values.put(MySQLiteHelper.COLUMN_PHONE, phone);
         values.put(MySQLiteHelper.COLUMN_SMS, message);
+        values.put(MySQLiteHelper.COLUMN_OWN, own);
         long insertId = database.insert(MySQLiteHelper.TABLE_SMS, null,
                 values);
         Cursor cursor = database.query(
@@ -81,6 +83,7 @@ public class MessagesDataSource {
         message.setPhone(cursor.getString(1));
         message.setTime(cursor.getString(2));
         message.setMessage(cursor.getString(3));
+        message.setOwn(cursor.getInt(4));
         return message;
     }
 }

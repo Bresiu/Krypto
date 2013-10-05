@@ -4,8 +4,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.SmsManager;
+import android.text.format.Time;
 import android.widget.Toast;
 
+import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.utils.cipher.CaesarEncrypt;
 
 import java.util.ArrayList;
@@ -33,9 +35,19 @@ public class SendSMS {
             }
             sms.sendMultipartTextMessage(phoneNumber, null, smsParts,
                     sentPendingIntents, deliveredPendingIntents);
+            addToDatabase(message, phoneNumber, context);
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(context, "SMS sending failed...", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void addToDatabase(String message, String phoneNumber, Context context) {
+        Time now = new Time();
+        now.setToNow();
+        MessagesDataSource datasource = new MessagesDataSource(context);
+        datasource.open();
+        datasource.createMessage(now.toString(), phoneNumber, message, 1);
+        datasource.close();
     }
 }

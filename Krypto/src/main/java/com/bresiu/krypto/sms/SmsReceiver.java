@@ -42,13 +42,12 @@ public class SmsReceiver extends BroadcastReceiver {
                 Time now = new Time();
                 now.setToNow();
                 //TODO: Decrypt("algorithm name", key)
+                //Cipher cipher = new Cipher();
+                //cipher.decrypt("caesar", key, message);
                 MessagesDataSource datasource = new MessagesDataSource(context);
                 datasource.open();
-                datasource.createMessage(now.toString(), msgs[0].getOriginatingAddress(), str);
+                datasource.createMessage(now.toString(), msgs[0].getOriginatingAddress(), str, 0);
                 datasource.close();
-//                Message message = datasource.createMessage("sad");
-//                adapter.add(comment);
-//                datasource.close();
                 CreateNotification.createNotification(context, msgs[0].getOriginatingAddress(), caesarDecrypt.caesarDecrypt(str));
                 Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(100);

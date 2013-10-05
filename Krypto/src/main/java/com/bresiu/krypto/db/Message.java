@@ -6,6 +6,7 @@ public class Message {
     private String phone;
     private String time;
     private String message;
+    private int own;
 
     public long getId() {
         return id;
@@ -37,6 +38,15 @@ public class Message {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    //Theres now bool variable in SQLite?
+    public int getOwn() {
+        return own;
+    }
+
+    public void setOwn(int own) {
+        this.own = own;
     }
 
     // Will be used by the ArrayAdapter in the ListView
