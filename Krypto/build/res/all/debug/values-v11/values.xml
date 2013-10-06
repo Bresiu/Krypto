@@ -13,13 +13,10 @@
         <item name="android:progressBarStyleHorizontal">@style/ProgressBarAppTheme</item>
         <item name="android:buttonStyleToggle">@style/ToggleAppTheme</item>
         <item name="android:listChoiceBackgroundIndicator">@drawable/list_selector_holo_light</item>
-        <item name="android:activatedBackgroundIndicator">
-            @drawable/activated_background_holo_light
-        </item>
+        <item name="android:activatedBackgroundIndicator">            @drawable/activated_background_holo_light</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values-v11/styles_apptheme.xml -->
-    <style name="AutoCompleteTextViewAppTheme"
-        parent="android:Widget.Holo.Light.AutoCompleteTextView">
+    <style name="AutoCompleteTextViewAppTheme" parent="android:Widget.Holo.Light.AutoCompleteTextView">
         <item name="android:dropDownSelector">@drawable/list_selector_holo_light</item>
         <item name="android:background">@drawable/edit_text_holo_light</item>
     </style>
@@ -34,9 +31,7 @@
 
     <style name="ProgressBarAppTheme" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">
-            @drawable/progress_indeterminate_horizontal_holo_light
-        </item>
+        <item name="android:indeterminateDrawable">            @drawable/progress_indeterminate_horizontal_holo_light</item>
     </style>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values-v11/values.xml -->
     <style name="Sherlock.__Theme" parent="android:Theme.Holo">

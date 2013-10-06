@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -141,6 +142,8 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         return true;
     }
 
+    //TODO: Zamiast listy dac FILO
+
     public static void notifyList() {
         values.clear();
         values.addAll(datasource.getAllMessages());
@@ -151,6 +154,19 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         values = datasource.getAllMessages();
         lviewAdapter = new ListViewAdapter(this, values);
         lview.setAdapter(lviewAdapter);
+        lview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view,
+                                           int position, long id) {
+                Message message = (Message) lviewAdapter.getItem(position);
+                datasource.deleteMessage(message);
+                notifyList();
+                Toast.makeText(InboxActivity.this, "Item in position " + position + " deleted",
+                        Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
     }
 
     private void setupReceiver() {

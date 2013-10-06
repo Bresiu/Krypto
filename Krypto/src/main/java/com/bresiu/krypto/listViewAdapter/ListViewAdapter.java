@@ -28,12 +28,13 @@ public class ListViewAdapter extends BaseAdapter {
         return values.size();
     }
 
+    @Override
     public Object getItem(int position) {
-        return null;
+        return values.get(position);
     }
 
     public long getItemId(int position) {
-        return 0;
+        return values.get(position).getId();
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
