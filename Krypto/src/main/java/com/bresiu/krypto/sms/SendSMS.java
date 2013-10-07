@@ -4,11 +4,9 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.SmsManager;
-import android.text.format.Time;
 import android.widget.Toast;
 
 import com.bresiu.krypto.InboxActivity;
-import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.utils.cipher.CaesarEncrypt;
 
 import java.util.ArrayList;
@@ -27,8 +25,10 @@ public class SendSMS {
 
         //Encrypt message
         CaesarEncrypt caesarEncrypt = new CaesarEncrypt();
-        String messageEncrypted = KRYPTO_TAG + caesarEncrypt.caesarEncrypt(message) + "\n";
-        addToDatabase(phoneNumber, messageEncrypted, context);
+        String messageEncrypted = KRYPTO_TAG + caesarEncrypt.caesarEncrypt(message);
+
+        SmsToDatabase.insert(phoneNumber, messageEncrypted, 1, 1, context);
+        InboxActivity.notifyList();
 
         try {
             SmsManager sms = SmsManager.getDefault();
@@ -44,15 +44,5 @@ public class SendSMS {
             e.printStackTrace();
             Toast.makeText(context, "SMS sending failed...", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private void addToDatabase(String phoneNumber, String messageEncrypted, Context context) {
-        Time now = new Time();
-        now.setToNow();
-        MessagesDataSource datasource = new MessagesDataSource(context);
-        datasource.open();
-        datasource.createMessage(now.format2445(), phoneNumber, messageEncrypted, 1);
-        datasource.close();
-        InboxActivity.notifyList();
     }
 }

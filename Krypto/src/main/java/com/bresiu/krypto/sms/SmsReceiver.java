@@ -23,25 +23,25 @@ public class SmsReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d(TAG, "onReceive");
-
         //---get the SMS message passed in---
         Bundle bundle = intent.getExtras();
-        SmsMessage[] msgs = null;
-        String str = "";
+        SmsMessage[] msgs;
+
         if (bundle != null) {
+            String str = "";
             //---retrieve the SMS message received---
             Object[] pdus = (Object[]) bundle.get("pdus");
             msgs = new SmsMessage[pdus.length];
             for (int i = 0; i < msgs.length; i++) {
                 msgs[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
                 str += msgs[i].getMessageBody();
-                str += "\n";
+                //str += "\n";
             }
             if (msgs[0].getMessageBody().startsWith(SendSMS.KRYPTO_TAG)) {
                 abortBroadcast();
 
                 String phoneNo = msgs[0].getOriginatingAddress();
-                SmsToDatabase.insert(phoneNo, str, 0, context);
+                SmsToDatabase.insert(phoneNo, str, 0, 0, context);
                 if (isOnTop) {
                     InboxActivity.notifyList();
                 } else {

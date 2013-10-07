@@ -148,15 +148,6 @@
         <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
             android:background="@color/background" android:padding="3dp">
 
-            <com.bresiu.krypto.utils.widget.RobotoButton android:id="@+id/delete_button"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
-                android:layout_marginLeft="5dp" android:layout_marginTop="5dp"
-                android:background="@drawable/button" android:gravity="left"
-                android:onClick="onClick" android:padding="10dp" android:text="Delete Your Account"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/tabs" app:typeface="roboto_thin" />
-
             <com.bresiu.krypto.utils.widget.RobotoButton android:id="@+id/licences"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true" android:layout_alignRight="@+id/delete_button"

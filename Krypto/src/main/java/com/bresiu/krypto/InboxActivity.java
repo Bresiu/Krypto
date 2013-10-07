@@ -109,6 +109,11 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
                             Toast.LENGTH_SHORT).show();
                 }
                 break;
+            case R.id.delete_button:
+                datasource.deleteAll();
+                notifyList();
+                slidingSettings.closeLayer(true);
+                break;
         }
     }
 

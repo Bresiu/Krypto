@@ -7,6 +7,7 @@ public class Message {
     private String time;
     private String message;
     private int own;
+    private int isRead;
 
     public long getId() {
         return id;
@@ -47,6 +48,14 @@ public class Message {
 
     public void setOwn(int own) {
         this.own = own;
+    }
+
+    public int getRead() {
+        return isRead;
+    }
+
+    public void setRead(int read) {
+        isRead = read;
     }
 
     // Will be used by the ArrayAdapter in the ListView

@@ -8,7 +8,7 @@ public class CaesarDecrypt {
     public String caesarDecrypt(String cipherText) {
         cipherText = cipherText.toLowerCase();
         String message = "";
-        for (int i = 1; i < cipherText.length() - 1; i++) {
+        for (int i = 1; i < cipherText.length(); i++) {
             int charPosition = this.ALPHABET.indexOf(cipherText.charAt(i));
             int keyVal = (charPosition - SHIFT) % 28;
             if (keyVal < 0) {

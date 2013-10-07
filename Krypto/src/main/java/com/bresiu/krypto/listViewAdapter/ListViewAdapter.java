@@ -44,7 +44,13 @@ public class ListViewAdapter extends BaseAdapter {
         LayoutInflater inflater = context.getLayoutInflater();
 
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.message, null);
+            //TODO: reverse view
+            if (values.get(position).getOwn() == 0) {
+                convertView = inflater.inflate(R.layout.message_received, null);
+            } else {
+                convertView = inflater.inflate(R.layout.message_sent, null);
+            }
+
             holder = new ViewHolder();
             holder.messageView = (TextView) convertView.findViewById(R.id.message_box);
             holder.phoneView = (TextView) convertView.findViewById(R.id.phone_box);
