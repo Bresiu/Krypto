@@ -7,6 +7,7 @@ import android.telephony.SmsManager;
 import android.text.format.Time;
 import android.widget.Toast;
 
+import com.bresiu.krypto.InboxActivity;
 import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.utils.cipher.CaesarEncrypt;
 
@@ -23,32 +24,35 @@ public class SendSMS {
                 new Intent(context, SmsSentReceiver.class), 0);
         PendingIntent deliveredPI = PendingIntent.getBroadcast(context, 0,
                 new Intent(context, SmsDeliveredReceiver.class), 0);
+
         //Encrypt message
         CaesarEncrypt caesarEncrypt = new CaesarEncrypt();
+        String messageEncrypted = KRYPTO_TAG + caesarEncrypt.caesarEncrypt(message) + "\n";
+        addToDatabase(phoneNumber, messageEncrypted, context);
 
         try {
             SmsManager sms = SmsManager.getDefault();
-            ArrayList<String> smsParts = sms.divideMessage(KRYPTO_TAG + caesarEncrypt.caesarEncrypt(message));
+            ArrayList<String> smsParts = sms.divideMessage(messageEncrypted);
             for (int i = 0; i < smsParts.size(); i++) {
                 sentPendingIntents.add(i, sentPI);
                 deliveredPendingIntents.add(i, deliveredPI);
             }
             sms.sendMultipartTextMessage(phoneNumber, null, smsParts,
                     sentPendingIntents, deliveredPendingIntents);
-            addToDatabase(message, phoneNumber, context);
+
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(context, "SMS sending failed...", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void addToDatabase(String message, String phoneNumber, Context context) {
+    private void addToDatabase(String phoneNumber, String messageEncrypted, Context context) {
         Time now = new Time();
         now.setToNow();
         MessagesDataSource datasource = new MessagesDataSource(context);
         datasource.open();
-        // todo check time format
-        datasource.createMessage(now.format2445(), phoneNumber, message, 1);
+        datasource.createMessage(now.format2445(), phoneNumber, messageEncrypted, 1);
         datasource.close();
+        InboxActivity.notifyList();
     }
 }

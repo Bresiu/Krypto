@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.telephony.SmsMessage;
-import android.text.format.Time;
 import android.util.Log;
 
 import com.bresiu.krypto.InboxActivity;
-import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.utils.CreateNotification;
 import com.bresiu.krypto.utils.cipher.CaesarDecrypt;
 
@@ -41,23 +39,17 @@ public class SmsReceiver extends BroadcastReceiver {
             }
             if (msgs[0].getMessageBody().startsWith(SendSMS.KRYPTO_TAG)) {
                 abortBroadcast();
-                //TODO AsyncTask
-                CaesarDecrypt caesarDecrypt = new CaesarDecrypt();
-                Time now = new Time();
-                now.setToNow();
+
                 String phoneNo = msgs[0].getOriginatingAddress();
-                //TODO: Decrypt("algorithm name", key)
-                //Cipher cipher = new Cipher();
-                //cipher.decrypt("caesar", key, message);
-                MessagesDataSource datasource = new MessagesDataSource(context);
-                datasource.open();
-                datasource.createMessage(now.format2445(), phoneNo, str, 0);
-                datasource.close();
-
-
+                SmsToDatabase.insert(phoneNo, str, 0, context);
                 if (isOnTop) {
                     InboxActivity.notifyList();
                 } else {
+                    //TODO AsyncTask
+                    //TODO: Decrypt("algorithm name", key)
+                    //Cipher cipher = new Cipher();
+                    //cipher.decrypt("caesar", key, message);
+                    CaesarDecrypt caesarDecrypt = new CaesarDecrypt();
                     CreateNotification.createNotification(context, phoneNo, caesarDecrypt.caesarDecrypt(str));
                 }
                 Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
