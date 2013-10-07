@@ -32,6 +32,7 @@ public class CreateNotification {
         Intent notificationIntent = new Intent(context, LoginActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
 
+        //TODO
         notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 
         final int HELLO_ID = 1;

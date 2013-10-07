@@ -22,6 +22,7 @@ import com.bresiu.krypto.db.Message;
 import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.listViewAdapter.ListViewAdapter;
 import com.bresiu.krypto.sms.SendSMS;
+import com.bresiu.krypto.sms.SmsReceiver;
 import com.bresiu.krypto.utils.SlidingLayer;
 
 import java.util.List;
@@ -29,49 +30,49 @@ import java.util.List;
 public class InboxActivity extends SherlockActivity implements View.OnClickListener {
     private static final String TAG = "InBoxActivity";
     private static final int PHONE_NUMBER_MIN_LENGTH = 9;
+    public static ListView lview;
+    public static ListViewAdapter lviewAdapter;
     private static SlidingLayer slidingCompose;
     private static SlidingLayer slidingSettings;
     private static BroadcastReceiver receiver;
-    private static IntentFilter filter;
-    private static Context context;
-    public static ListView lview;
-    public static ListViewAdapter lviewAdapter;
     private static EditText mPhoneNumber;
     private static EditText mMessage;
-    private static String phno;
-    private static String msg;
     private static InputMethodManager imm;
     private static MessagesDataSource datasource;
     private static List<Message> values;
+
+    public static void notifyList() {
+        values.clear();
+        values.addAll(datasource.getAllMessages());
+        lviewAdapter.notifyDataSetChanged();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
-        //TODO: Add logs, and check if datasource.open() is necessary here
         datasource = new MessagesDataSource(this);
         datasource.open();
 
         setupWidgets();
         setupReceiver();
+
         makeList();
 
+        isOnTop(true);
         imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
     }
 
-    @Override
-    protected void onDestroy() {
-        Log.d(TAG, "onDestroy");
-        unregisterReceiver(receiver);
-        datasource.close();
-        super.onDestroy();
+    private void isOnTop(boolean isOnTop) {
+        SmsReceiver.setOnTop(isOnTop);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         datasource.open();
+        isOnTop(true);
         notifyList();
     }
 
@@ -79,6 +80,16 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
     protected void onPause() {
         super.onPause();
         datasource.close();
+        isOnTop(false);
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy");
+        unregisterReceiver(receiver);
+        datasource.close();
+        isOnTop(false);
+        super.onDestroy();
     }
 
     @Override
@@ -86,9 +97,9 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         Log.d(TAG, "onClick");
         switch (v.getId()) {
             case R.id.send:
-                phno = mPhoneNumber.getText().toString();
-                msg = mMessage.getText().toString();
-                context = getApplicationContext();
+                String phno = mPhoneNumber.getText().toString();
+                String msg = mMessage.getText().toString();
+                Context context = getApplicationContext();
                 if (phno.length() >= PHONE_NUMBER_MIN_LENGTH && msg.length() > 0) {
                     SendSMS sendSMS = new SendSMS();
                     sendSMS.sendSMS(phno, msg, context);
@@ -142,14 +153,6 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
         return true;
     }
 
-    //TODO: Zamiast listy dac FILO
-
-    public static void notifyList() {
-        values.clear();
-        values.addAll(datasource.getAllMessages());
-        lviewAdapter.notifyDataSetChanged();
-    }
-
     public void makeList() {
         values = datasource.getAllMessages();
         lviewAdapter = new ListViewAdapter(this, values);
@@ -171,7 +174,7 @@ public class InboxActivity extends SherlockActivity implements View.OnClickListe
 
     private void setupReceiver() {
         receiver = new BReceiver();
-        filter = new IntentFilter("SmsDeliveredReceiver");
+        IntentFilter filter = new IntentFilter("SmsDeliveredReceiver");
         registerReceiver(receiver, filter);
     }
 

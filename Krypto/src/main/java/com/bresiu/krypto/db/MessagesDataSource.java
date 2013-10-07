@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.bresiu.krypto.InboxActivity;
+import com.bresiu.krypto.sms.SmsReceiver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +53,9 @@ public class MessagesDataSource {
         cursor.moveToFirst();
         Message newMessage = cursorToMessage(cursor);
         cursor.close();
-        InboxActivity.notifyList();
+        if (SmsReceiver.isOnTop) {
+            InboxActivity.notifyList();
+        }
         return newMessage;
     }
 

@@ -9,12 +9,18 @@ import android.telephony.SmsMessage;
 import android.text.format.Time;
 import android.util.Log;
 
+import com.bresiu.krypto.InboxActivity;
 import com.bresiu.krypto.db.MessagesDataSource;
 import com.bresiu.krypto.utils.CreateNotification;
 import com.bresiu.krypto.utils.cipher.CaesarDecrypt;
 
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsSender";
+    public static boolean isOnTop = false;
+
+    public static void setOnTop(boolean onTop) {
+        isOnTop = onTop;
+    }
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -49,7 +55,11 @@ public class SmsReceiver extends BroadcastReceiver {
                 datasource.close();
 
 
-                CreateNotification.createNotification(context, phoneNo, caesarDecrypt.caesarDecrypt(str));
+                if (isOnTop) {
+                    InboxActivity.notifyList();
+                } else {
+                    CreateNotification.createNotification(context, phoneNo, caesarDecrypt.caesarDecrypt(str));
+                }
                 Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(100);
             }
