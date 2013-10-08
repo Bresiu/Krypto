@@ -192,6 +192,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void showProg() {
+        // TODO Dodac losowe kolory z listy do linear layout, wraz z wprowadzaniem kolejnych cyfr
         if (slidingMenu.isOpened()) {
             slidingMenu.closeLayer(true);
         }
@@ -203,6 +204,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 mCancel.setEnabled(false);
                 break;
             case 1:
+                // mPass.setText(progStar + "*")
+                // mPass.setText(progStar.substring(0, progStar.length()-1)));
                 mPass.setText(getString(R.string.one_star));
                 mProg1.setBackgroundColor(getResources().getColor(R.color.green));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
