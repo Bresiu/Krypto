@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/activity_horizontal_margin"
-    android:background="@color/grey"
+    android:background="@color/red"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
 
@@ -17,7 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="Date"
-        app:typeface="roboto_thin" />
+        app:typeface="roboto_condensed" />
 
     <com.bresiu.krypto.utils.widget.RobotoTextView
         android:id="@+id/phone_box"
@@ -26,7 +26,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="Phone No"
-        app:typeface="roboto_thin" />
+        app:typeface="roboto_condensed" />
 
     <com.bresiu.krypto.utils.widget.RobotoTextView
         android:id="@+id/message_box"
@@ -36,6 +36,6 @@
         android:layout_alignRight="@+id/phone_box"
         android:layout_below="@+id/date_box"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        app:typeface="roboto_thin" />
+        app:typeface="roboto_condensed" />
 
 </RelativeLayout>

@@ -16,8 +16,10 @@
      limitations under the License.
 -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_mediumAnimTime">
-    <item android:state_pressed="false" android:state_focused="true" android:drawable="@drawable/list_focused_brs" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:exitFadeDuration="@android:integer/config_mediumAnimTime">
+    <item android:state_pressed="false" android:state_focused="true"
+        android:drawable="@drawable/list_focused_brs" />
     <item android:state_pressed="true" android:drawable="@drawable/pressed_background_brs" />
     <item android:drawable="@android:color/transparent" />
 </selector><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/drawable/selectable_background_brs.xml -->

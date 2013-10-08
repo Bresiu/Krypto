@@ -23,7 +23,7 @@
             android:gravity="center"
             android:text="Enter Your PIN:"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/tabs"
+            android:textColor="@color/text_dark"
             app:typeface="roboto_thin" />
 
         <com.bresiu.krypto.utils.widget.RobotoTextView
@@ -35,7 +35,8 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/orange"
+            android:textColor="@color/text_dark"
+            android:textSize="40sp"
             app:typeface="roboto_thin" />
 
     </RelativeLayout>
@@ -46,14 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/orange"
+        android:background="@color/stripes"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/prog1"
@@ -97,7 +98,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="1"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -109,7 +110,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="2"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -121,7 +122,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="3"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
         </LinearLayout>
@@ -140,7 +141,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="4"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -152,7 +153,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="5"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -164,7 +165,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="6"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
         </LinearLayout>
@@ -183,7 +184,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="7"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -195,7 +196,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="8"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -207,7 +208,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="9"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
         </LinearLayout>
@@ -226,7 +227,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="c"
-                android:textColor="@color/blue"
+                android:textColor="@color/text_dark"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -238,7 +239,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="0"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
 
@@ -250,7 +251,7 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="@string/lower_than"
-                android:textColor="@color/blue"
+                android:textColor="@color/text_dark"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
         </LinearLayout>
@@ -266,7 +267,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/background"
+            android:background="@color/transparent"
             android:padding="3dp">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -274,17 +275,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignRight="@+id/delete_button"
-                android:layout_below="@+id/delete_button"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button"
                 android:gravity="left"
                 android:onClick="onClick"
                 android:padding="10dp"
-                android:text="Licenses"
+                android:text="Licences"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -292,7 +291,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignRight="@+id/delete_button"
+                android:layout_alignRight="@+id/licences"
                 android:layout_below="@+id/licences"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
@@ -302,7 +301,7 @@
                 android:padding="10dp"
                 android:text="About"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/tabs"
+                android:textColor="@color/text_color"
                 app:typeface="roboto_thin" />
 
 
@@ -313,7 +312,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/orange"
+                android:textColor="@color/text_color"
                 app:typeface="roboto_thin" />
 
         </RelativeLayout>

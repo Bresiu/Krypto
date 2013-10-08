@@ -1,23 +1,32 @@
 <resources>
 
-    <!-- redesign colours -->
-    <color name="pressed_brs">#CCCC181E</color>
+    <!-- redesign colors -->
 
-    <color name="background">#ebebeb</color>
-    <color name="background_black">#ebebeb</color>
-    <color name="test">#CC181E</color>
-    <color name="grey">#999999</color>
-    <color name="transparent">#00000000</color>
+    <color name="button">#b81f22</color>
+    <color name="button_pressed">#89191a</color>
 
-    <color name="orange">#999999</color>
-    <color name="blue">#2A86AC</color>
+    <color name="message_sent">#b81f22</color>
+    <color name="message_received">#89191a</color>
 
-    <!--<color name="background">#F7F7F7</color>-->
-    <color name="action_bar">#df4931</color>
-    <color name="tabs">#333333</color>
+    <color name="shadow">#b81f22</color>
 
-    <color name="green">#3BE4BD</color>
-    <color name="yellow">#FFC67D</color>
-    <color name="purple">#CB96EE</color>
+    <color name="background">#f2f2f2</color>
+
+    <color name="text_color">#f2f2f2</color>
+    <color name="text_dark">#1b2021</color>
+    <color name="stripes">#1b2021</color>
+    <color name="action_bar_color">#1b2021</color>
+    <color name="action_bar_font">#a8afaf</color>
+
+    <color name="green">#27ae60</color>
+    <color name="red">#c0392b</color>
+
+    <color name="turquoise">#1abc9c</color>
+    <color name="yellow">#f1c40f</color>
+    <color name="violet">#9b59b6</color>
+
+    <color name="pressed_brs">#CC8A1719</color>
+
+    <color name="transparent">#c8000000</color>
 
 </resources>

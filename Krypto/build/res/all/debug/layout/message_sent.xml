@@ -3,23 +3,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/message_sent"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:layout_margin="@dimen/activity_horizontal_margin" android:background="@color/tabs"
+    android:layout_margin="@dimen/activity_horizontal_margin" android:background="@color/green"
     android:orientation="vertical" android:padding="@dimen/activity_horizontal_margin">
 
     <com.bresiu.krypto.utils.widget.RobotoTextView android:id="@+id/date_box"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
-        android:text="Date" app:typeface="roboto_thin" />
+        android:text="Date" app:typeface="roboto_condensed" />
 
     <com.bresiu.krypto.utils.widget.RobotoTextView android:id="@+id/phone_box"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_alignParentRight="true" android:layout_alignParentTop="true"
-        android:text="Phone No" app:typeface="roboto_thin" />
+        android:text="Phone No" app:typeface="roboto_condensed" />
 
     <com.bresiu.krypto.utils.widget.RobotoTextView android:id="@+id/message_box"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/date_box" android:layout_alignRight="@+id/phone_box"
         android:layout_below="@+id/date_box"
-        android:textAppearance="?android:attr/textAppearanceMedium" app:typeface="roboto_thin" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:typeface="roboto_condensed" />
 
 </RelativeLayout><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/layout/message_sent.xml -->

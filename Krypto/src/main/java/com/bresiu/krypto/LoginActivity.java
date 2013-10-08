@@ -57,7 +57,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         if (!restoreData()) {
             initNewKey();
         } else {
-            mLastLogged.setText(String.format("%s%s", getString(R.string.last_logged_in), preferences.getString(LAST_LOGGED, getString(R.string.blank))));
+            mLastLogged.setText(String.format("%s\n%s", getString(R.string.last_logged_in), preferences.getString(LAST_LOGGED, getString(R.string.blank))));
             noKey = false;
         }
         initVars();
@@ -199,7 +199,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         switch (count) {
             case 0:
                 mPass.setText(getString(R.string.blank));
-                setBlue();
+                setDark();
                 mBack.setEnabled(false);
                 mCancel.setEnabled(false);
                 break;
@@ -207,32 +207,32 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 // mPass.setText(progStar + "*")
                 // mPass.setText(progStar.substring(0, progStar.length()-1)));
                 mPass.setText(getString(R.string.one_star));
-                mProg1.setBackgroundColor(getResources().getColor(R.color.green));
-                mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
-                mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
-                mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+                mProg1.setBackgroundColor(getResources().getColor(R.color.turquoise));
+                mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
                 mBack.setEnabled(true);
                 mCancel.setEnabled(true);
                 break;
 
             case 2:
                 mPass.setText(getString(R.string.two_stars));
-                mProg1.setBackgroundColor(getResources().getColor(R.color.green));
+                mProg1.setBackgroundColor(getResources().getColor(R.color.turquoise));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.yellow));
-                mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
-                mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
                 break;
             case 3:
                 mPass.setText(getString(R.string.three_stars));
-                mProg1.setBackgroundColor(getResources().getColor(R.color.green));
+                mProg1.setBackgroundColor(getResources().getColor(R.color.turquoise));
                 mProg2.setBackgroundColor(getResources().getColor(R.color.yellow));
-                mProg3.setBackgroundColor(getResources().getColor(R.color.purple));
-                mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+                mProg3.setBackgroundColor(getResources().getColor(R.color.violet));
+                mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
                 break;
             case 4:
                 if (noKey) {
                     if (isFirstAttempt) {
-                        setBlue();
+                        setDark();
                         mPass.setText(getString(R.string.blank));
                         passFirstAttempt = password;
                         isFirstAttempt = false;
@@ -241,11 +241,12 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                     } else {
                         if (password.equals(passFirstAttempt)) {
                             mInfo.setText(getString(R.string.pin_set));
+                            mPass.setText(getString(R.string.four_stars));
                             setBlue();
                             saveData();
                         } else {
                             mInfo.setText(getString(R.string.pin_do_not_match));
-                            setBlue();
+                            setRed();
                             mPass.setText(getString(R.string.blank));
                             isFirstAttempt = true;
                             passFirstAttempt = getString(R.string.blank);
@@ -255,14 +256,14 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 } else {
                     if (password.equals(preferences.getString(KEY, getString(R.string.blank)))) {
                         mInfo.setText(getString(R.string.pin_correct));
-                        mPass.setText(getString(R.string.blank));
+                        mPass.setText(getString(R.string.four_stars));
                         setBlue();
                         loginComplete();
                     } else {
                         initVars();
                         mInfo.setText(getString(R.string.pin_incorrect));
                         mPass.setText(getString(R.string.blank));
-                        setBlue();
+                        setRed();
                     }
                     break;
                 }
@@ -270,10 +271,24 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     }
 
     private void setBlue() {
-        mProg1.setBackgroundColor(getResources().getColor(R.color.blue));
-        mProg2.setBackgroundColor(getResources().getColor(R.color.blue));
-        mProg3.setBackgroundColor(getResources().getColor(R.color.blue));
-        mProg4.setBackgroundColor(getResources().getColor(R.color.blue));
+        mProg1.setBackgroundColor(getResources().getColor(R.color.green));
+        mProg2.setBackgroundColor(getResources().getColor(R.color.green));
+        mProg3.setBackgroundColor(getResources().getColor(R.color.green));
+        mProg4.setBackgroundColor(getResources().getColor(R.color.green));
+    }
+
+    private void setRed() {
+        mProg1.setBackgroundColor(getResources().getColor(R.color.red));
+        mProg2.setBackgroundColor(getResources().getColor(R.color.red));
+        mProg3.setBackgroundColor(getResources().getColor(R.color.red));
+        mProg4.setBackgroundColor(getResources().getColor(R.color.red));
+    }
+
+    private void setDark() {
+        mProg1.setBackgroundColor(getResources().getColor(R.color.stripes));
+        mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
+        mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
+        mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
     }
 
     private void cleanData() {
@@ -307,6 +322,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         Intent login = new Intent(this,
                 InboxActivity.class);
         startActivity(login);
+        overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
+
         finish();
     }
 }

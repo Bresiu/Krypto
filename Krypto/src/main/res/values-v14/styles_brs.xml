@@ -28,11 +28,12 @@
         <item name="android:actionModeBackground">@drawable/cab_background_top_brs</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
-
-
+        <item name="android:windowBackground">@color/background</item>
     </style>
 
     <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.ActionBar.Solid">
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="displayOptions">showHome|useLogo</item>
         <item name="android:background">@drawable/ab_solid_brs</item>
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_brs</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_brs</item>
