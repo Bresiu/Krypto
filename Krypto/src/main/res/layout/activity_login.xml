@@ -98,6 +98,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="1"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -109,7 +111,10 @@
                 android:layout_weight="1"
                 android:background="@drawable/button"
                 android:onClick="onClick"
+                android:ems=""
                 android:text="2"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -122,6 +127,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="3"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -141,6 +148,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="4"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -153,6 +162,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="5"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -165,6 +176,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="6"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -184,6 +197,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="7"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -196,6 +211,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="8"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -208,6 +225,8 @@
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="9"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -233,12 +252,14 @@
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b0"
+                android:paddingLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="0"
+                android:gravity="left|center"
                 android:textColor="@color/text_color"
                 android:textSize="40sp"
                 app:typeface="roboto_thin" />
@@ -248,6 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+
                 android:background="@drawable/button"
                 android:onClick="onClick"
                 android:text="@string/lower_than"

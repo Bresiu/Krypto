@@ -23,5 +23,15 @@
     <string name="pin_correct">PIN correct</string>
     <string name="pin_incorrect">Incorrect PIN, try again</string>
     <string name="four_stars">****</string>
+    <string name="one">1</string>
+    <string name="two">2 ABC</string>
+    <string name="three">3 DEF</string>
+    <string name="four">4 GHI</string>
+    <string name="five">5 JKL</string>
+    <string name="six">6 MNO</string>
+    <string name="seven">7 PQRS</string>
+    <string name="eight">8 TUV</string>
+    <string name="nine">9 WXYZ</string>
+    <string name="zero">0</string>
 
 </resources>

@@ -888,31 +888,32 @@ public final class R {
         public static final int abs__bright_foreground_disabled_holo_light = 0x7f070003;
         public static final int abs__bright_foreground_holo_dark = 0x7f070004;
         public static final int abs__bright_foreground_holo_light = 0x7f070005;
-        public static final int abs__primary_text_disable_only_holo_dark = 0x7f070018;
-        public static final int abs__primary_text_disable_only_holo_light = 0x7f070019;
-        public static final int abs__primary_text_holo_dark = 0x7f07001a;
-        public static final int abs__primary_text_holo_light = 0x7f07001b;
+        public static final int abs__primary_text_disable_only_holo_dark = 0x7f070019;
+        public static final int abs__primary_text_disable_only_holo_light = 0x7f07001a;
+        public static final int abs__primary_text_holo_dark = 0x7f07001b;
+        public static final int abs__primary_text_holo_light = 0x7f07001c;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml
          */
         public static final int action_bar_color = 0x7f070006;
         public static final int action_bar_font = 0x7f070007;
         public static final int background = 0x7f070008;
-        public static final int button = 0x7f070009;
-        public static final int button_pressed = 0x7f07000a;
-        public static final int green = 0x7f07000b;
-        public static final int message_received = 0x7f07000c;
-        public static final int message_sent = 0x7f07000d;
-        public static final int pressed_brs = 0x7f07000e;
-        public static final int red = 0x7f07000f;
-        public static final int shadow = 0x7f070010;
-        public static final int stripes = 0x7f070011;
-        public static final int text_color = 0x7f070012;
-        public static final int text_dark = 0x7f070013;
-        public static final int transparent = 0x7f070014;
-        public static final int turquoise = 0x7f070015;
-        public static final int violet = 0x7f070016;
-        public static final int yellow = 0x7f070017;
+        public static final int black = 0x7f070009;
+        public static final int button = 0x7f07000a;
+        public static final int button_pressed = 0x7f07000b;
+        public static final int green = 0x7f07000c;
+        public static final int message_received = 0x7f07000d;
+        public static final int message_sent = 0x7f07000e;
+        public static final int pressed_brs = 0x7f07000f;
+        public static final int red = 0x7f070010;
+        public static final int shadow = 0x7f070011;
+        public static final int stripes = 0x7f070012;
+        public static final int text_color = 0x7f070013;
+        public static final int text_dark = 0x7f070014;
+        public static final int transparent = 0x7f070015;
+        public static final int turquoise = 0x7f070016;
+        public static final int violet = 0x7f070017;
+        public static final int yellow = 0x7f070018;
     }
 
     public static final class dimen {
@@ -1293,20 +1294,30 @@ public final class R {
         public static final int app_name = 0x7f0a000e;
         public static final int blank = 0x7f0a000f;
         public static final int confirm_pin = 0x7f0a0010;
-        public static final int enter_pin = 0x7f0a0011;
-        public static final int four_stars = 0x7f0a0012;
-        public static final int last_logged = 0x7f0a0013;
-        public static final int last_logged_in = 0x7f0a0014;
-        public static final int lower_than = 0x7f0a0015;
-        public static final int on_create = 0x7f0a0016;
-        public static final int one_star = 0x7f0a0017;
-        public static final int pin_correct = 0x7f0a0018;
-        public static final int pin_do_not_match = 0x7f0a0019;
-        public static final int pin_incorrect = 0x7f0a001a;
-        public static final int pin_set = 0x7f0a001b;
-        public static final int three_stars = 0x7f0a001c;
-        public static final int title_activity_login = 0x7f0a001d;
-        public static final int two_stars = 0x7f0a001e;
+        public static final int eight = 0x7f0a0011;
+        public static final int enter_pin = 0x7f0a0012;
+        public static final int five = 0x7f0a0013;
+        public static final int four = 0x7f0a0014;
+        public static final int four_stars = 0x7f0a0015;
+        public static final int last_logged = 0x7f0a0016;
+        public static final int last_logged_in = 0x7f0a0017;
+        public static final int lower_than = 0x7f0a0018;
+        public static final int nine = 0x7f0a0019;
+        public static final int on_create = 0x7f0a001a;
+        public static final int one = 0x7f0a001b;
+        public static final int one_star = 0x7f0a001c;
+        public static final int pin_correct = 0x7f0a001d;
+        public static final int pin_do_not_match = 0x7f0a001e;
+        public static final int pin_incorrect = 0x7f0a001f;
+        public static final int pin_set = 0x7f0a0020;
+        public static final int seven = 0x7f0a0021;
+        public static final int six = 0x7f0a0022;
+        public static final int three = 0x7f0a0023;
+        public static final int three_stars = 0x7f0a0024;
+        public static final int title_activity_login = 0x7f0a0025;
+        public static final int two = 0x7f0a0026;
+        public static final int two_stars = 0x7f0a0027;
+        public static final int zero = 0x7f0a0028;
     }
 
     public static final class style {

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Spannable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.utils.SlidingLayer;
 import com.bresiu.krypto.utils.cipher.Hash;
+import com.bresiu.krypto.utils.util.FontUtils;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -64,6 +66,22 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             noKey = false;
         }
         initVars();
+        //TODO Test:
+        Button but1 = (Button) findViewById(R.id.b1);
+        Button but2 = (Button) findViewById(R.id.b2);
+        Button but3 = (Button) findViewById(R.id.b3);
+        Button but4 = (Button) findViewById(R.id.b4);
+        Button but5 = (Button) findViewById(R.id.b5);
+        Button but6 = (Button) findViewById(R.id.b6);
+        Button but7 = (Button) findViewById(R.id.b7);
+        Button but8 = (Button) findViewById(R.id.b8);
+        Button but9 = (Button) findViewById(R.id.b9);
+        Button but0 = (Button) findViewById(R.id.b0);
+        Button[] buttons = new Button[]{but1, but2, but3, but4, but5, but6, but7, but8, but9, but0};
+        Spannable[] spannables = FontUtils.createSpannableList(this);
+        for (int i = 0; i < buttons.length; i++) {
+            buttons[i].setText(spannables[i]);
+        }
     }
 
     @Override
@@ -263,7 +281,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                         }
                     }
                 } else {
-                    if (password.equals(Hash.toHash(preferences.getString(KEY, getString(R.string.blank))))) {
+                    if (Hash.toHash(password).equals(preferences.getString(KEY, getString(R.string.blank)))) {
                         mInfo.setText(getString(R.string.pin_correct));
                         mPass.setText(getString(R.string.four_stars));
                         setBlue();
