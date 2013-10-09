@@ -51,14 +51,14 @@
     <color name="background">#000000</color>
     <color name="black">#000000</color>
     <color name="button">#000000</color>
-    <color name="button_pressed">#89191a</color>
+    <color name="button_pressed">#b81f22</color>
     <color name="green">#27ae60</color>
     <color name="message_received">#89191a</color>
     <color name="message_sent">#b81f22</color>
     <color name="pressed_brs">#CC8A1719</color>
     <color name="red">#c0392b</color>
     <color name="shadow">#b81f22</color>
-    <color name="stripes">#a8afaf</color>
+    <color name="stripes">#1b2021</color>
     <color name="text_color">#27ae60</color>
     <color name="text_dark">#a8afaf</color>
     <color name="transparent">#c8000000</color>
@@ -590,6 +590,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="layer_width">300dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="num_pad_font_size">40sp</dimen>
+    <dimen name="num_pad_margin">30dp</dimen>
+    <dimen name="num_pad_stripes">1dp</dimen>
     <dimen name="offset_width">48dp</dimen>
     <dimen name="shadow_width">8dp</dimen>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
@@ -601,7 +605,9 @@
     <item name="abs__up" type="id" />
 
     <integer name="abs__max_action_buttons">2</integer>
-
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml -->
+    <string name="about">About</string>
+    <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <string name="abs__action_bar_home_description">Navigate home</string>
     <string name="abs__action_bar_up_description">Navigate up</string>
     <string name="abs__action_menu_overflow_description">More options</string>
@@ -621,19 +627,27 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">Krypto</string>
     <string name="blank"></string>
+    <string name="c">c</string>
     <string name="confirm_pin">Confim PIN:</string>
-    <string name="eight">8 TUV\u0020</string>
+    <string name="ei">8</string>
+    <string name="eight">8\u0020TUV</string>
     <string name="enter_pin">Enter Your New PIN:</string>
-    <string name="five">5 JKL\u0020</string>
-    <string name="four">4 GHI\u0020</string>
+    <string name="fi">5</string>
+    <string name="five">5\u0020JKL</string>
+    <string name="fo">4</string>
+    <string name="four">4\u0020GHI</string>
     <string name="four_stars">****</string>
     <string name="last_logged">LastLogged</string>
     <string name="last_logged_in">Last logged in:</string>
+    <string name="licences">Licences</string>
     <string name="lower_than">&lt;</string>
-    <string name="nine">9 WXYZ</string>
+    <string name="ni">9</string>
+    <string name="nine">9\u0020WXYZ</string>
+    <string name="on">1</string>
     <string name="on_create">onCreate</string>
-    <string name="one">1\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="one">1</string>
     <string name="one_star">*</string>
+    <string name="pin">Enter Your PIN:</string>
     <string name="pin_correct">PIN correct</string>
     <string name="pin_do_not_match">PIN do not match.
         Try again…
@@ -642,14 +656,19 @@
     <string name="pin_set">PIN set successfully!
         Logging in…
     </string>
-    <string name="seven">7 PQRS</string>
-    <string name="six">6 MNO\u0020</string>
-    <string name="three">3 DEF\u0020</string>
+    <string name="se">7</string>
+    <string name="seven">7\u0020PQRS</string>
+    <string name="si">6</string>
+    <string name="six">6\u0020MNO</string>
+    <string name="th">3</string>
+    <string name="three">3\u0020DEF</string>
     <string name="three_stars">***</string>
     <string name="title_activity_login">Login</string>
-    <string name="two">2 ABC\u0020</string>
+    <string name="tw">2</string>
+    <string name="two">2\u0020ABC</string>
     <string name="two_stars">**</string>
-    <string name="zero">0\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="ze">0</string>
+    <string name="zero">0</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_brs.xml -->
     <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.ActionBar.Solid">
         <item name="displayOptions">showHome|useLogo</item>

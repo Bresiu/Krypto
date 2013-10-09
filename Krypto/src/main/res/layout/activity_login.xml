@@ -21,7 +21,7 @@
             android:layout_above="@+id/pass"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="Enter Your PIN:"
+            android:text="@string/pin"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/text_dark"
             app:typeface="roboto_thin" />
@@ -32,63 +32,64 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/margin_top"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/text_dark"
-            android:textSize="40sp"
+            android:textSize="@dimen/num_pad_font_size"
             app:typeface="roboto_thin" />
 
     </RelativeLayout>
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/prog1"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/prog2"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/prog3"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/prog4"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/stripes"
-        android:orientation="vertical">
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:id="@+id/prog1"
-                android:layout_width="wrap_content"
-                android:layout_height="3dp"
-                android:layout_weight="1"
-                android:orientation="horizontal" />
-
-            <LinearLayout
-                android:id="@+id/prog2"
-                android:layout_width="wrap_content"
-                android:layout_height="3dp"
-                android:layout_weight="1"
-                android:orientation="horizontal" />
-
-            <LinearLayout
-                android:id="@+id/prog3"
-                android:layout_width="wrap_content"
-                android:layout_height="3dp"
-                android:layout_weight="1"
-                android:orientation="horizontal" />
-
-            <LinearLayout
-                android:id="@+id/prog4"
-                android:layout_width="wrap_content"
-                android:layout_height="3dp"
-                android:layout_weight="1"
-                android:orientation="horizontal" />
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b1"
@@ -96,12 +97,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="1"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/on"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -110,13 +111,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:ems=""
-                android:text="2"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/tw"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -125,20 +125,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="3"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/th"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
-        </LinearLayout>
+        </TableRow>
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="@dimen/num_pad_stripes">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b4"
@@ -146,12 +145,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="4"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/fo"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -160,12 +159,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="5"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/fi"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -174,20 +173,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="6"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/si"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
-        </LinearLayout>
+        </TableRow>
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="@dimen/num_pad_stripes">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b7"
@@ -195,12 +193,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="7"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/se"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -209,12 +207,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="8"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/ei"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -223,20 +221,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="9"
-                android:paddingLeft="20dp"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/ni"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
-        </LinearLayout>
+        </TableRow>
 
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:orientation="horizontal">
+            android:layout_marginBottom="@dimen/num_pad_stripes"
+            android:layout_marginTop="@dimen/num_pad_stripes">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/cancel"
@@ -244,24 +242,26 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
+                android:gravity="left|center"
                 android:onClick="onClick"
-                android:text="c"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/c"
                 android:textColor="@color/text_dark"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b0"
-                android:paddingLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:onClick="onClick"
-                android:text="0"
                 android:gravity="left|center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
+                android:text="@string/ze"
                 android:textColor="@color/text_color"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
@@ -269,15 +269,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
                 android:background="@drawable/button"
+                android:gravity="left|center"
                 android:onClick="onClick"
+                android:paddingLeft="@dimen/num_pad_margin"
                 android:text="@string/lower_than"
                 android:textColor="@color/text_dark"
-                android:textSize="40sp"
+                android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
-        </LinearLayout>
-    </LinearLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
 
     <com.bresiu.krypto.utils.SlidingLayer xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
         android:id="@+id/slidingMenu"
@@ -303,7 +307,7 @@
                 android:gravity="left"
                 android:onClick="onClick"
                 android:padding="10dp"
-                android:text="Licences"
+                android:text="@string/licences"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/text_color"
                 app:typeface="roboto_thin" />
@@ -321,7 +325,7 @@
                 android:gravity="left"
                 android:onClick="onClick"
                 android:padding="10dp"
-                android:text="About"
+                android:text="@string/about"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/text_color"
                 app:typeface="roboto_thin" />

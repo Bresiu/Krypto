@@ -2,9 +2,8 @@
 
     <!-- redesign colors -->
 
-    <!--<color name="button">#b81f22</color>-->
     <color name="button">#000000</color>
-    <color name="button_pressed">#89191a</color>
+    <color name="button_pressed">#b81f22</color>
 
     <color name="message_sent">#b81f22</color>
     <color name="message_received">#89191a</color>
@@ -20,8 +19,7 @@
     <!--<color name="text_color">#f2f2f2</color>
     <color name="text_dark">#1b2021</color>-->
     <color name="text_dark">#a8afaf</color>
-    <!--<color name="stripes">#1b2021</color>-->
-    <color name="stripes">#a8afaf</color>
+    <color name="stripes">#1b2021</color>
     <color name="action_bar_color">#1b2021</color>
     <color name="action_bar_font">#a8afaf</color>
 

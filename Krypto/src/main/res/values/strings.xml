@@ -10,6 +10,7 @@
     <string name="last_logged_in">Last logged in:</string>
     <string name="blank" />
     <string name="enter_pin">Enter Your New PIN:</string>
+    <string name="pin">Enter Your PIN:</string>
     <string name="one_star">*</string>
     <string name="two_stars">**</string>
     <string name="three_stars">***</string>
@@ -24,14 +25,27 @@
     <string name="pin_incorrect">Incorrect PIN, try again</string>
     <string name="four_stars">****</string>
     <string name="one">1</string>
-    <string name="two">2 ABC</string>
-    <string name="three">3 DEF</string>
-    <string name="four">4 GHI</string>
-    <string name="five">5 JKL</string>
-    <string name="six">6 MNO</string>
-    <string name="seven">7 PQRS</string>
-    <string name="eight">8 TUV</string>
-    <string name="nine">9 WXYZ</string>
+    <string name="two">2\u0020ABC</string>
+    <string name="three">3\u0020DEF</string>
+    <string name="four">4\u0020GHI</string>
+    <string name="five">5\u0020JKL</string>
+    <string name="six">6\u0020MNO</string>
+    <string name="seven">7\u0020PQRS</string>
+    <string name="eight">8\u0020TUV</string>
+    <string name="nine">9\u0020WXYZ</string>
     <string name="zero">0</string>
+    <string name="on">1</string>
+    <string name="th">3</string>
+    <string name="tw">2</string>
+    <string name="fo">4</string>
+    <string name="fi">5</string>
+    <string name="si">6</string>
+    <string name="se">7</string>
+    <string name="ei">8</string>
+    <string name="ni">9</string>
+    <string name="ze">0</string>
+    <string name="c">c</string>
+    <string name="about">About</string>
+    <string name="licences">Licences</string>
 
 </resources>

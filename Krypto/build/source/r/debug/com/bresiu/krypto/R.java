@@ -934,8 +934,8 @@ public final class R {
         public static final int abs__action_bar_title_text_size = 0x7f080005;
         public static final int abs__action_button_min_width = 0x7f080006;
         public static final int abs__config_prefDialogWidth = 0x7f080007;
-        public static final int abs__dialog_min_width_major = 0x7f080012;
-        public static final int abs__dialog_min_width_minor = 0x7f080013;
+        public static final int abs__dialog_min_width_major = 0x7f080016;
+        public static final int abs__dialog_min_width_minor = 0x7f080017;
         public static final int abs__dropdownitem_icon_width = 0x7f080008;
         public static final int abs__dropdownitem_text_padding_left = 0x7f080009;
         public static final int abs__dropdownitem_text_padding_right = 0x7f08000a;
@@ -947,8 +947,12 @@ public final class R {
         public static final int activity_horizontal_margin = 0x7f08000d;
         public static final int activity_vertical_margin = 0x7f08000e;
         public static final int layer_width = 0x7f08000f;
-        public static final int offset_width = 0x7f080010;
-        public static final int shadow_width = 0x7f080011;
+        public static final int margin_top = 0x7f080010;
+        public static final int num_pad_font_size = 0x7f080011;
+        public static final int num_pad_margin = 0x7f080012;
+        public static final int num_pad_stripes = 0x7f080013;
+        public static final int offset_width = 0x7f080014;
+        public static final int shadow_width = 0x7f080015;
     }
 
     public static final class drawable {
@@ -1274,50 +1278,70 @@ public final class R {
     }
 
     public static final class string {
-        public static final int abs__action_bar_home_description = 0x7f0a0000;
-        public static final int abs__action_bar_up_description = 0x7f0a0001;
-        public static final int abs__action_menu_overflow_description = 0x7f0a0002;
-        public static final int abs__action_mode_done = 0x7f0a0003;
-        public static final int abs__activity_chooser_view_see_all = 0x7f0a0004;
-        public static final int abs__activitychooserview_choose_application = 0x7f0a0005;
-        public static final int abs__searchview_description_clear = 0x7f0a0006;
-        public static final int abs__searchview_description_query = 0x7f0a0007;
-        public static final int abs__searchview_description_search = 0x7f0a0008;
-        public static final int abs__searchview_description_submit = 0x7f0a0009;
-        public static final int abs__searchview_description_voice = 0x7f0a000a;
-        public static final int abs__shareactionprovider_share_with = 0x7f0a000b;
-        public static final int abs__shareactionprovider_share_with_application = 0x7f0a000c;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml
          */
-        public static final int action_settings = 0x7f0a000d;
-        public static final int app_name = 0x7f0a000e;
-        public static final int blank = 0x7f0a000f;
-        public static final int confirm_pin = 0x7f0a0010;
-        public static final int eight = 0x7f0a0011;
-        public static final int enter_pin = 0x7f0a0012;
-        public static final int five = 0x7f0a0013;
-        public static final int four = 0x7f0a0014;
-        public static final int four_stars = 0x7f0a0015;
-        public static final int last_logged = 0x7f0a0016;
-        public static final int last_logged_in = 0x7f0a0017;
-        public static final int lower_than = 0x7f0a0018;
-        public static final int nine = 0x7f0a0019;
-        public static final int on_create = 0x7f0a001a;
-        public static final int one = 0x7f0a001b;
-        public static final int one_star = 0x7f0a001c;
-        public static final int pin_correct = 0x7f0a001d;
-        public static final int pin_do_not_match = 0x7f0a001e;
-        public static final int pin_incorrect = 0x7f0a001f;
-        public static final int pin_set = 0x7f0a0020;
-        public static final int seven = 0x7f0a0021;
-        public static final int six = 0x7f0a0022;
-        public static final int three = 0x7f0a0023;
-        public static final int three_stars = 0x7f0a0024;
-        public static final int title_activity_login = 0x7f0a0025;
-        public static final int two = 0x7f0a0026;
-        public static final int two_stars = 0x7f0a0027;
-        public static final int zero = 0x7f0a0028;
+        public static final int about = 0x7f0a0000;
+        /**
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
+         */
+        public static final int abs__action_bar_home_description = 0x7f0a0001;
+        public static final int abs__action_bar_up_description = 0x7f0a0002;
+        public static final int abs__action_menu_overflow_description = 0x7f0a0003;
+        public static final int abs__action_mode_done = 0x7f0a0004;
+        public static final int abs__activity_chooser_view_see_all = 0x7f0a0005;
+        public static final int abs__activitychooserview_choose_application = 0x7f0a0006;
+        public static final int abs__searchview_description_clear = 0x7f0a0007;
+        public static final int abs__searchview_description_query = 0x7f0a0008;
+        public static final int abs__searchview_description_search = 0x7f0a0009;
+        public static final int abs__searchview_description_submit = 0x7f0a000a;
+        public static final int abs__searchview_description_voice = 0x7f0a000b;
+        public static final int abs__shareactionprovider_share_with = 0x7f0a000c;
+        public static final int abs__shareactionprovider_share_with_application = 0x7f0a000d;
+        /**
+         * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml
+         */
+        public static final int action_settings = 0x7f0a000e;
+        public static final int app_name = 0x7f0a000f;
+        public static final int blank = 0x7f0a0010;
+        public static final int c = 0x7f0a0011;
+        public static final int confirm_pin = 0x7f0a0012;
+        public static final int ei = 0x7f0a0013;
+        public static final int eight = 0x7f0a0014;
+        public static final int enter_pin = 0x7f0a0015;
+        public static final int fi = 0x7f0a0016;
+        public static final int five = 0x7f0a0017;
+        public static final int fo = 0x7f0a0018;
+        public static final int four = 0x7f0a0019;
+        public static final int four_stars = 0x7f0a001a;
+        public static final int last_logged = 0x7f0a001b;
+        public static final int last_logged_in = 0x7f0a001c;
+        public static final int licences = 0x7f0a001d;
+        public static final int lower_than = 0x7f0a001e;
+        public static final int ni = 0x7f0a001f;
+        public static final int nine = 0x7f0a0020;
+        public static final int on = 0x7f0a0021;
+        public static final int on_create = 0x7f0a0022;
+        public static final int one = 0x7f0a0023;
+        public static final int one_star = 0x7f0a0024;
+        public static final int pin = 0x7f0a0025;
+        public static final int pin_correct = 0x7f0a0026;
+        public static final int pin_do_not_match = 0x7f0a0027;
+        public static final int pin_incorrect = 0x7f0a0028;
+        public static final int pin_set = 0x7f0a0029;
+        public static final int se = 0x7f0a002a;
+        public static final int seven = 0x7f0a002b;
+        public static final int si = 0x7f0a002c;
+        public static final int six = 0x7f0a002d;
+        public static final int th = 0x7f0a002e;
+        public static final int three = 0x7f0a002f;
+        public static final int three_stars = 0x7f0a0030;
+        public static final int title_activity_login = 0x7f0a0031;
+        public static final int tw = 0x7f0a0032;
+        public static final int two = 0x7f0a0033;
+        public static final int two_stars = 0x7f0a0034;
+        public static final int ze = 0x7f0a0035;
+        public static final int zero = 0x7f0a0036;
     }
 
     public static final class style {

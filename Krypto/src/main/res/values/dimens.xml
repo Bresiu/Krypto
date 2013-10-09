@@ -6,4 +6,9 @@
     <dimen name="shadow_width">8dp</dimen>
     <dimen name="layer_width">300dp</dimen>
     <dimen name="offset_width">48dp</dimen>
+    <!-- Num Pad margins-->
+    <dimen name="num_pad_margin">30dp</dimen>
+    <dimen name="num_pad_stripes">1dp</dimen>
+    <dimen name="num_pad_font_size">40sp</dimen>
+    <dimen name="margin_top">10dp</dimen>
 </resources>
