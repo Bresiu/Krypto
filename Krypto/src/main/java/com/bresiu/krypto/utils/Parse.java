@@ -13,6 +13,11 @@ public class Parse {
             j++;
         }
 
-        return newPhoneNo;
+        return cutPhoneNo(newPhoneNo);
+    }
+
+    //TODO check
+    public static String cutPhoneNo(String phoneNo) {
+        return phoneNo.substring(phoneNo.length() - 11);
     }
 }

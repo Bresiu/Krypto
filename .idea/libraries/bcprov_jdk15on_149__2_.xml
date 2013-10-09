@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bcprov-jdk15on-149 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Krypto/libs/bcprov-jdk15on-149.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -16,7 +16,10 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.utils.SlidingLayer;
+import com.bresiu.krypto.utils.cipher.Hash;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -145,7 +148,13 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             case R.id.licences:
                 break;
         }
-        showProg();
+        try {
+            showProg();
+        } catch (NoSuchProviderException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
 
     private void setupActionBar() {
@@ -191,7 +200,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         mCancel.setEnabled(false);
     }
 
-    private void showProg() {
+    private void showProg() throws NoSuchProviderException, NoSuchAlgorithmException {
         // TODO Dodac losowe kolory z listy do linear layout, wraz z wprowadzaniem kolejnych cyfr
         if (slidingMenu.isOpened()) {
             slidingMenu.closeLayer(true);
@@ -254,7 +263,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                         }
                     }
                 } else {
-                    if (password.equals(preferences.getString(KEY, getString(R.string.blank)))) {
+                    if (password.equals(Hash.toHash(preferences.getString(KEY, getString(R.string.blank))))) {
                         mInfo.setText(getString(R.string.pin_correct));
                         mPass.setText(getString(R.string.four_stars));
                         setBlue();
@@ -307,9 +316,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         startActivity(intent);
     }
 
-    private void saveData() {
+    private void saveData() throws NoSuchProviderException, NoSuchAlgorithmException {
         preferencesEditor.putBoolean(KEY_STORED, true);
-        preferencesEditor.putString(KEY, password);
+        preferencesEditor.putString(KEY, Hash.toHash(password));
         preferencesEditor.commit();
         initVars();
         loginComplete();
