@@ -18,6 +18,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.utils.SlidingLayer;
 import com.bresiu.krypto.utils.cipher.Hash;
+import com.bresiu.krypto.utils.util.CommonUtils;
 import com.bresiu.krypto.utils.util.FontUtils;
 
 import java.security.NoSuchAlgorithmException;
@@ -38,10 +39,11 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private static Button mCancel;
     private static Button mBack;
     private static SlidingLayer slidingMenu;
-    private static LinearLayout mProg1;
-    private static LinearLayout mProg2;
-    private static LinearLayout mProg3;
-    private static LinearLayout mProg4;
+    //private static LinearLayout mProg1;
+    //private static LinearLayout mProg2;
+    //private static LinearLayout mProg3;
+    //private static LinearLayout mProg4;
+    private static LinearLayout mProgress;
     private static SharedPreferences preferences;
     private static SharedPreferences.Editor preferencesEditor;
     private final String TAG = "LoginActivity";
@@ -65,7 +67,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             mLastLogged.setText(String.format("%s\n%s", getString(R.string.last_logged_in), preferences.getString(LAST_LOGGED, getString(R.string.blank))));
             noKey = false;
         }
+
         initVars();
+
         //TODO Test:
         Button but1 = (Button) findViewById(R.id.b1);
         Button but2 = (Button) findViewById(R.id.b2);
@@ -157,6 +161,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             case R.id.cancel:
                 count = 0;
                 password = "";
+                mProgress.removeAllViews();
                 break;
             case R.id.delete_button:
                 cleanData();
@@ -210,10 +215,11 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         mBack = (Button) findViewById(R.id.back);
         mCancel = (Button) findViewById(R.id.cancel);
         slidingMenu = (SlidingLayer) findViewById(R.id.slidingMenu);
-        mProg1 = (LinearLayout) findViewById(R.id.prog1);
-        mProg2 = (LinearLayout) findViewById(R.id.prog2);
-        mProg3 = (LinearLayout) findViewById(R.id.prog3);
-        mProg4 = (LinearLayout) findViewById(R.id.prog4);
+        mProgress = (LinearLayout) findViewById(R.id.progress);
+        //mProg1 = (LinearLayout) findViewById(R.id.prog1);
+        //mProg2 = (LinearLayout) findViewById(R.id.prog2);
+        //mProg3 = (LinearLayout) findViewById(R.id.prog3);
+        //mProg4 = (LinearLayout) findViewById(R.id.prog4);
         mBack.setEnabled(false);
         mCancel.setEnabled(false);
     }
@@ -234,27 +240,49 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                 // mPass.setText(progStar + "*")
                 // mPass.setText(progStar.substring(0, progStar.length()-1)));
                 mPass.setText(getString(R.string.one_star));
-                mProg1.setBackgroundColor(getResources().getColor(R.color.turquoise));
-                mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
-                mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
-                mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
+
+                mProgress = (LinearLayout) findViewById(R.id.progress);
+
+                LinearLayout prog = new LinearLayout(this);
+                prog.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor(this)));
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+
+                prog.setLayoutParams(params);
+                mProgress.addView(prog);
+
+
+                //mProg1.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
+                //mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
+                //mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
+                //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
                 mBack.setEnabled(true);
                 mCancel.setEnabled(true);
                 break;
 
             case 2:
                 mPass.setText(getString(R.string.two_stars));
-                mProg1.setBackgroundColor(getResources().getColor(R.color.turquoise));
-                mProg2.setBackgroundColor(getResources().getColor(R.color.yellow));
-                mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
-                mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
+
+                LinearLayout prog2 = new LinearLayout(this);
+                prog2.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor(this)));
+                LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+
+                prog2.setLayoutParams(params2);
+                mProgress.addView(prog2);
+                //mProg1.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
+                //mProg2.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
+                //mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
+                //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
                 break;
             case 3:
                 mPass.setText(getString(R.string.three_stars));
-                mProg1.setBackgroundColor(getResources().getColor(R.color.turquoise));
-                mProg2.setBackgroundColor(getResources().getColor(R.color.yellow));
-                mProg3.setBackgroundColor(getResources().getColor(R.color.violet));
-                mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
+                //mProg1.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
+                //mProg2.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
+                //mProg3.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
+                //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
                 break;
             case 4:
                 if (noKey) {
@@ -297,25 +325,26 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         }
     }
 
+    //TODO change name
     private void setBlue() {
-        mProg1.setBackgroundColor(getResources().getColor(R.color.green));
-        mProg2.setBackgroundColor(getResources().getColor(R.color.green));
-        mProg3.setBackgroundColor(getResources().getColor(R.color.green));
-        mProg4.setBackgroundColor(getResources().getColor(R.color.green));
+        //mProg1.setBackgroundColor(getResources().getColor(R.color.green));
+        //mProg2.setBackgroundColor(getResources().getColor(R.color.green));
+        //mProg3.setBackgroundColor(getResources().getColor(R.color.green));
+        //mProg4.setBackgroundColor(getResources().getColor(R.color.green));
     }
 
     private void setRed() {
-        mProg1.setBackgroundColor(getResources().getColor(R.color.red));
-        mProg2.setBackgroundColor(getResources().getColor(R.color.red));
-        mProg3.setBackgroundColor(getResources().getColor(R.color.red));
-        mProg4.setBackgroundColor(getResources().getColor(R.color.red));
+        //mProg1.setBackgroundColor(getResources().getColor(R.color.red));
+        //mProg2.setBackgroundColor(getResources().getColor(R.color.red));
+        //mProg3.setBackgroundColor(getResources().getColor(R.color.red));
+        //mProg4.setBackgroundColor(getResources().getColor(R.color.red));
     }
 
     private void setDark() {
-        mProg1.setBackgroundColor(getResources().getColor(R.color.stripes));
-        mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
-        mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
-        mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
+        //mProg1.setBackgroundColor(getResources().getColor(R.color.stripes));
+        //mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
+        //mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
+        //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
     }
 
     private void cleanData() {
