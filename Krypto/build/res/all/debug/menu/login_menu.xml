@@ -1,8 +1,4 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      style="@style/Theme.Brs">
-    <item
-            android:id="@+id/menu"
-            android:title="Menu"
-            android:showAsAction="always"
-            android:icon="@drawable/settings"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" style="@style/Theme.Brs">
+    <item android:id="@+id/menu" android:icon="@drawable/ic_action_overflow"
+        android:showAsAction="always" android:title="@string/Menu" />
 </menu><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/menu/login_menu.xml -->

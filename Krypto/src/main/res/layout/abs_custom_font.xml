@@ -6,5 +6,5 @@
     app:typeface="roboto_condensed"
     android:text="@string/app_name"
     android:textAppearance="?android:attr/textAppearanceLarge"
-    android:textColor="@color/text_dark"
+    android:textColor="@color/text_white"
     android:id="@+id/abs_custom_font" />

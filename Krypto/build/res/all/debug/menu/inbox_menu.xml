@@ -1,14 +1,7 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      style="@style/Theme.Brs">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" style="@style/Theme.Brs">
 
-    <item
-            android:id="@+id/compose"
-            android:title="Compose"
-            android:showAsAction="always"
-            android:icon="@drawable/edit"/>
-    <item
-            android:id="@+id/settings"
-            android:title="Menu"
-            android:showAsAction="always"
-            android:icon="@drawable/settings"/>
+    <item android:id="@+id/compose" android:icon="@drawable/edit" android:showAsAction="always"
+        android:title="Compose" />
+    <item android:id="@+id/settings" android:icon="@drawable/settings" android:showAsAction="always"
+        android:title="Menu" />
 </menu><!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/menu/inbox_menu.xml -->

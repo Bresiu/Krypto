@@ -34,7 +34,6 @@ public class FontUtils {
         int length = input.length();
         TypefaceSpan typeFaceRobotoThin = new TypefaceSpan(context, "Roboto-Thin");
 
-        int m_color = R.color.text_color;
         Spannable span = new SpannableString(input);
         span.setSpan(typeFaceRobotoThin, 0, length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         span.setSpan(new RelativeSizeSpan(0.4f), 1, length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);

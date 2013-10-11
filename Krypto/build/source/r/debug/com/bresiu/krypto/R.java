@@ -888,32 +888,46 @@ public final class R {
         public static final int abs__bright_foreground_disabled_holo_light = 0x7f070003;
         public static final int abs__bright_foreground_holo_dark = 0x7f070004;
         public static final int abs__bright_foreground_holo_light = 0x7f070005;
-        public static final int abs__primary_text_disable_only_holo_dark = 0x7f070019;
-        public static final int abs__primary_text_disable_only_holo_light = 0x7f07001a;
-        public static final int abs__primary_text_holo_dark = 0x7f07001b;
-        public static final int abs__primary_text_holo_light = 0x7f07001c;
+        public static final int abs__primary_text_disable_only_holo_dark = 0x7f070027;
+        public static final int abs__primary_text_disable_only_holo_light = 0x7f070028;
+        public static final int abs__primary_text_holo_dark = 0x7f070029;
+        public static final int abs__primary_text_holo_light = 0x7f07002a;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml
          */
-        public static final int action_bar_color = 0x7f070006;
-        public static final int action_bar_font = 0x7f070007;
-        public static final int background = 0x7f070008;
-        public static final int black = 0x7f070009;
-        public static final int button = 0x7f07000a;
-        public static final int button_pressed = 0x7f07000b;
-        public static final int green = 0x7f07000c;
-        public static final int message_received = 0x7f07000d;
-        public static final int message_sent = 0x7f07000e;
-        public static final int pressed_brs = 0x7f07000f;
-        public static final int red = 0x7f070010;
-        public static final int shadow = 0x7f070011;
-        public static final int stripes = 0x7f070012;
-        public static final int text_color = 0x7f070013;
-        public static final int text_dark = 0x7f070014;
-        public static final int transparent = 0x7f070015;
-        public static final int turquoise = 0x7f070016;
-        public static final int violet = 0x7f070017;
-        public static final int yellow = 0x7f070018;
+        public static final int alizarin = 0x7f070006;
+        public static final int amethyst = 0x7f070007;
+        public static final int asbestos = 0x7f070008;
+        public static final int background = 0x7f070009;
+        public static final int belize_hole = 0x7f07000a;
+        public static final int button = 0x7f07000b;
+        public static final int button_pressed = 0x7f07000c;
+        public static final int carrot = 0x7f07000d;
+        public static final int clouds = 0x7f07000e;
+        public static final int concrete = 0x7f07000f;
+        public static final int emerald = 0x7f070010;
+        public static final int green = 0x7f070011;
+        public static final int green_sea = 0x7f070012;
+        public static final int message_received = 0x7f070013;
+        public static final int message_sent = 0x7f070014;
+        public static final int midnight_blue = 0x7f070015;
+        public static final int nepritis = 0x7f070016;
+        public static final int orange = 0x7f070017;
+        public static final int peter_river = 0x7f070018;
+        public static final int pomegrante = 0x7f070019;
+        public static final int pressed_brs = 0x7f07001a;
+        public static final int pumpkin = 0x7f07001b;
+        public static final int red = 0x7f07001c;
+        public static final int shadow = 0x7f07001d;
+        public static final int silver = 0x7f07001e;
+        public static final int stripes = 0x7f07001f;
+        public static final int sun_flower = 0x7f070020;
+        public static final int text_color = 0x7f070021;
+        public static final int text_white = 0x7f070022;
+        public static final int transparent = 0x7f070023;
+        public static final int turquoise = 0x7f070024;
+        public static final int wer_asphalt = 0x7f070025;
+        public static final int wisteria = 0x7f070026;
     }
 
     public static final class dimen {
@@ -934,8 +948,8 @@ public final class R {
         public static final int abs__action_bar_title_text_size = 0x7f080005;
         public static final int abs__action_button_min_width = 0x7f080006;
         public static final int abs__config_prefDialogWidth = 0x7f080007;
-        public static final int abs__dialog_min_width_major = 0x7f080016;
-        public static final int abs__dialog_min_width_minor = 0x7f080017;
+        public static final int abs__dialog_min_width_major = 0x7f08001e;
+        public static final int abs__dialog_min_width_minor = 0x7f08001f;
         public static final int abs__dropdownitem_icon_width = 0x7f080008;
         public static final int abs__dropdownitem_text_padding_left = 0x7f080009;
         public static final int abs__dropdownitem_text_padding_right = 0x7f08000a;
@@ -946,13 +960,21 @@ public final class R {
          */
         public static final int activity_horizontal_margin = 0x7f08000d;
         public static final int activity_vertical_margin = 0x7f08000e;
-        public static final int layer_width = 0x7f08000f;
-        public static final int margin_top = 0x7f080010;
-        public static final int num_pad_font_size = 0x7f080011;
-        public static final int num_pad_margin = 0x7f080012;
-        public static final int num_pad_stripes = 0x7f080013;
-        public static final int offset_width = 0x7f080014;
-        public static final int shadow_width = 0x7f080015;
+        public static final int five = 0x7f08000f;
+        public static final int font_size_big = 0x7f080010;
+        public static final int font_size_medium = 0x7f080011;
+        public static final int layer_width = 0x7f080012;
+        public static final int margin_top = 0x7f080013;
+        public static final int num_pad_font_size = 0x7f080014;
+        public static final int num_pad_left_margin = 0x7f080015;
+        public static final int offset_width = 0x7f080016;
+        public static final int progress_height = 0x7f080017;
+        public static final int shadow_width = 0x7f080018;
+        public static final int sliding_layer_height = 0x7f080019;
+        public static final int stripes = 0x7f08001a;
+        public static final int stripes_three = 0x7f08001b;
+        public static final int ten = 0x7f08001c;
+        public static final int three = 0x7f08001d;
     }
 
     public static final class drawable {
@@ -1074,39 +1096,45 @@ public final class R {
         public static final int abs__textfield_searchview_right_holo_dark = 0x7f020073;
         public static final int abs__textfield_searchview_right_holo_light = 0x7f020074;
         public static final int abs__toast_frame = 0x7f020075;
-        public static final int btn_cab_done_brs = 0x7f020076;
-        public static final int btn_cab_done_default_brs = 0x7f020077;
-        public static final int btn_cab_done_focused_brs = 0x7f020078;
-        public static final int btn_cab_done_pressed_brs = 0x7f020079;
-        public static final int button = 0x7f02007a;
-        public static final int cab_background_bottom_brs = 0x7f02007b;
-        public static final int cab_background_top_brs = 0x7f02007c;
-        public static final int edit = 0x7f02007d;
-        public static final int ic_launcher = 0x7f02007e;
-        public static final int icon_bw = 0x7f02007f;
-        public static final int list_focused_brs = 0x7f020080;
-        public static final int menu_dropdown_panel_brs = 0x7f020081;
-        public static final int pressed_background_brs = 0x7f020082;
-        public static final int progress_bg_brs = 0x7f020083;
-        public static final int progress_horizontal_brs = 0x7f020084;
-        public static final int progress_primary_brs = 0x7f020085;
-        public static final int progress_secondary_brs = 0x7f020086;
-        public static final int selectable_background_brs = 0x7f020087;
-        public static final int settings = 0x7f020088;
-        public static final int sidebar_shadow = 0x7f020089;
-        public static final int spinner_ab_default_brs = 0x7f02008a;
-        public static final int spinner_ab_disabled_brs = 0x7f02008b;
-        public static final int spinner_ab_focused_brs = 0x7f02008c;
-        public static final int spinner_ab_pressed_brs = 0x7f02008d;
-        public static final int spinner_background_ab_brs = 0x7f02008e;
-        public static final int tab_indicator_ab_brs = 0x7f02008f;
-        public static final int tab_selected_brs = 0x7f020090;
-        public static final int tab_selected_focused_brs = 0x7f020091;
-        public static final int tab_selected_pressed_brs = 0x7f020092;
-        public static final int tab_unselected_brs = 0x7f020093;
-        public static final int tab_unselected_focused_brs = 0x7f020094;
-        public static final int tab_unselected_pressed_brs = 0x7f020095;
-        public static final int web_hi_res_512 = 0x7f020096;
+        public static final int action_overflow = 0x7f020076;
+        public static final int btn_cab_done_brs = 0x7f020077;
+        public static final int btn_cab_done_default_brs = 0x7f020078;
+        public static final int btn_cab_done_focused_brs = 0x7f020079;
+        public static final int btn_cab_done_pressed_brs = 0x7f02007a;
+        public static final int button = 0x7f02007b;
+        public static final int cab_background_bottom_brs = 0x7f02007c;
+        public static final int cab_background_top_brs = 0x7f02007d;
+        public static final int content_backspace = 0x7f02007e;
+        public static final int content_edit = 0x7f02007f;
+        public static final int edit = 0x7f020080;
+        public static final int ic_action_overflow = 0x7f020081;
+        public static final int ic_launcher = 0x7f020082;
+        public static final int icon_bw = 0x7f020083;
+        public static final int list_focused_brs = 0x7f020084;
+        public static final int menu_dropdown_panel_brs = 0x7f020085;
+        public static final int navigation_accept = 0x7f020086;
+        public static final int pressed_background_brs = 0x7f020087;
+        public static final int progress_bg_brs = 0x7f020088;
+        public static final int progress_horizontal_brs = 0x7f020089;
+        public static final int progress_primary_brs = 0x7f02008a;
+        public static final int progress_secondary_brs = 0x7f02008b;
+        public static final int selectable_background_brs = 0x7f02008c;
+        public static final int settings = 0x7f02008d;
+        public static final int sidebar_shadow = 0x7f02008e;
+        public static final int social_send_now = 0x7f02008f;
+        public static final int spinner_ab_default_brs = 0x7f020090;
+        public static final int spinner_ab_disabled_brs = 0x7f020091;
+        public static final int spinner_ab_focused_brs = 0x7f020092;
+        public static final int spinner_ab_pressed_brs = 0x7f020093;
+        public static final int spinner_background_ab_brs = 0x7f020094;
+        public static final int tab_indicator_ab_brs = 0x7f020095;
+        public static final int tab_selected_brs = 0x7f020096;
+        public static final int tab_selected_focused_brs = 0x7f020097;
+        public static final int tab_selected_pressed_brs = 0x7f020098;
+        public static final int tab_unselected_brs = 0x7f020099;
+        public static final int tab_unselected_focused_brs = 0x7f02009a;
+        public static final int tab_unselected_pressed_brs = 0x7f02009b;
+        public static final int web_hi_res_512 = 0x7f02009c;
     }
 
     public static final class id {
@@ -1156,45 +1184,44 @@ public final class R {
         public static final int abs__up = 0x7f050029;
         public static final int abs_custom_font = 0x7f05004c;
         public static final int auto = 0x7f05001e;
-        public static final int b0 = 0x7f05006a;
-        public static final int b1 = 0x7f050060;
-        public static final int b2 = 0x7f050061;
-        public static final int b3 = 0x7f050062;
-        public static final int b4 = 0x7f050063;
-        public static final int b5 = 0x7f050064;
-        public static final int b6 = 0x7f050065;
-        public static final int b7 = 0x7f050066;
-        public static final int b8 = 0x7f050067;
-        public static final int b9 = 0x7f050068;
-        public static final int back = 0x7f05006b;
+        public static final int b0 = 0x7f050068;
+        public static final int b1 = 0x7f05005e;
+        public static final int b2 = 0x7f05005f;
+        public static final int b3 = 0x7f050060;
+        public static final int b4 = 0x7f050061;
+        public static final int b5 = 0x7f050062;
+        public static final int b6 = 0x7f050063;
+        public static final int b7 = 0x7f050064;
+        public static final int b8 = 0x7f050065;
+        public static final int b9 = 0x7f050066;
+        public static final int back_cancel = 0x7f050067;
         public static final int bottom = 0x7f050023;
-        public static final int cancel = 0x7f050069;
-        public static final int compose = 0x7f050072;
-        public static final int date_box = 0x7f05006e;
+        public static final int compose = 0x7f050071;
+        public static final int date_box = 0x7f05006c;
         public static final int delete_button = 0x7f050055;
         public static final int disableHome = 0x7f05001c;
         public static final int edit_query = 0x7f050040;
         public static final int homeAsUp = 0x7f050019;
-        public static final int info = 0x7f05005a;
-        public static final int last_logged_in = 0x7f05006c;
+        public static final int info = 0x7f05005b;
+        public static final int last_logged_in = 0x7f05006a;
         public static final int left = 0x7f050020;
         public static final int licences = 0x7f050056;
+        public static final int line = 0x7f05005a;
         public static final int listMode = 0x7f050015;
         public static final int listView = 0x7f05004d;
-        public static final int menu = 0x7f050074;
+        public static final int login = 0x7f050069;
+        public static final int menu = 0x7f050073;
         public static final int message = 0x7f050053;
-        public static final int message_box = 0x7f050070;
-        public static final int message_received = 0x7f05006d;
-        public static final int message_sent = 0x7f050071;
+        public static final int message_box = 0x7f05006e;
+        public static final int message_received = 0x7f05006b;
+        public static final int message_sent = 0x7f05006f;
         public static final int middle = 0x7f050021;
         public static final int normal = 0x7f050014;
-        public static final int pass = 0x7f05005b;
+        public static final int pass = 0x7f05005c;
         public static final int phoneNumber = 0x7f050050;
-        public static final int phone_box = 0x7f05006f;
-        public static final int prog1 = 0x7f05005c;
-        public static final int prog2 = 0x7f05005d;
-        public static final int prog3 = 0x7f05005e;
-        public static final int prog4 = 0x7f05005f;
+        public static final int phone_box = 0x7f05006d;
+        public static final int prog = 0x7f050070;
+        public static final int progress = 0x7f05005d;
         public static final int relative = 0x7f050058;
         public static final int right = 0x7f05001f;
         public static final int roboto_black = 0x7f05000a;
@@ -1219,14 +1246,14 @@ public final class R {
         public static final int robotoslab_thin = 0x7f050010;
         public static final int scrollView = 0x7f050051;
         public static final int send = 0x7f050052;
-        public static final int settings = 0x7f050073;
+        public static final int settings = 0x7f050072;
         public static final int showCustom = 0x7f05001b;
         public static final int showHome = 0x7f050018;
         public static final int showTitle = 0x7f05001a;
         public static final int slidingCompose = 0x7f05004e;
         public static final int slidingMenu = 0x7f050054;
         public static final int tabMode = 0x7f050016;
-        public static final int tableLayout = 0x7f050059;
+        public static final int table = 0x7f050059;
         public static final int top = 0x7f050022;
         public static final int useLogo = 0x7f050017;
         public static final int wrap_content = 0x7f05001d;
@@ -1268,8 +1295,9 @@ public final class R {
         public static final int activity_login = 0x7f030017;
         public static final int message_received = 0x7f030018;
         public static final int message_sent = 0x7f030019;
-        public static final int sherlock_spinner_dropdown_item = 0x7f03001a;
-        public static final int sherlock_spinner_item = 0x7f03001b;
+        public static final int progress = 0x7f03001a;
+        public static final int sherlock_spinner_dropdown_item = 0x7f03001b;
+        public static final int sherlock_spinner_item = 0x7f03001c;
     }
 
     public static final class menu {
@@ -1281,30 +1309,30 @@ public final class R {
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml
          */
-        public static final int about = 0x7f0a0000;
+        public static final int Menu = 0x7f0a0000;
+        public static final int about = 0x7f0a0001;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml
          */
-        public static final int abs__action_bar_home_description = 0x7f0a0001;
-        public static final int abs__action_bar_up_description = 0x7f0a0002;
-        public static final int abs__action_menu_overflow_description = 0x7f0a0003;
-        public static final int abs__action_mode_done = 0x7f0a0004;
-        public static final int abs__activity_chooser_view_see_all = 0x7f0a0005;
-        public static final int abs__activitychooserview_choose_application = 0x7f0a0006;
-        public static final int abs__searchview_description_clear = 0x7f0a0007;
-        public static final int abs__searchview_description_query = 0x7f0a0008;
-        public static final int abs__searchview_description_search = 0x7f0a0009;
-        public static final int abs__searchview_description_submit = 0x7f0a000a;
-        public static final int abs__searchview_description_voice = 0x7f0a000b;
-        public static final int abs__shareactionprovider_share_with = 0x7f0a000c;
-        public static final int abs__shareactionprovider_share_with_application = 0x7f0a000d;
+        public static final int abs__action_bar_home_description = 0x7f0a0002;
+        public static final int abs__action_bar_up_description = 0x7f0a0003;
+        public static final int abs__action_menu_overflow_description = 0x7f0a0004;
+        public static final int abs__action_mode_done = 0x7f0a0005;
+        public static final int abs__activity_chooser_view_see_all = 0x7f0a0006;
+        public static final int abs__activitychooserview_choose_application = 0x7f0a0007;
+        public static final int abs__searchview_description_clear = 0x7f0a0008;
+        public static final int abs__searchview_description_query = 0x7f0a0009;
+        public static final int abs__searchview_description_search = 0x7f0a000a;
+        public static final int abs__searchview_description_submit = 0x7f0a000b;
+        public static final int abs__searchview_description_voice = 0x7f0a000c;
+        public static final int abs__shareactionprovider_share_with = 0x7f0a000d;
+        public static final int abs__shareactionprovider_share_with_application = 0x7f0a000e;
         /**
          * From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml
          */
-        public static final int action_settings = 0x7f0a000e;
-        public static final int app_name = 0x7f0a000f;
-        public static final int blank = 0x7f0a0010;
-        public static final int c = 0x7f0a0011;
+        public static final int action_settings = 0x7f0a000f;
+        public static final int app_name = 0x7f0a0010;
+        public static final int blank = 0x7f0a0011;
         public static final int confirm_pin = 0x7f0a0012;
         public static final int ei = 0x7f0a0013;
         public static final int eight = 0x7f0a0014;
@@ -1313,17 +1341,17 @@ public final class R {
         public static final int five = 0x7f0a0017;
         public static final int fo = 0x7f0a0018;
         public static final int four = 0x7f0a0019;
-        public static final int four_stars = 0x7f0a001a;
-        public static final int last_logged = 0x7f0a001b;
-        public static final int last_logged_in = 0x7f0a001c;
-        public static final int licences = 0x7f0a001d;
-        public static final int lower_than = 0x7f0a001e;
-        public static final int ni = 0x7f0a001f;
-        public static final int nine = 0x7f0a0020;
-        public static final int on = 0x7f0a0021;
-        public static final int on_create = 0x7f0a0022;
-        public static final int one = 0x7f0a0023;
-        public static final int one_star = 0x7f0a0024;
+        public static final int last_logged = 0x7f0a001a;
+        public static final int last_logged_in = 0x7f0a001b;
+        public static final int licences = 0x7f0a001c;
+        public static final int ni = 0x7f0a001d;
+        public static final int nine = 0x7f0a001e;
+        public static final int on = 0x7f0a001f;
+        public static final int on_click = 0x7f0a0020;
+        public static final int on_create = 0x7f0a0021;
+        public static final int on_create_options = 0x7f0a0022;
+        public static final int on_options_item_selected = 0x7f0a0023;
+        public static final int one = 0x7f0a0024;
         public static final int pin = 0x7f0a0025;
         public static final int pin_correct = 0x7f0a0026;
         public static final int pin_do_not_match = 0x7f0a0027;
@@ -1333,15 +1361,14 @@ public final class R {
         public static final int seven = 0x7f0a002b;
         public static final int si = 0x7f0a002c;
         public static final int six = 0x7f0a002d;
-        public static final int th = 0x7f0a002e;
-        public static final int three = 0x7f0a002f;
-        public static final int three_stars = 0x7f0a0030;
+        public static final int star = 0x7f0a002e;
+        public static final int th = 0x7f0a002f;
+        public static final int three = 0x7f0a0030;
         public static final int title_activity_login = 0x7f0a0031;
         public static final int tw = 0x7f0a0032;
         public static final int two = 0x7f0a0033;
-        public static final int two_stars = 0x7f0a0034;
-        public static final int ze = 0x7f0a0035;
-        public static final int zero = 0x7f0a0036;
+        public static final int ze = 0x7f0a0034;
+        public static final int zero = 0x7f0a0035;
     }
 
     public static final class style {

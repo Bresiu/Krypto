@@ -28,7 +28,7 @@
         <item name="actionModeBackground">@drawable/cab_background_top_brs</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
-        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowBackground">@drawable/ab_solid_brs</item>
     </style>
 
     <style name="ActionBar.Solid.Brs" parent="@style/Widget.Sherlock.ActionBar.Solid">

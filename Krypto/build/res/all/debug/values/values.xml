@@ -46,25 +46,39 @@
     <color name="abs__bright_foreground_holo_dark">@color/abs__background_holo_light</color>
     <color name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/colors.xml -->
-    <color name="action_bar_color">#1b2021</color>
-    <color name="action_bar_font">#a8afaf</color>
+    <color name="alizarin">#e74c3c</color>
+    <color name="amethyst">#9b59b6</color>
+    <color name="asbestos">#7f8c8d</color>
     <color name="background">#000000</color>
-    <color name="black">#000000</color>
+    <color name="belize_hole">#2980b9</color>
     <color name="button">#000000</color>
-    <color name="button_pressed">#b81f22</color>
+    <color name="button_pressed">#1b2021</color>
+    <color name="carrot">#e67e22</color>
+    <color name="clouds">#ecf0f1</color>
+    <color name="concrete">#95a5a6</color>
+    <color name="emerald">#2ecc71</color>
     <color name="green">#27ae60</color>
+    <color name="green_sea">#16a085</color>
     <color name="message_received">#89191a</color>
     <color name="message_sent">#b81f22</color>
+    <color name="midnight_blue">#2c3e50</color>
+    <color name="nepritis">#27ae60</color>
+    <color name="orange">#f39c12</color>
+    <color name="peter_river">#3498db</color>
+    <color name="pomegrante">#c0392b</color>
     <color name="pressed_brs">#CC8A1719</color>
+    <color name="pumpkin">#d35400</color>
     <color name="red">#c0392b</color>
     <color name="shadow">#b81f22</color>
+    <color name="silver">#bdc3c7</color>
     <color name="stripes">#1b2021</color>
+    <color name="sun_flower">#f1c40f</color>
     <color name="text_color">#27ae60</color>
-    <color name="text_dark">#a8afaf</color>
+    <color name="text_white">#a8afaf</color>
     <color name="transparent">#c8000000</color>
     <color name="turquoise">#1abc9c</color>
-    <color name="violet">#9b59b6</color>
-    <color name="yellow">#f1c40f</color>
+    <color name="wer_asphalt">#34495e</color>
+    <color name="wisteria">#8e44ad</color>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/attrs.xml -->
     <declare-styleable name="RobotoAutoCompleteTextView">
         <attr name="typeface" />
@@ -589,13 +603,21 @@
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/dimens.xml -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="font_size_big">40sp</dimen>
+    <dimen name="font_size_medium">25sp</dimen>
     <dimen name="layer_width">300dp</dimen>
     <dimen name="margin_top">10dp</dimen>
     <dimen name="num_pad_font_size">40sp</dimen>
-    <dimen name="num_pad_margin">30dp</dimen>
-    <dimen name="num_pad_stripes">1dp</dimen>
+    <dimen name="num_pad_left_margin">25dp</dimen>
     <dimen name="offset_width">48dp</dimen>
+    <dimen name="progress_height">3dp</dimen>
     <dimen name="shadow_width">8dp</dimen>
+    <dimen name="sliding_layer_height">250dp</dimen>
+    <dimen name="stripes">1dp</dimen>
+    <dimen name="stripes_three">3dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="three">3dp</dimen>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <item name="abs__action_menu_divider" type="id" />
     <item name="abs__action_menu_presenter" type="id" />
@@ -606,6 +628,7 @@
 
     <integer name="abs__max_action_buttons">2</integer>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/strings.xml -->
+    <string name="Menu">Menu</string>
     <string name="about">About</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/build/exploded-bundles/KryptoProjectLibrariesActionbarsherlockUnspecified.aar/res/values/values.xml -->
     <string name="abs__action_bar_home_description">Navigate home</string>
@@ -627,7 +650,6 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">Krypto</string>
     <string name="blank"></string>
-    <string name="c">c</string>
     <string name="confirm_pin">Confim PIN:</string>
     <string name="ei">8</string>
     <string name="eight">8\u0020TUV</string>
@@ -636,17 +658,17 @@
     <string name="five">5\u0020JKL</string>
     <string name="fo">4</string>
     <string name="four">4\u0020GHI</string>
-    <string name="four_stars">****</string>
     <string name="last_logged">LastLogged</string>
     <string name="last_logged_in">Last logged in:</string>
     <string name="licences">Licences</string>
-    <string name="lower_than">&lt;</string>
     <string name="ni">9</string>
     <string name="nine">9\u0020WXYZ</string>
     <string name="on">1</string>
+    <string name="on_click">onClick</string>
     <string name="on_create">onCreate</string>
+    <string name="on_create_options">onCreateOptionsMenu</string>
+    <string name="on_options_item_selected">onOptionsItemSelected</string>
     <string name="one">1</string>
-    <string name="one_star">*</string>
     <string name="pin">Enter Your PIN:</string>
     <string name="pin_correct">PIN correct</string>
     <string name="pin_do_not_match">PIN do not match.
@@ -660,13 +682,12 @@
     <string name="seven">7\u0020PQRS</string>
     <string name="si">6</string>
     <string name="six">6\u0020MNO</string>
+    <string name="star">*</string>
     <string name="th">3</string>
     <string name="three">3\u0020DEF</string>
-    <string name="three_stars">***</string>
     <string name="title_activity_login">Login</string>
     <string name="tw">2</string>
     <string name="two">2\u0020ABC</string>
-    <string name="two_stars">**</string>
     <string name="ze">0</string>
     <string name="zero">0</string>
     <!-- From: file:/home/bresiu/android-studio/android-workspace/KryptoProject/Krypto/src/main/res/values/styles_brs.xml -->
@@ -910,7 +931,7 @@
         <item name="actionModeBackground">@drawable/cab_background_top_brs</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_brs</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Brs</item>
-        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowBackground">@drawable/ab_solid_brs</item>
     </style>
 
     <style name="Theme.Brs.Widget" parent="@style/Theme.Sherlock">

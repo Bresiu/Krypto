@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Spannable;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -18,13 +19,16 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.bresiu.krypto.utils.SlidingLayer;
 import com.bresiu.krypto.utils.cipher.Hash;
-import com.bresiu.krypto.utils.util.CommonUtils;
+import com.bresiu.krypto.utils.util.ColorUtils;
+import com.bresiu.krypto.utils.util.ConvertUtils;
 import com.bresiu.krypto.utils.util.FontUtils;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class LoginActivity extends SherlockActivity implements View.OnClickListener {
 
@@ -33,23 +37,20 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
     private static String passFirstAttempt;
     private static String password;
     private static int count;
-    private static TextView mInfo;
-    private static TextView mPass;
-    private static TextView mLastLogged;
-    private static Button mCancel;
-    private static Button mBack;
-    private static SlidingLayer slidingMenu;
-    //private static LinearLayout mProg1;
-    //private static LinearLayout mProg2;
-    //private static LinearLayout mProg3;
-    //private static LinearLayout mProg4;
-    private static LinearLayout mProgress;
     private static SharedPreferences preferences;
     private static SharedPreferences.Editor preferencesEditor;
     private final String TAG = "LoginActivity";
     private final String KEY_STORED = "KeyStored";
     private final String KEY = "Key";
     private final String LAST_LOGGED = "LastLogged";
+    private List<Integer> gradients;
+    private TextView mInfo;
+    private TextView mPass;
+    private TextView mLastLogged;
+    private Button mLogin;
+    private Button mBack;
+    private SlidingLayer slidingMenu;
+    private LinearLayout mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,44 +59,20 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         setContentView(R.layout.activity_login);
         setupActionBar();
         setupWidgets();
-        String PREFERENCES_NAME = "Preferences";
-        preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
-        preferencesEditor = preferences.edit();
-        if (!restoreData()) {
-            initNewKey();
-        } else {
-            mLastLogged.setText(String.format("%s\n%s", getString(R.string.last_logged_in), preferences.getString(LAST_LOGGED, getString(R.string.blank))));
-            noKey = false;
-        }
-
+        setupPreferences();
         initVars();
-
-        //TODO Test:
-        Button but1 = (Button) findViewById(R.id.b1);
-        Button but2 = (Button) findViewById(R.id.b2);
-        Button but3 = (Button) findViewById(R.id.b3);
-        Button but4 = (Button) findViewById(R.id.b4);
-        Button but5 = (Button) findViewById(R.id.b5);
-        Button but6 = (Button) findViewById(R.id.b6);
-        Button but7 = (Button) findViewById(R.id.b7);
-        Button but8 = (Button) findViewById(R.id.b8);
-        Button but9 = (Button) findViewById(R.id.b9);
-        Button but0 = (Button) findViewById(R.id.b0);
-        Button[] buttons = new Button[]{but1, but2, but3, but4, but5, but6, but7, but8, but9, but0};
-        Spannable[] spannables = FontUtils.createSpannableList(this);
-        for (int i = 0; i < buttons.length; i++) {
-            buttons[i].setText(spannables[i]);
-        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(TAG, getString(R.string.on_create_options));
         getSupportMenuInflater().inflate(R.menu.login_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, getString(R.string.on_options_item_selected));
         super.onOptionsItemSelected(item);
 
         switch (item.getItemId()) {
@@ -112,63 +89,81 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Log.d(TAG, getString(R.string.on_click));
         switch (v.getId()) {
             case R.id.b0:
                 count++;
                 password += 0;
+                insertNewColor();
                 break;
             case R.id.b1:
                 count++;
                 password += 1;
+                insertNewColor();
                 break;
             case R.id.b2:
                 count++;
                 password += 2;
+                insertNewColor();
                 break;
             case R.id.b3:
                 count++;
                 password += 3;
+                insertNewColor();
                 break;
             case R.id.b4:
                 count++;
                 password += 4;
+                insertNewColor();
                 break;
             case R.id.b5:
                 count++;
                 password += 5;
+                insertNewColor();
                 break;
             case R.id.b6:
                 count++;
                 password += 6;
+                insertNewColor();
                 break;
             case R.id.b7:
                 count++;
                 password += 7;
+                insertNewColor();
                 break;
             case R.id.b8:
                 count++;
                 password += 8;
+                insertNewColor();
                 break;
             case R.id.b9:
                 count++;
                 password += 9;
+                insertNewColor();
                 break;
-            case R.id.back:
+            case R.id.back_cancel:
                 if (count > 0) count--;
                 if (password.length() > 0)
                     password = password.substring(0, password.length() - 1);
+                //TODO
+                if (gradients.size() > 0) {
+                    deleteLastColor();
+                }
                 break;
-            case R.id.cancel:
-                count = 0;
-                password = "";
-                mProgress.removeAllViews();
-                break;
-            case R.id.delete_button:
-                cleanData();
+            case R.id.login:
+                try {
+                    attemptLogin();
+                } catch (NoSuchProviderException e) {
+                    e.printStackTrace();
+                } catch (NoSuchAlgorithmException e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.about:
+                //TODO
                 break;
             case R.id.licences:
+                //TODO
                 break;
         }
         try {
@@ -192,6 +187,92 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         mActionBar.setDisplayShowCustomEnabled(true);
     }
 
+    private void setupWidgets() {
+        mInfo = (TextView) findViewById(R.id.info);
+        mPass = (TextView) findViewById(R.id.pass);
+        mLastLogged = (TextView) findViewById(R.id.last_logged_in);
+
+        slidingMenu = (SlidingLayer) findViewById(R.id.slidingMenu);
+        mProgress = (LinearLayout) findViewById(R.id.progress);
+
+        mBack = (Button) findViewById(R.id.back_cancel);
+        mLogin = (Button) findViewById(R.id.login);
+
+        mBack.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                //TODO
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    initVars();
+                    try {
+                        showProg();
+                    } catch (NoSuchProviderException e) {
+                        e.printStackTrace();
+                    } catch (NoSuchAlgorithmException e) {
+                        e.printStackTrace();
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        mBack.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                initVars();
+                try {
+                    showProg();
+                } catch (NoSuchProviderException e) {
+                    e.printStackTrace();
+                } catch (NoSuchAlgorithmException e) {
+                    e.printStackTrace();
+                }
+                return true;
+            }
+        });
+
+        Button but1 = (Button) findViewById(R.id.b1);
+        Button but2 = (Button) findViewById(R.id.b2);
+        Button but3 = (Button) findViewById(R.id.b3);
+        Button but4 = (Button) findViewById(R.id.b4);
+        Button but5 = (Button) findViewById(R.id.b5);
+        Button but6 = (Button) findViewById(R.id.b6);
+        Button but7 = (Button) findViewById(R.id.b7);
+        Button but8 = (Button) findViewById(R.id.b8);
+        Button but9 = (Button) findViewById(R.id.b9);
+        Button but0 = (Button) findViewById(R.id.b0);
+
+        Button[] buttons = new Button[]{but1, but2, but3, but4, but5, but6, but7, but8, but9, but0};
+        Spannable[] spannables = FontUtils.createSpannableList(this);
+        for (int i = 0; i < buttons.length; i++) {
+            buttons[i].setText(spannables[i]);
+        }
+
+        mBack.setEnabled(false);
+        mLogin.setEnabled(false);
+    }
+
+    private void setupPreferences() {
+        String PREFERENCES_NAME = "Preferences";
+        preferences = getSharedPreferences(PREFERENCES_NAME, Activity.MODE_PRIVATE);
+        preferencesEditor = preferences.edit();
+        if (!restoreData()) {
+            initNewKey();
+        } else {
+            mLastLogged.setText(String.format("%s\n%s", getString(R.string.last_logged_in),
+                    preferences.getString(LAST_LOGGED, getString(R.string.blank))));
+            noKey = false;
+        }
+    }
+
+    private void initVars() {
+        password = "";
+        count = 0;
+        gradients = new ArrayList<Integer>();
+
+    }
+
     private boolean restoreData() {
         return preferences.getBoolean(KEY_STORED, false);
     }
@@ -203,164 +284,36 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         mInfo.setText(getString(R.string.enter_pin));
     }
 
-    private void initVars() {
-        password = "";
-        count = 0;
-    }
-
-    private void setupWidgets() {
-        mInfo = (TextView) findViewById(R.id.info);
-        mPass = (TextView) findViewById(R.id.pass);
-        mLastLogged = (TextView) findViewById(R.id.last_logged_in);
-        mBack = (Button) findViewById(R.id.back);
-        mCancel = (Button) findViewById(R.id.cancel);
-        slidingMenu = (SlidingLayer) findViewById(R.id.slidingMenu);
-        mProgress = (LinearLayout) findViewById(R.id.progress);
-        //mProg1 = (LinearLayout) findViewById(R.id.prog1);
-        //mProg2 = (LinearLayout) findViewById(R.id.prog2);
-        //mProg3 = (LinearLayout) findViewById(R.id.prog3);
-        //mProg4 = (LinearLayout) findViewById(R.id.prog4);
-        mBack.setEnabled(false);
-        mCancel.setEnabled(false);
-    }
-
     private void showProg() throws NoSuchProviderException, NoSuchAlgorithmException {
-        // TODO Dodac losowe kolory z listy do linear layout, wraz z wprowadzaniem kolejnych cyfr
         if (slidingMenu.isOpened()) {
             slidingMenu.closeLayer(true);
         }
-        switch (count) {
-            case 0:
-                mPass.setText(getString(R.string.blank));
-                setDark();
-                mBack.setEnabled(false);
-                mCancel.setEnabled(false);
-                break;
-            case 1:
-                // mPass.setText(progStar + "*")
-                // mPass.setText(progStar.substring(0, progStar.length()-1)));
-                mPass.setText(getString(R.string.one_star));
-
-                mProgress = (LinearLayout) findViewById(R.id.progress);
-
-                LinearLayout prog = new LinearLayout(this);
-                prog.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor(this)));
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
-
-                prog.setLayoutParams(params);
-                mProgress.addView(prog);
-
-
-                //mProg1.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
-                //mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
-                //mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
-                //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
-                mBack.setEnabled(true);
-                mCancel.setEnabled(true);
-                break;
-
-            case 2:
-                mPass.setText(getString(R.string.two_stars));
-
-                LinearLayout prog2 = new LinearLayout(this);
-                prog2.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor(this)));
-                LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
-
-                prog2.setLayoutParams(params2);
-                mProgress.addView(prog2);
-                //mProg1.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
-                //mProg2.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
-                //mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
-                //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
-                break;
-            case 3:
-                mPass.setText(getString(R.string.three_stars));
-                //mProg1.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
-                //mProg2.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
-                //mProg3.setBackgroundColor(getResources().getColor(CommonUtils.getNextRandomColor()));
-                //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
-                break;
-            case 4:
-                if (noKey) {
-                    if (isFirstAttempt) {
-                        setDark();
-                        mPass.setText(getString(R.string.blank));
-                        passFirstAttempt = password;
-                        isFirstAttempt = false;
-                        initVars();
-                        mInfo.setText(getString(R.string.confirm_pin));
-                    } else {
-                        if (password.equals(passFirstAttempt)) {
-                            mInfo.setText(getString(R.string.pin_set));
-                            mPass.setText(getString(R.string.four_stars));
-                            setBlue();
-                            saveData();
-                        } else {
-                            mInfo.setText(getString(R.string.pin_do_not_match));
-                            setRed();
-                            mPass.setText(getString(R.string.blank));
-                            isFirstAttempt = true;
-                            passFirstAttempt = getString(R.string.blank);
-                            initVars();
-                        }
-                    }
-                } else {
-                    if (Hash.toHash(password).equals(preferences.getString(KEY, getString(R.string.blank)))) {
-                        mInfo.setText(getString(R.string.pin_correct));
-                        mPass.setText(getString(R.string.four_stars));
-                        setBlue();
-                        loginComplete();
-                    } else {
-                        initVars();
-                        mInfo.setText(getString(R.string.pin_incorrect));
-                        mPass.setText(getString(R.string.blank));
-                        setRed();
-                    }
-                    break;
-                }
+        if (count == 1) {
+            mBack.setEnabled(true);
+            mLogin.setEnabled(true);
+            mInfo.setText(R.string.pin);
         }
-    }
+        if (count == 0) {
+            mBack.setEnabled(false);
+            mLogin.setEnabled(false);
+            setDark();
+            mPass.setText(getString(R.string.blank));
+        } else {
+            mProgress.setBackgroundColor(gradients.get(0));
+            String stars = "";
+            for (int i = 0; i < count; i++) {
+                stars += getString(R.string.star);
+            }
+            mPass.setText(stars);
+        }
 
-    //TODO change name
-    private void setBlue() {
-        //mProg1.setBackgroundColor(getResources().getColor(R.color.green));
-        //mProg2.setBackgroundColor(getResources().getColor(R.color.green));
-        //mProg3.setBackgroundColor(getResources().getColor(R.color.green));
-        //mProg4.setBackgroundColor(getResources().getColor(R.color.green));
-    }
-
-    private void setRed() {
-        //mProg1.setBackgroundColor(getResources().getColor(R.color.red));
-        //mProg2.setBackgroundColor(getResources().getColor(R.color.red));
-        //mProg3.setBackgroundColor(getResources().getColor(R.color.red));
-        //mProg4.setBackgroundColor(getResources().getColor(R.color.red));
-    }
-
-    private void setDark() {
-        //mProg1.setBackgroundColor(getResources().getColor(R.color.stripes));
-        //mProg2.setBackgroundColor(getResources().getColor(R.color.stripes));
-        //mProg3.setBackgroundColor(getResources().getColor(R.color.stripes));
-        //mProg4.setBackgroundColor(getResources().getColor(R.color.stripes));
-    }
-
-    private void cleanData() {
-        preferencesEditor.putBoolean(KEY_STORED, false);
-        preferencesEditor.commit();
-        reload();
-    }
-
-    private void reload() {
-        Intent intent = getIntent();
-        overridePendingTransition(0, 0);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        finish();
-
-        overridePendingTransition(0, 0);
-        startActivity(intent);
+        if (gradients.size() > 1) {
+            mProgress.setBackground(ColorUtils.makeGradient(ConvertUtils.listToArray(gradients)));
+        } else if (gradients.size() == 1) {
+            mProgress.setBackgroundColor(gradients.get(0));
+        } else {
+            setDark();
+        }
     }
 
     private void saveData() throws NoSuchProviderException, NoSuchAlgorithmException {
@@ -369,6 +322,49 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         preferencesEditor.commit();
         initVars();
         loginComplete();
+    }
+
+    private void attemptLogin() throws NoSuchProviderException, NoSuchAlgorithmException {
+        if (noKey) {
+            if (isFirstAttempt) {
+                setDark();
+                mPass.setText(getString(R.string.blank));
+                passFirstAttempt = password;
+                isFirstAttempt = false;
+                initVars();
+                mInfo.setText(getString(R.string.confirm_pin));
+            } else {
+                if (password.equals(passFirstAttempt)) {
+                    mInfo.setText(getString(R.string.pin_set));
+                    setGreen();
+                    try {
+                        saveData();
+                    } catch (NoSuchProviderException e) {
+                        e.printStackTrace();
+                    } catch (NoSuchAlgorithmException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    mInfo.setText(getString(R.string.pin_do_not_match));
+                    setRed();
+                    mPass.setText(getString(R.string.blank));
+                    isFirstAttempt = true;
+                    passFirstAttempt = getString(R.string.blank);
+                    initVars();
+                }
+            }
+        } else {
+            if (Hash.toHash(password).equals(preferences.getString(KEY, getString(R.string.blank)))) {
+                mInfo.setText(getString(R.string.pin_correct));
+                setGreen();
+                loginComplete();
+            } else {
+                initVars();
+                mInfo.setText(getString(R.string.pin_incorrect));
+                mPass.setText(getString(R.string.blank));
+                setRed();
+            }
+        }
     }
 
     private void loginComplete() {
@@ -381,5 +377,29 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
 
         finish();
+    }
+
+    private void setGreen() {
+        mProgress.setBackgroundColor(getResources().getColor(R.color.green));
+    }
+
+    private void setRed() {
+        mProgress.setBackgroundColor(getResources().getColor(R.color.red));
+    }
+
+    private void setDark() {
+        mProgress.setBackgroundColor(getResources().getColor(R.color.stripes));
+    }
+
+    private int makeColor() {
+        return getResources().getColor(ColorUtils.getNextRandomColor(this));
+    }
+
+    private void insertNewColor() {
+        gradients.add(makeColor());
+    }
+
+    private void deleteLastColor() {
+        gradients.remove(gradients.size() - 1);
     }
 }

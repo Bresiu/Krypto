@@ -6,9 +6,20 @@
     <dimen name="shadow_width">8dp</dimen>
     <dimen name="layer_width">300dp</dimen>
     <dimen name="offset_width">48dp</dimen>
-    <!-- Num Pad margins-->
-    <dimen name="num_pad_margin">30dp</dimen>
-    <dimen name="num_pad_stripes">1dp</dimen>
-    <dimen name="num_pad_font_size">40sp</dimen>
+    <!-- Margins-->
+    <dimen name="num_pad_left_margin">25dp</dimen>
     <dimen name="margin_top">10dp</dimen>
+    <!-- Sizes -->
+    <dimen name="stripes">1dp</dimen>
+    <dimen name="stripes_three">3dp</dimen>
+    <dimen name="progress_height">3dp</dimen>
+    <dimen name="sliding_layer_height">250dp</dimen>
+    <!-- Fonts -->
+    <dimen name="num_pad_font_size">40sp</dimen>
+    <dimen name="font_size_medium">25sp</dimen>
+    <dimen name="font_size_big">40sp</dimen>
+    <!-- DP -->
+    <dimen name="three">3dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="ten">10dp</dimen>
 </resources>

@@ -23,10 +23,7 @@ package com.bresiu.krypto.utils.util;
 
 import java.util.Random;
 
-/**
- * Common Utils for Android.
- */
-public class CommonUtils {
+public class RandomUtils {
 
     private static Random mRandom;
 
@@ -42,4 +39,15 @@ public class CommonUtils {
         return mRandom.nextBoolean();
     }
 
+    /**
+     * Get a random int in range
+     */
+    //This gives a random integer between 65 (inclusive) and 80 (exclusive), one of 65,66,...,78,79
+    public static int getNextRandomInt(int rangeStart, int rangeEnd) {
+
+        if (mRandom == null) {
+            mRandom = new Random();
+        }
+        return mRandom.nextInt(rangeEnd - rangeStart) + rangeStart;
+    }
 }

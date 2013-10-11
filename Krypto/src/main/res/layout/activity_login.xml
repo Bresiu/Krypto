@@ -10,9 +10,16 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tableLayout"
+        android:layout_above="@+id/table"
         android:layout_alignParentTop="true"
         android:background="@color/background">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/stripes"
+            android:layout_alignParentTop="true"
+            android:background="@color/stripes" />
 
         <com.bresiu.krypto.utils.widget.RobotoTextView
             android:id="@+id/info"
@@ -22,9 +29,10 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="@string/pin"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/text_dark"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/font_size_medium"
             app:typeface="roboto_thin" />
+
 
         <com.bresiu.krypto.utils.widget.RobotoTextView
             android:id="@+id/pass"
@@ -32,53 +40,25 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="@dimen/margin_top"
+            android:layout_margin="@dimen/margin_top"
             android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/text_dark"
-            android:textSize="@dimen/num_pad_font_size"
+            android:maxLines="2"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/font_size_medium"
             app:typeface="roboto_thin" />
 
+        <LinearLayout
+            android:id="@+id/progress"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/progress_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/stripes"
+            android:baselineAligned="false"
+            android:orientation="horizontal" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tableLayout"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
-
-        <LinearLayout
-            android:id="@+id/prog1"
-            android:layout_width="wrap_content"
-            android:layout_height="3dp"
-            android:layout_weight="1"
-            android:orientation="horizontal" />
-
-        <LinearLayout
-            android:id="@+id/prog2"
-            android:layout_width="wrap_content"
-            android:layout_height="3dp"
-            android:layout_weight="1"
-            android:orientation="horizontal" />
-
-        <LinearLayout
-            android:id="@+id/prog3"
-            android:layout_width="wrap_content"
-            android:layout_height="3dp"
-            android:layout_weight="1"
-            android:orientation="horizontal" />
-
-        <LinearLayout
-            android:id="@+id/prog4"
-            android:layout_width="wrap_content"
-            android:layout_height="3dp"
-            android:layout_weight="1"
-            android:orientation="horizontal" />
-    </LinearLayout>
-
     <TableLayout
-        android:id="@+id/tableLayout"
+        android:id="@+id/table"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -95,11 +75,10 @@
                 android:id="@+id/b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/on"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -109,11 +88,10 @@
                 android:id="@+id/b2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/tw"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -123,11 +101,10 @@
                 android:id="@+id/b3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/th"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -137,17 +114,16 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/num_pad_stripes">
+            android:layout_marginTop="@dimen/stripes">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/fo"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -157,11 +133,10 @@
                 android:id="@+id/b5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/fi"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -171,11 +146,10 @@
                 android:id="@+id/b6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/si"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -185,17 +159,16 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/num_pad_stripes">
+            android:layout_marginTop="@dimen/stripes">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/se"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -205,11 +178,10 @@
                 android:id="@+id/b8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/ei"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -219,11 +191,10 @@
                 android:id="@+id/b9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/ni"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
@@ -233,60 +204,51 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/num_pad_stripes"
-            android:layout_marginTop="@dimen/num_pad_stripes">
+            android:layout_marginBottom="@dimen/stripes"
+            android:layout_marginTop="@dimen/stripes">
 
-            <com.bresiu.krypto.utils.widget.RobotoButton
-                android:id="@+id/cancel"
+            <Button
+                android:id="@+id/back_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
-                android:gravity="left|center"
+                android:drawableStart="@drawable/content_backspace"
+                android:gravity="center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
-                android:text="@string/c"
-                android:textColor="@color/text_dark"
-                android:textSize="@dimen/num_pad_font_size"
-                app:typeface="roboto_thin" />
+                android:paddingLeft="@dimen/num_pad_left_margin"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/num_pad_font_size" />
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/b0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
                 android:gravity="left|center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
+                android:paddingLeft="@dimen/num_pad_left_margin"
                 android:text="@string/ze"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/num_pad_font_size"
                 app:typeface="roboto_thin" />
 
-            <com.bresiu.krypto.utils.widget.RobotoButton
-                android:id="@+id/back"
+            <Button
+                android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/button"
-                android:gravity="left|center"
+                android:drawableStart="@drawable/navigation_accept"
+                android:gravity="center"
                 android:onClick="onClick"
-                android:paddingLeft="@dimen/num_pad_margin"
-                android:text="@string/lower_than"
-                android:textColor="@color/text_dark"
-                android:textSize="@dimen/num_pad_font_size"
-                app:typeface="roboto_thin" />
+                android:paddingLeft="@dimen/num_pad_left_margin"
+                android:textSize="@dimen/num_pad_font_size" />
         </TableRow>
-
-
     </TableLayout>
-
 
     <com.bresiu.krypto.utils.SlidingLayer xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
         android:id="@+id/slidingMenu"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/sliding_layer_height"
         slidingLayer:closeOnTapEnabled="true"
         slidingLayer:stickTo="top">
 
@@ -294,19 +256,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/transparent"
-            android:padding="3dp">
+            android:padding="@dimen/three">
 
             <com.bresiu.krypto.utils.widget.RobotoButton
                 android:id="@+id/licences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginTop="@dimen/five"
                 android:background="@drawable/button"
                 android:gravity="left"
                 android:onClick="onClick"
-                android:padding="10dp"
+                android:padding="@dimen/ten"
                 android:text="@string/licences"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/text_color"
@@ -319,17 +281,16 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignRight="@+id/licences"
                 android:layout_below="@+id/licences"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginTop="@dimen/five"
                 android:background="@drawable/button"
                 android:gravity="left"
                 android:onClick="onClick"
-                android:padding="10dp"
+                android:padding="@dimen/ten"
                 android:text="@string/about"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/text_color"
                 app:typeface="roboto_thin" />
-
 
             <com.bresiu.krypto.utils.widget.RobotoTextView
                 android:id="@+id/last_logged_in"

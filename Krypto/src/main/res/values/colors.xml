@@ -2,36 +2,56 @@
 
     <!-- redesign colors -->
 
+    <color name="background">#000000</color>
+    <color name="transparent">#c8000000</color>
+    <color name="stripes">#1b2021</color>
+
     <color name="button">#000000</color>
-    <color name="button_pressed">#b81f22</color>
+    <color name="button_pressed">#1b2021</color>
+
+    <color name="pressed_brs">#CC8A1719</color>
 
     <color name="message_sent">#b81f22</color>
     <color name="message_received">#89191a</color>
 
     <color name="shadow">#b81f22</color>
 
-    <!--<color name="background">#f2f2f2</color>-->
-
-    <color name="background">#000000</color>
-    <color name="black">#000000</color>
-
     <color name="text_color">#27ae60</color>
-    <!--<color name="text_color">#f2f2f2</color>
-    <color name="text_dark">#1b2021</color>-->
-    <color name="text_dark">#a8afaf</color>
-    <color name="stripes">#1b2021</color>
-    <color name="action_bar_color">#1b2021</color>
-    <color name="action_bar_font">#a8afaf</color>
+    <color name="text_white">#a8afaf</color>
 
     <color name="green">#27ae60</color>
     <color name="red">#c0392b</color>
 
+    <!-- Flat colors -->
+
     <color name="turquoise">#1abc9c</color>
-    <color name="yellow">#f1c40f</color>
-    <color name="violet">#9b59b6</color>
+    <color name="green_sea">#16a085</color>
 
-    <color name="pressed_brs">#CC8A1719</color>
+    <color name="emerald">#2ecc71</color>
+    <color name="nepritis">#27ae60</color>
 
-    <color name="transparent">#c8000000</color>
+    <color name="peter_river">#3498db</color>
+    <color name="belize_hole">#2980b9</color>
+
+    <color name="amethyst">#9b59b6</color>
+    <color name="wisteria">#8e44ad</color>
+
+    <color name="wer_asphalt">#34495e</color>
+    <color name="midnight_blue">#2c3e50</color>
+
+    <color name="sun_flower">#f1c40f</color>
+    <color name="orange">#f39c12</color>
+
+    <color name="carrot">#e67e22</color>
+    <color name="pumpkin">#d35400</color>
+
+    <color name="alizarin">#e74c3c</color>
+    <color name="pomegrante">#c0392b</color>
+
+    <color name="clouds">#ecf0f1</color>
+    <color name="silver">#bdc3c7</color>
+
+    <color name="concrete">#95a5a6</color>
+    <color name="asbestos">#7f8c8d</color>
 
 </resources>

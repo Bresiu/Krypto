@@ -9,7 +9,9 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:divider="@color/green"
+        android:dividerHeight="2dp" />
 
     <com.bresiu.krypto.utils.SlidingLayer xmlns:slidingLayer="http://schemas.android.com/apk/res/com.bresiu.krypto"
         android:id="@+id/slidingCompose"
@@ -46,8 +48,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/PhoneNumberInfo"
-                android:textColor="@color/text_color"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:textColor="@color/text_color" />
 
             <ScrollView
                 android:id="@+id/scrollView"
@@ -61,11 +63,11 @@
                     android:id="@+id/message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/text_color"
                     android:ems="10"
                     android:gravity="bottom"
                     android:lines="3"
-                    android:singleLine="false" />
+                    android:singleLine="false"
+                    android:textColor="@color/text_color" />
 
             </ScrollView>
 
